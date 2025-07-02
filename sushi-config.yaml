@@ -67,7 +67,7 @@ pages:
     title: Artifacts
     artifacts-structural.md:
       title: Structural artifacts
-# The parameters property represents IG.definition.parameter. Rather
+# The parameters property represents IG.definition.parameter. Rather 
 # than a list of code/value pairs (as in the ImplementationGuide
 # resource), the code is the YAML key. If a parameter allows repeating
 # values, the value in the YAML should be a sequence/array.
