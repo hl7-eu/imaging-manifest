@@ -348,7 +348,7 @@ function generateObligationFiles(parsedData) {
     });
   
   writeActorObligationFiles( parsedData, manifestObligationResources, 'Manifest', 'M');  
-  writeActorObligationFiles( parsedData, reportObligationResources, 'Report', 'R');  
+//   writeActorObligationFiles( parsedData, reportObligationResources, 'Report', 'R');  
   
 }
 
