@@ -1,11 +1,11 @@
 id: hl7.fhir.eu.imaging-r5
-canonical: http://hl7.eu/fhir/imaging-r5
-name: HL7EuImagingStudyReport
-title: HL7 Europe Imaging Study Report
-description: This guide describes how a Imaging Study Report can be represented in the European REALM.
+canonical: http://hl7.eu/fhir/imaging-manifest-r5
+name: HL7EuImagingStudyManifestR5
+title: HL7 Europe Imaging Study Manifest R5
+description: This guide describes how a Imaging Study Manifest can be represented in the European REALM.
 status: draft # draft | active | retired | unknown
 experimental: false
-version: 0.1.0-ballot
+version: 0.2.0-ballot
 fhirVersion: 5.0.0 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 #fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2025+
@@ -57,12 +57,8 @@ pages:
       title: XtEHR Logical Model
     xtehr-mapping.md:
       title: Mapping to XtEHR Logical Model
-  profiles.md:
-    title: Deployment profiles
-    imaging-manifest.md:
-      title: Imaging Manifest
-    imaging-report.md:
-      title: Imaging Report
+  imaging-manifest.md:
+    title: Imaging Manifest
   design-considerations.md:
     title: Design Considerations
   artifacts-intro.md:
@@ -123,7 +119,6 @@ menu:
     XtEHR-model: xtehr-logical-model.html
     XtEHR-mapping: xtehr-mapping.html
   Imaging Manifest: imaging-manifest.html
-  Imaging Report: imaging-report.html
   Artifacts: 
     All: artifacts.html
     Structural: artifacts-structural.html

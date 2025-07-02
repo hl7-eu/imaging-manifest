@@ -4,9 +4,9 @@
 <div xmlns="http://www.w3.org/1999/xhtml"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
  <blockquote class="stu-note">  
-   <p>This is the 0.1.0-ballot version of the specification. 
+   <p>This is the 0.2.0-build version of the specification. 
    </p>
-   <p>The source of this IG is stored on github (<a href="https://github.com/hl7-eu/imaging">https://github.com/hl7-eu/imaging</a>).
+   <p>The source of this IG is stored on github (<a href="https://github.com/hl7-eu/imaging-manifest">https://github.com/hl7-eu/imaging-manifest</a>).
    </p>
    <p> The content of this implementation guide is discussed HL7 EU calls (<a href="https://confluence.hl7.org/spaces/HEU/pages/321160129/Imaging+meetings">HL7-eu imaging on Confluence</a>).
    </p>
