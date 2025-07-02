@@ -1,7 +1,7 @@
 #!/bin/sh
 
 random_number=$(date +%s%N | cut -b1-10)
-instance_name="ig-publisher-imaging-$random_number"
+instance_name="ig-publisher-imaging-manifest-$random_number"
 
 docker run \
     --name $instance_name \

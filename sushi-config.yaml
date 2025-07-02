@@ -1,4 +1,4 @@
-id: hl7.fhir.eu.imaging-r5
+id: hl7.fhir.eu.imaging-manifest-r5
 canonical: http://hl7.eu/fhir/imaging-manifest-r5
 name: HL7EuImagingStudyManifestR5
 title: HL7 Europe Imaging Study Manifest R5
@@ -57,8 +57,10 @@ pages:
       title: XtEHR Logical Model
     xtehr-mapping.md:
       title: Mapping to XtEHR Logical Model
+  kos-specification.md:
+    title: KOS Specification
   imaging-manifest.md:
-    title: Imaging Manifest
+    title: FHIR Imaging Manifest
   design-considerations.md:
     title: Design Considerations
   artifacts-intro.md:
@@ -118,7 +120,8 @@ menu:
   XtEHR model:
     XtEHR-model: xtehr-logical-model.html
     XtEHR-mapping: xtehr-mapping.html
-  Imaging Manifest: imaging-manifest.html
+  FHIR Imaging Manifest: imaging-manifest.html
+  KOS specification: kos-specification.html
   Artifacts: 
     All: artifacts.html
     Structural: artifacts-structural.html
