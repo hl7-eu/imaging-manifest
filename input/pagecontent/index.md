@@ -6,7 +6,7 @@
  <blockquote class="stu-note">  
    <p>This is the 0.2.0-build version of the specification. 
    </p>
-   <p>The source of this IG is stored on github (<a href="https://github.com/hl7-eu/imaging-manifest">https://github.com/hl7-eu/imaging-manifest</a>).
+   <p>The source of this IG is stored on github (<a href="https://github.com/hl7-eu/manifest4imaging">https://github.com/hl7-eu/manifest4imaging</a>).
    </p>
    <p> The content of this implementation guide is discussed HL7 EU calls (<a href="https://confluence.hl7.org/spaces/HEU/pages/321160129/Imaging+meetings">HL7-eu imaging on Confluence</a>).
    </p>
