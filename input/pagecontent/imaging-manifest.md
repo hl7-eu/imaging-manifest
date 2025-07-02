@@ -1,5 +1,5 @@
 {% include variable-definitions.md %}
-The imaging manifest represents a summary of the data stored in a DICOM imaging study. In document based deployments, it is the '*document*' that is searched for and provides the URL's that allow download of the imaging content. It is the data that is provided by a PACS system. The figure below presents an overview of the data that is part of the imaging-manifest.
+The imaging manifest represents a summary of the data stored in a DICOM imaging study as is stored in a PACS. In document based deployments, it is the '*document*' that is searched for and provides the URL's that allow download of the imaging content. It is the data that is provided by a PACS system. The figure below presents an overview of the data that is part of the imaging-manifest.
 
 In order to keep the diagram readable, not all references are included.
 
