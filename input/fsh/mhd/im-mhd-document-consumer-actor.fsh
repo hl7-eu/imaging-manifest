@@ -147,7 +147,7 @@ Usage: #definition
 * code = #accession-number
 * type = #token
 * base[0] = #DocumentReference
-* expression = "DocumentReference.basedOn.identifier"
+* expression = "DocumentReference.basedOn.identifier.where(type != 'ASN').value"
 * multipleOr = true
 * multipleAnd = true
 
