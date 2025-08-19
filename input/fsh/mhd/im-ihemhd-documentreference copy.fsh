@@ -41,21 +41,21 @@ A DocumentReference profile for the Manifest DocumentReference used in MHD deplo
   * reference 0..0
 * modality 1..* 
 
-ValueSet: AnatomicalRegionVS
-Id:	      imm-anatomical-region
-Title:	  "Anatomical Region Value Set"
-Description:   """Atomic Region / Body Part affected."""
-* ^experimental = false
-* $sct#63337009 // (http://snomed.info/id/63337009) Structuur van onderste gedeelte van romp
-* $sct#38266002 // (http://snomed.info/id/38266002) Gehele lichaam in totaliteit
-* $sct#53120007 // (http://snomed.info/id/53120007) Structuur van bovenste extremiteit
-* $sct#61685007 // (http://snomed.info/id/61685007) Structuur van onderste extremiteit
-* $sct#67734004 // (http://snomed.info/id/67734004) Structuur van bovenste deel van romp
-* $sct#774007   // (http://snomed.info/id/774007) Structuur van hoofd-halsregio
-* $sct#113257007 // (http://snomed.info/id/113257007) Structuur van tractus circulatorius
-* $sct#80891009 // (http://snomed.info/id/80891009) Structuur van hart
-* $sct#76752008 // (http://snomed.info/id/76752008) Structuur van mamma
-* $sct#737561001 // (http://snomed.info/id/737561001)    Structuur van wervelkolom en/of ruggenmerg
+// ValueSet: AnatomicalRegionVS
+// Id:	      imm-anatomical-region
+// Title:	  "Anatomical Region Value Set"
+// Description:   """Atomic Region / Body Part affected."""
+// * ^experimental = false
+// * $sct#63337009 // (http://snomed.info/id/63337009) Structuur van onderste gedeelte van romp
+// * $sct#38266002 // (http://snomed.info/id/38266002) Gehele lichaam in totaliteit
+// * $sct#53120007 // (http://snomed.info/id/53120007) Structuur van bovenste extremiteit
+// * $sct#61685007 // (http://snomed.info/id/61685007) Structuur van onderste extremiteit
+// * $sct#67734004 // (http://snomed.info/id/67734004) Structuur van bovenste deel van romp
+// * $sct#774007   // (http://snomed.info/id/774007) Structuur van hoofd-halsregio
+// * $sct#113257007 // (http://snomed.info/id/113257007) Structuur van tractus circulatorius
+// * $sct#80891009 // (http://snomed.info/id/80891009) Structuur van hart
+// * $sct#76752008 // (http://snomed.info/id/76752008) Structuur van mamma
+// * $sct#737561001 // (http://snomed.info/id/737561001)    Structuur van wervelkolom en/of ruggenmerg
 
 
 // Profile: ImIheMhdDocumentReference

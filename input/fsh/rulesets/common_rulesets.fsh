@@ -3,7 +3,6 @@ RuleSet: SetFmmAndStatusRule ( fmm, status )
 * ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status].valueCode = #{status}
 * ^jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.html#EU "Europe"
 
-
 RuleSet: ExtensionContext(path)
 // copied by mCode
 * ^context[+].type = #element
@@ -39,3 +38,9 @@ RuleSet: LOINCCopyrightForVS
 
 RuleSet: UCUMCopyrightForVS
 * ^copyright = "The UCUM codes, UCUM table (regardless of format), and UCUM Specification are copyright 1999-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. https://ucum.org/trac/wiki/TermsOfUse"
+
+RuleSet: CapabilityStatementExpectation( expectation )
+* extension
+  * url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+  * valueCode = #{expectation}
+  

@@ -25,7 +25,7 @@ Usage: #definition
 * experimental = false
 * publisher = "HL7 Europe"
 * description = "The IHE-MHD - Document Consumer Capability Statement."
-* kind = #Requirements
+* kind = #requirements
 * fhirVersion = #5.0.0
 * date = 2025-08-25
 * format[0] = #application/fhir+xml
@@ -36,30 +36,44 @@ Usage: #definition
   * security.description =  "Recommend [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html), encouraged [IHE-IUA](https://profiles.ihe.net/ITI/IUA/index.html) or SMART-on-FHIR"
   * resource[+]
     * type = #DocumentReference
+    * insert CapabilityStatementExpectation( SHALL )
     // * profile = "https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Query.Minimal.DocumentReference"
     * interaction[+]
+      * insert CapabilityStatementExpectation( SHALL )
       * code = #read
+    * interaction[+]
+      * insert CapabilityStatementExpectation( SHALL )
       * code = #search-type
     * searchParam[+]
+      * insert CapabilityStatementExpectation( SHALL )
       * name = "modality"
       * definition = Canonical( ImModalitySearchParameter )
       * type = #code
       * documentation = "Modality of a series in the study."
     * searchParam[+]
+      * insert CapabilityStatementExpectation( SHALL )
       * name = "anatomical-region"
       * definition = Canonical( AnatomicalRegionSearchParameter )
       * type = #token
       * documentation = "Anatomical region of the study."
     * searchParam[+]
+      * insert CapabilityStatementExpectation( SHALL )
       * name = "study-instance-uid"
       * definition = Canonical( StudyInstanceUidSearchParameter )
       * type = #url
       * documentation = "Study Instance UID of the study."
     * searchParam[+]
+      * insert CapabilityStatementExpectation( SHALL )
       * name = "accession-number"
       * definition = Canonical( AccessionNumberSearchParameter )
       * type = #url
       * documentation = "Accession Number of the study."
+    * searchParam[+]
+      * insert CapabilityStatementExpectation( SHALL )
+      * name = "order-id"
+      * definition = Canonical( OrderIdentifierSearchParameter )
+      * type = #url
+      * documentation = "Order-idof the study."
 
 Instance: ImModalitySearchParameter
 InstanceOf: SearchParameter

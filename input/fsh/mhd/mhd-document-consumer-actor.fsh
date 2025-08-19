@@ -24,7 +24,7 @@ Usage: #definition
 * experimental = false
 * publisher = "HL7 Europe"
 * description = "The IHE-MHD - Document Consumer Capability Statement."
-* kind = #Requirements
+* kind = #requirements
 * fhirVersion = #5.0.0
 * date = 2025-08-25
 * format[0] = #application/fhir+xml
@@ -35,9 +35,13 @@ Usage: #definition
   * resource[+]
     * type = #DocumentReference
     // * profile = "https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Query.Minimal.DocumentReference"
+    * insert CapabilityStatementExpectation( SHALL )
     * interaction[+]
       * code = #read
+      * insert CapabilityStatementExpectation( SHALL )
+    * interaction[+]
       * code = #search-type
+      * insert CapabilityStatementExpectation( SHALL )
     * searchParam[+]
       * name = "_id"
       * definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
@@ -49,98 +53,106 @@ Usage: #definition
       * type = #date
       * documentation = "When the resource version last changed"
     * searchParam[+]
-      * name = "_id"
-      * definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
-      * type = #token
-      * documentation = "Logical id of this artifact"
-    * searchParam[+]
-      * name = "_lastupdated"
-      * definition = "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"
-      * type = #date
-      * documentation = "When the resource version last changed"
-    * searchParam[+]
+      * insert CapabilityStatementExpectation( SHALL )
       * name = "author.given"
       * type = #string
       * documentation = "These parameters, of type string, specify the name parts of the author"
     * searchParam[+]
+      * insert CapabilityStatementExpectation( SHALL )
       * name = "author.family"
       * type = #string
       * documentation = "These parameters, of type string, specify the name parts of the author person, which is associated with the DocumentReference Resource, or in Document Sharing nomenclature, the author of the Document Entry. See ITI TF-2x: Appendix Z.2 for use of the string data type."
     * searchParam[+]
+      * insert CapabilityStatementExpectation( SHALL )
       * name =  "category"
       * definition = "http://hl7.org/fhir/SearchParameter/DocumentReference-category"
       * type = #token
       * documentation = "Categorization of document"
     * searchParam[+]
+      * insert CapabilityStatementExpectation( SHALL )
       * name =  "creation"
       * definition = "https://profiles.ihe.net/ITI/MHD/SearchParameter/DocumentReference-Creation"
       * type = #date
       * documentation = "When this document was created"
     * searchParam[+]
+      * insert CapabilityStatementExpectation( SHOULD )
       * name =  "date"
       * definition = "http://hl7.org/fhir/SearchParameter/DocumentReference-date"
       * type = #date
       * documentation = "When this document reference was created"
     * searchParam[+]
+      * insert CapabilityStatementExpectation( SHALL )
       * name =  "event"
       * definition = "http://hl7.org/fhir/SearchParameter/DocumentReference-event"
       * type = #token
       * documentation = "Main clinical acts documented"
     * searchParam[+]
+      * insert CapabilityStatementExpectation( SHALL )
       * name =  "facility"
       * definition = "http://hl7.org/fhir/SearchParameter/DocumentReference-facility"
       * type = #token
       * documentation = "Kind of facility where patient was seen"
     * searchParam[+]
+      * insert CapabilityStatementExpectation( MAY )
       * name =  "format"
       * definition = "http://hl7.org/fhir/SearchParameter/DocumentReference-format"
       * type = #token
       * documentation = "Format/content rules for the document"
     * searchParam[+]
+      * insert CapabilityStatementExpectation( SHALL )
       * name =  "identifier"
       * definition = "http://hl7.org/fhir/SearchParameter/clinical-identifier"
       * type = #token
       * documentation = "The identifier for this DocumentReference"
     * searchParam[+]
+      * insert CapabilityStatementExpectation( MAY )
       * name =  "patient"
       * definition = "http://hl7.org/fhir/SearchParameter/clinical-patient"
       * type = #reference
       * documentation = "Who/what is the subject of the document"
     * searchParam[+]
+      * insert CapabilityStatementExpectation( SHALL )
       * name =  "patient.identifier"
       * type = #token
       * documentation = "An Identifier for Who/what is the subject of the document"
     * searchParam[+]
+      * insert CapabilityStatementExpectation( SHALL )
       * name =  "period"
       * definition = "http://hl7.org/fhir/SearchParameter/DocumentReference-period"
       * type = #date
       * documentation = "Time of service that is being documented"
     * searchParam[+]
+      * insert CapabilityStatementExpectation( MAY )
       * name =  "related"
       * definition = "http://hl7.org/fhir/SearchParameter/DocumentReference-related"
       * type = #reference
       * documentation = "Related Resource"
     * searchParam[+]
+      * insert CapabilityStatementExpectation( MAY )
       * name =  "security-label"
       * definition = "http://hl7.org/fhir/SearchParameter/DocumentReference-security-label"
       * type = #token
       * documentation = "Document security-tags"
     * searchParam[+]
+      * insert CapabilityStatementExpectation( MAY )
       * name =  "setting"
       * definition = "http://hl7.org/fhir/SearchParameter/DocumentReference-setting"
       * type = #token
       * documentation = "Additional details about where the content was created (e.g. clinical specialty)"
     * searchParam[+]
+      * insert CapabilityStatementExpectation( SHALL )
       * name =  "status"
       * definition = "http://hl7.org/fhir/SearchParameter/DocumentReference-status"
       * type = #token
       * documentation = "current | superseded | entered-in-error"
     * searchParam[+]
+      * insert CapabilityStatementExpectation( SHALL )
       * name =  "type"
       * definition = "http://hl7.org/fhir/SearchParameter/clinical-patient"
       * type = #reference
       * documentation = "Kind of document (LOINC if possible)"
   * resource[+]
+    * insert CapabilityStatementExpectation( MAY )
     * type = #List
       // * profile =  "https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.List"
       // * supportedProfile[+]= "https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.UnContained.Comprehensive.SubmissionSet"🔗 
