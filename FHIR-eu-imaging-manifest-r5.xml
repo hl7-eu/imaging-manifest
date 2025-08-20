@@ -98,57 +98,57 @@
 <artifact id="StructureDefinition/EHDSLocation" key="StructureDefinition-EHDSLocation" name="Location model"/>
 <artifact id="StructureDefinition/ImManifestIheMhdDocumentReference" key="StructureDefinition-ImManifestIheMhdDocumentReference" name="Manifest DocumentReference for MHD deployments"/>
 <artifact id="StructureDefinition/Manifest-ImManifestDocumentReference" key="StructureDefinition-Manifest-ImManifestDocumentReference" name="Manifest Obligations for ImManifestIheMhdDocumentReference"/>
-<artifact id="StructureDefinition/Manifest-EuAddress" key="StructureDefinition-Manifest-EuAddress" name="Manifest obligations for EuAddress"/>
-<artifact id="StructureDefinition/Manifest-EuBodyStructure" key="StructureDefinition-Manifest-EuBodyStructure" name="Manifest obligations for EuBodyStructure"/>
-<artifact id="StructureDefinition/Manifest-EuContactPoint" key="StructureDefinition-Manifest-EuContactPoint" name="Manifest obligations for EuContactPoint"/>
-<artifact id="StructureDefinition/Manifest-EuDevice" key="StructureDefinition-Manifest-EuDevice" name="Manifest obligations for EuDevice"/>
-<artifact id="StructureDefinition/Manifest-EuEndpoint" key="StructureDefinition-Manifest-EuEndpoint" name="Manifest obligations for EuEndpoint"/>
-<artifact id="StructureDefinition/Manifest-EuHumanName" key="StructureDefinition-Manifest-EuHumanName" name="Manifest obligations for EuHumanName"/>
-<artifact id="StructureDefinition/Manifest-EuLocation" key="StructureDefinition-Manifest-EuLocation" name="Manifest obligations for EuLocation"/>
-<artifact id="StructureDefinition/Manifest-EuOrganization" key="StructureDefinition-Manifest-EuOrganization" name="Manifest obligations for EuOrganization"/>
-<artifact id="StructureDefinition/Manifest-EuPatient" key="StructureDefinition-Manifest-EuPatient" name="Manifest obligations for EuPatient"/>
-<artifact id="StructureDefinition/Manifest-EuPatientAnimal" key="StructureDefinition-Manifest-EuPatientAnimal" name="Manifest obligations for EuPatientAnimal"/>
-<artifact id="StructureDefinition/Manifest-EuPractitioner" key="StructureDefinition-Manifest-EuPractitioner" name="Manifest obligations for EuPractitioner"/>
-<artifact id="StructureDefinition/Manifest-EuPractitionerRole" key="StructureDefinition-Manifest-EuPractitionerRole" name="Manifest obligations for EuPractitionerRole"/>
-<artifact id="StructureDefinition/Manifest-EuProcedure" key="StructureDefinition-Manifest-EuProcedure" name="Manifest obligations for EuProcedure"/>
-<artifact id="StructureDefinition/Manifest-EuServiceRequest" key="StructureDefinition-Manifest-EuServiceRequest" name="Manifest obligations for EuServiceRequest"/>
-<artifact id="StructureDefinition/Manifest-EuSpecimen" key="StructureDefinition-Manifest-EuSpecimen" name="Manifest obligations for EuSpecimen"/>
-<artifact id="StructureDefinition/Manifest-ImImageIidViewerEndpoint" key="StructureDefinition-Manifest-ImImageIidViewerEndpoint" name="Manifest obligations for ImImageIidViewerEndpoint"/>
-<artifact id="StructureDefinition/Manifest-ImImagingStudy" key="StructureDefinition-Manifest-ImImagingStudy" name="Manifest obligations for ImImagingStudy"/>
-<artifact id="StructureDefinition/Manifest-ImImagingStudyManifest" key="StructureDefinition-Manifest-ImImagingStudyManifest" name="Manifest obligations for ImImagingStudyManifest"/>
-<artifact id="StructureDefinition/Manifest-ImOrder" key="StructureDefinition-Manifest-ImOrder" name="Manifest obligations for ImOrder"/>
-<artifact id="StructureDefinition/Manifest-ImPatient" key="StructureDefinition-Manifest-ImPatient" name="Manifest obligations for ImPatient"/>
-<artifact id="StructureDefinition/Manifest-ImProcedure" key="StructureDefinition-Manifest-ImProcedure" name="Manifest obligations for ImProcedure"/>
-<artifact id="StructureDefinition/Manifest-ImWadoEndpoint" key="StructureDefinition-Manifest-ImWadoEndpoint" name="Manifest obligations for ImWadoEndpoint"/>
-<artifact id="ConceptMap/EHDSAddressMap" key="ConceptMap-EHDSAddressMap" name="Map for EHDSAddress"/>
-<artifact id="ConceptMap/EHDSAllergyIntoleranceMap" key="ConceptMap-EHDSAllergyIntoleranceMap" name="Map for EHDSAllergyIntolerance"/>
-<artifact id="ConceptMap/EHDSAttachmentMap" key="ConceptMap-EHDSAttachmentMap" name="Map for EHDSAttachment"/>
-<artifact id="ConceptMap/EHDSCarePlanMap" key="ConceptMap-EHDSCarePlanMap" name="Map for EHDSCarePlan"/>
-<artifact id="ConceptMap/EHDSConditionMap" key="ConceptMap-EHDSConditionMap" name="Map for EHDSCondition"/>
-<artifact id="ConceptMap/EHDSCoverageMap" key="ConceptMap-EHDSCoverageMap" name="Map for EHDSCoverage"/>
-<artifact id="ConceptMap/EHDSDeviceMap" key="ConceptMap-EHDSDeviceMap" name="Map for EHDSDevice"/>
-<artifact id="ConceptMap/EHDSEncounterMap" key="ConceptMap-EHDSEncounterMap" name="Map for EHDSEncounter"/>
-<artifact id="ConceptMap/EHDSEndpointMap" key="ConceptMap-EHDSEndpointMap" name="Map for EHDSEndpoint"/>
-<artifact id="ConceptMap/EHDSEpisodeOfCareMap" key="ConceptMap-EHDSEpisodeOfCareMap" name="Map for EHDSEpisodeOfCare"/>
-<artifact id="ConceptMap/EHDSHealthProfessionalMap" key="ConceptMap-EHDSHealthProfessionalMap" name="Map for EHDSHealthProfessional"/>
-<artifact id="ConceptMap/EHDSHumanNameMap" key="ConceptMap-EHDSHumanNameMap" name="Map for EHDSHumanName"/>
-<artifact id="ConceptMap/EHDSImagingReportMap" key="ConceptMap-EHDSImagingReportMap" name="Map for EHDSImagingReport"/>
-<artifact id="ConceptMap/EHDSImagingReportBodyMap" key="ConceptMap-EHDSImagingReportBodyMap" name="Map for EHDSImagingReportBody"/>
-<artifact id="ConceptMap/EHDSImagingReportHeaderMap" key="ConceptMap-EHDSImagingReportHeaderMap" name="Map for EHDSImagingReportHeader"/>
-<artifact id="ConceptMap/EHDSImagingStudyMap" key="ConceptMap-EHDSImagingStudyMap" name="Map for EHDSImagingStudy"/>
-<artifact id="ConceptMap/EHDSLocationMap" key="ConceptMap-EHDSLocationMap" name="Map for EHDSLocation"/>
-<artifact id="ConceptMap/EHDSMediaMap" key="ConceptMap-EHDSMediaMap" name="Map for EHDSMedia"/>
-<artifact id="ConceptMap/EHDSMedicationMap" key="ConceptMap-EHDSMedicationMap" name="Map for EHDSMedication"/>
-<artifact id="ConceptMap/EHDSMedicationAdministrationMap" key="ConceptMap-EHDSMedicationAdministrationMap" name="Map for EHDSMedicationAdministration"/>
-<artifact id="ConceptMap/EHDSObservationMap" key="ConceptMap-EHDSObservationMap" name="Map for EHDSObservation"/>
-<artifact id="ConceptMap/EHDSOrganizationMap" key="ConceptMap-EHDSOrganizationMap" name="Map for EHDSOrganization"/>
-<artifact id="ConceptMap/EHDSPatientMap" key="ConceptMap-EHDSPatientMap" name="Map for EHDSPatient"/>
-<artifact id="ConceptMap/EHDSProcedureMap" key="ConceptMap-EHDSProcedureMap" name="Map for EHDSProcedure"/>
-<artifact id="ConceptMap/EHDSRelatedPersonMap" key="ConceptMap-EHDSRelatedPersonMap" name="Map for EHDSRelatedPerson"/>
-<artifact id="ConceptMap/EHDSServiceRequestMap" key="ConceptMap-EHDSServiceRequestMap" name="Map for EHDSServiceRequest"/>
-<artifact id="ConceptMap/EHDSSpecimenMap" key="ConceptMap-EHDSSpecimenMap" name="Map for EHDSSpecimen"/>
-<artifact id="ConceptMap/EHDSSubstanceMap" key="ConceptMap-EHDSSubstanceMap" name="Map for EHDSSubstance"/>
-<artifact id="ConceptMap/EHDSTelecomMap" key="ConceptMap-EHDSTelecomMap" name="Map for EHDSTelecom"/>
+<artifact deprecated="true" id="StructureDefinition/Manifest-EuAddress" key="StructureDefinition-Manifest-EuAddress" name="Manifest obligations for EuAddress"/>
+<artifact deprecated="true" id="StructureDefinition/Manifest-EuBodyStructure" key="StructureDefinition-Manifest-EuBodyStructure" name="Manifest obligations for EuBodyStructure"/>
+<artifact deprecated="true" id="StructureDefinition/Manifest-EuContactPoint" key="StructureDefinition-Manifest-EuContactPoint" name="Manifest obligations for EuContactPoint"/>
+<artifact deprecated="true" id="StructureDefinition/Manifest-EuDevice" key="StructureDefinition-Manifest-EuDevice" name="Manifest obligations for EuDevice"/>
+<artifact deprecated="true" id="StructureDefinition/Manifest-EuEndpoint" key="StructureDefinition-Manifest-EuEndpoint" name="Manifest obligations for EuEndpoint"/>
+<artifact deprecated="true" id="StructureDefinition/Manifest-EuHumanName" key="StructureDefinition-Manifest-EuHumanName" name="Manifest obligations for EuHumanName"/>
+<artifact deprecated="true" id="StructureDefinition/Manifest-EuLocation" key="StructureDefinition-Manifest-EuLocation" name="Manifest obligations for EuLocation"/>
+<artifact deprecated="true" id="StructureDefinition/Manifest-EuOrganization" key="StructureDefinition-Manifest-EuOrganization" name="Manifest obligations for EuOrganization"/>
+<artifact deprecated="true" id="StructureDefinition/Manifest-EuPatient" key="StructureDefinition-Manifest-EuPatient" name="Manifest obligations for EuPatient"/>
+<artifact deprecated="true" id="StructureDefinition/Manifest-EuPatientAnimal" key="StructureDefinition-Manifest-EuPatientAnimal" name="Manifest obligations for EuPatientAnimal"/>
+<artifact deprecated="true" id="StructureDefinition/Manifest-EuPractitioner" key="StructureDefinition-Manifest-EuPractitioner" name="Manifest obligations for EuPractitioner"/>
+<artifact deprecated="true" id="StructureDefinition/Manifest-EuPractitionerRole" key="StructureDefinition-Manifest-EuPractitionerRole" name="Manifest obligations for EuPractitionerRole"/>
+<artifact deprecated="true" id="StructureDefinition/Manifest-EuProcedure" key="StructureDefinition-Manifest-EuProcedure" name="Manifest obligations for EuProcedure"/>
+<artifact deprecated="true" id="StructureDefinition/Manifest-EuServiceRequest" key="StructureDefinition-Manifest-EuServiceRequest" name="Manifest obligations for EuServiceRequest"/>
+<artifact deprecated="true" id="StructureDefinition/Manifest-EuSpecimen" key="StructureDefinition-Manifest-EuSpecimen" name="Manifest obligations for EuSpecimen"/>
+<artifact deprecated="true" id="StructureDefinition/Manifest-ImImageIidViewerEndpoint" key="StructureDefinition-Manifest-ImImageIidViewerEndpoint" name="Manifest obligations for ImImageIidViewerEndpoint"/>
+<artifact deprecated="true" id="StructureDefinition/Manifest-ImImagingStudy" key="StructureDefinition-Manifest-ImImagingStudy" name="Manifest obligations for ImImagingStudy"/>
+<artifact deprecated="true" id="StructureDefinition/Manifest-ImImagingStudyManifest" key="StructureDefinition-Manifest-ImImagingStudyManifest" name="Manifest obligations for ImImagingStudyManifest"/>
+<artifact deprecated="true" id="StructureDefinition/Manifest-ImOrder" key="StructureDefinition-Manifest-ImOrder" name="Manifest obligations for ImOrder"/>
+<artifact deprecated="true" id="StructureDefinition/Manifest-ImPatient" key="StructureDefinition-Manifest-ImPatient" name="Manifest obligations for ImPatient"/>
+<artifact deprecated="true" id="StructureDefinition/Manifest-ImProcedure" key="StructureDefinition-Manifest-ImProcedure" name="Manifest obligations for ImProcedure"/>
+<artifact deprecated="true" id="StructureDefinition/Manifest-ImWadoEndpoint" key="StructureDefinition-Manifest-ImWadoEndpoint" name="Manifest obligations for ImWadoEndpoint"/>
+<artifact deprecated="true" id="ConceptMap/EHDSAddressMap" key="ConceptMap-EHDSAddressMap" name="Map for EHDSAddress"/>
+<artifact deprecated="true" id="ConceptMap/EHDSAllergyIntoleranceMap" key="ConceptMap-EHDSAllergyIntoleranceMap" name="Map for EHDSAllergyIntolerance"/>
+<artifact deprecated="true" id="ConceptMap/EHDSAttachmentMap" key="ConceptMap-EHDSAttachmentMap" name="Map for EHDSAttachment"/>
+<artifact deprecated="true" id="ConceptMap/EHDSCarePlanMap" key="ConceptMap-EHDSCarePlanMap" name="Map for EHDSCarePlan"/>
+<artifact deprecated="true" id="ConceptMap/EHDSConditionMap" key="ConceptMap-EHDSConditionMap" name="Map for EHDSCondition"/>
+<artifact deprecated="true" id="ConceptMap/EHDSCoverageMap" key="ConceptMap-EHDSCoverageMap" name="Map for EHDSCoverage"/>
+<artifact deprecated="true" id="ConceptMap/EHDSDeviceMap" key="ConceptMap-EHDSDeviceMap" name="Map for EHDSDevice"/>
+<artifact deprecated="true" id="ConceptMap/EHDSEncounterMap" key="ConceptMap-EHDSEncounterMap" name="Map for EHDSEncounter"/>
+<artifact deprecated="true" id="ConceptMap/EHDSEndpointMap" key="ConceptMap-EHDSEndpointMap" name="Map for EHDSEndpoint"/>
+<artifact deprecated="true" id="ConceptMap/EHDSEpisodeOfCareMap" key="ConceptMap-EHDSEpisodeOfCareMap" name="Map for EHDSEpisodeOfCare"/>
+<artifact deprecated="true" id="ConceptMap/EHDSHealthProfessionalMap" key="ConceptMap-EHDSHealthProfessionalMap" name="Map for EHDSHealthProfessional"/>
+<artifact deprecated="true" id="ConceptMap/EHDSHumanNameMap" key="ConceptMap-EHDSHumanNameMap" name="Map for EHDSHumanName"/>
+<artifact deprecated="true" id="ConceptMap/EHDSImagingReportMap" key="ConceptMap-EHDSImagingReportMap" name="Map for EHDSImagingReport"/>
+<artifact deprecated="true" id="ConceptMap/EHDSImagingReportBodyMap" key="ConceptMap-EHDSImagingReportBodyMap" name="Map for EHDSImagingReportBody"/>
+<artifact deprecated="true" id="ConceptMap/EHDSImagingReportHeaderMap" key="ConceptMap-EHDSImagingReportHeaderMap" name="Map for EHDSImagingReportHeader"/>
+<artifact deprecated="true" id="ConceptMap/EHDSImagingStudyMap" key="ConceptMap-EHDSImagingStudyMap" name="Map for EHDSImagingStudy"/>
+<artifact deprecated="true" id="ConceptMap/EHDSLocationMap" key="ConceptMap-EHDSLocationMap" name="Map for EHDSLocation"/>
+<artifact deprecated="true" id="ConceptMap/EHDSMediaMap" key="ConceptMap-EHDSMediaMap" name="Map for EHDSMedia"/>
+<artifact deprecated="true" id="ConceptMap/EHDSMedicationMap" key="ConceptMap-EHDSMedicationMap" name="Map for EHDSMedication"/>
+<artifact deprecated="true" id="ConceptMap/EHDSMedicationAdministrationMap" key="ConceptMap-EHDSMedicationAdministrationMap" name="Map for EHDSMedicationAdministration"/>
+<artifact deprecated="true" id="ConceptMap/EHDSObservationMap" key="ConceptMap-EHDSObservationMap" name="Map for EHDSObservation"/>
+<artifact deprecated="true" id="ConceptMap/EHDSOrganizationMap" key="ConceptMap-EHDSOrganizationMap" name="Map for EHDSOrganization"/>
+<artifact deprecated="true" id="ConceptMap/EHDSPatientMap" key="ConceptMap-EHDSPatientMap" name="Map for EHDSPatient"/>
+<artifact deprecated="true" id="ConceptMap/EHDSProcedureMap" key="ConceptMap-EHDSProcedureMap" name="Map for EHDSProcedure"/>
+<artifact deprecated="true" id="ConceptMap/EHDSRelatedPersonMap" key="ConceptMap-EHDSRelatedPersonMap" name="Map for EHDSRelatedPerson"/>
+<artifact deprecated="true" id="ConceptMap/EHDSServiceRequestMap" key="ConceptMap-EHDSServiceRequestMap" name="Map for EHDSServiceRequest"/>
+<artifact deprecated="true" id="ConceptMap/EHDSSpecimenMap" key="ConceptMap-EHDSSpecimenMap" name="Map for EHDSSpecimen"/>
+<artifact deprecated="true" id="ConceptMap/EHDSSubstanceMap" key="ConceptMap-EHDSSubstanceMap" name="Map for EHDSSubstance"/>
+<artifact deprecated="true" id="ConceptMap/EHDSTelecomMap" key="ConceptMap-EHDSTelecomMap" name="Map for EHDSTelecom"/>
 <artifact id="ValueSet/media-view" key="ValueSet-media-view" name="Media View types - placeholder for cross-version extension"/>
 <artifact id="StructureDefinition/EHDSMedia" key="StructureDefinition-EHDSMedia" name="Media model"/>
 <artifact id="StructureDefinition/CrossVersionMediaViewExtension" key="StructureDefinition-CrossVersionMediaViewExtension" name="Media.view extension"/>
@@ -230,21 +230,25 @@
 <artifact id="StructureDefinition/EHDSTelecom" key="StructureDefinition-EHDSTelecom" name="Telecom model"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
-<page key="actors-and-transactions" name="Actors and Transactions"/>
+<page key="volume-1" name="1:59 Manifest-based Access to DICOM Objects (MADO) Profile"/>
+<page key="rad-1xy" name="3.1xy WADO-RS Get Instances [RAD-1xy]"/>
+<page deprecated="true" key="actors-and-transactions" name="Actors and Transactions"/>
 <page key="adapting" name="Adapting Guidelines for Country use"/>
-<page key="artifacts-intro" name="Artifacts"/>
+<page deprecated="true" key="artifacts-intro" name="Artifacts"/>
 <page key="artifacts" name="Artifacts Summary"/>
 <page key="changes" name="Changes"/>
 <page key="contributors" name="Contributors"/>
 <page deprecated="true" key="profiles" name="Deployment profiles"/>
-<page key="design-considerations" name="Design Considerations"/>
-<page key="imaging-manifest" name="FHIR Imaging Manifest"/>
+<page deprecated="true" key="design-considerations" name="Design Considerations"/>
+<page key="fhir-imaging-manifest" name="FHIR Imaging Manifest"/>
 <page key="index" name="Home"/>
+<page deprecated="true" key="imaging-manifest" name="Imaging Manifest"/>
 <page deprecated="true" key="imaging-report" name="Imaging Report"/>
-<page key="kos-specification" name="KOS Specification"/>
-<page key="xtehr-mapping" name="Mapping to XtEHR Logical Model"/>
-<page key="artifacts-structural" name="Structural artifacts"/>
+<page key="issues" name="Issues"/>
+<page key="kos-manifest-specification" name="KOS manifest"/>
+<page deprecated="true" key="xtehr-mapping" name="Mapping to XtEHR Logical Model"/>
+<page deprecated="true" key="artifacts-structural" name="Structural artifacts"/>
 <page key="toc" name="Table of Contents"/>
-<page key="xtehr" name="XtEHR"/>
-<page key="xtehr-logical-model" name="XtEHR Logical Model"/>
+<page deprecated="true" key="xtehr" name="XtEHR"/>
+<page deprecated="true" key="xtehr-logical-model" name="XtEHR Logical Model"/>
 </specification>

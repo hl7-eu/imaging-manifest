@@ -49,24 +49,47 @@ pages:
       title: Adapting Guidelines for Country use	
     contributors.md:
       title: Contributors
-  actors-and-transactions.md:
-    title: Actors and Transactions
-  xtehr.md:
-    title: XtEHR
-    xtehr-logical-model.md:
-      title: XtEHR Logical Model
-    xtehr-mapping.md:
-      title: Mapping to XtEHR Logical Model
-  kos-specification.md:
-    title: KOS Specification
-  imaging-manifest.md:
+  issues.md: Issues
+  volume-1.md: 
+    title: 1:59 Manifest-based Access to DICOM Objects (MADO) Profile
+  rad-1xy.md: 
+    title: 3.1xy WADO-RS Get Instances [RAD-1xy]
+  kos-manifest-specification.md:
+    title: KOS manifest
+  fhir-imaging-manifest.md:
     title: FHIR Imaging Manifest
-  design-considerations.md:
-    title: Design Considerations
-  artifacts-intro.md:
-    title: Artifacts
-    artifacts-structural.md:
-      title: Structural artifacts
+
+# ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
+# │ The menu property will be used to generate the input/menu.xml file. The menu is represented    │
+# │ as a simple structure where the YAML key is the menu item name and the value is the URL.       │
+# │ The IG publisher currently only supports one level deep on sub-menus. To provide a             │
+# │ custom menu.xml file, do not include this property and include a `menu.xml` file in            │
+# │ input/includes. To use a provided input/includes/menu.xml file, delete the "menu"              │
+# │ property below.                                                                                │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+menu:
+  Home:
+    Introduction: index.html
+    Changes: changes.html
+    Dependencies: index.html#dependencies
+    References: index.html#references
+    Adapting Guidelines for Country use: adapting.html
+  Issues Log: issues.html
+  Volume 1: 
+    Introduction: volume-1.html
+    Actors, Transactions and Content Modules: volume-1.html#591-mado-actors-transactions-and-content-modules
+    Actor Options: volume-1.html#1592-mado-actor-options
+    Required Groupings: volume-1.html#1593-mado-required-actor-groupings
+    Overview: volume-1.html#1594-mado-overview
+    Security Considerations: volume-1.html#1595-mado-security-considerations
+    Cross-Profile Considerations: volume-1.html#1596-mado-cross-profile-considerations
+  Volume 2: 
+    WADO-RS Get Instances: rad-1xy.html
+  Volume 3: 
+    KOS Manifest Specification: kos-manifest-specification.html
+    FHIR Manifest Specification: fhir-imaging-manifest.html
+  Artifacts: artifacts.html
+
 # The parameters property represents IG.definition.parameter. Rather 
 # than a list of code/value pairs (as in the ImplementationGuide
 # resource), the code is the YAML key. If a parameter allows repeating
@@ -100,50 +123,7 @@ parameters:
   # broken links are not errors, but warnings
   # rule-broken-links: warning
   
-#
-# ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
-# │ The menu property will be used to generate the input/menu.xml file. The menu is represented    │
-# │ as a simple structure where the YAML key is the menu item name and the value is the URL.       │
-# │ The IG publisher currently only supports one level deep on sub-menus. To provide a             │
-# │ custom menu.xml file, do not include this property and include a `menu.xml` file in            │
-# │ input/includes. To use a provided input/includes/menu.xml file, delete the "menu"              │
-# │ property below.                                                                                │
-# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-menu:
-  Home:
-    Introduction: index.html
-    Changes: changes.html
-    Dependencies: index.html#dependencies
-    References: index.html#references
-    Adapting Guidelines for Country use: adapting.html
-  Actors and Transactions: actors-and-transactions.html
-  XtEHR model:
-    XtEHR-model: xtehr-logical-model.html
-    XtEHR-mapping: xtehr-mapping.html
-  FHIR Imaging Manifest: imaging-manifest.html
-  KOS specification: kos-specification.html
-  Artifacts: 
-    All: artifacts.html
-    Structural: artifacts-structural.html
-    Mapping: xtehr-mapping.html
-  Design Considerations: design-considerations.html
-  #   Changes: changes.html
-  #   Dependencies: index.html#dependencies
-  #   References: index.html#references
-  #   Adapting Guidelines for Country use: adapting.html
-  # eHN Guidelines: 
-  #   Summary: ehn-guidelines.html
-  #   Logical Model: ehn-guidelines.html#ehn-imaging-studies-and-reports-guidelines-logical-model
-  #   Concept Maps: ehn-guidelines.html#logical-model-mapping-onto-hl7-fhir
-  # Actors and Transactions:
-  #   System Actors: system-actors.html
-  #   Use Cases: use-cases.html
-  #   Transactions: transactions.html
-  # Domain Model: domain-model.html
-  # Artifacts: artifacts.html
-  # Design Considerations: design-considerations.html
-  # Open Topics: open-topics.html
-  
+ 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
 # │  resource. These properties are less commonly needed than those above.                         │

@@ -15,7 +15,9 @@ The following picture provide an overview of the origin of the participants.
     <p></p>
 </div>
 
-|Role                | Name                | Affiliation    |
-|--------------------|---------------------|----------------|
-| Project facilitator|  Bas van den Heuvel | Philips/HL7 EU |
-| Contributor        |  Ignacio Jauregui   | Philips        |
+|Role                | Name               | Affiliation    |
+|--------------------|--------------------|----------------|
+| Project facilitator| Rick Busbridge     | Nictiz         |
+| Contributor        | Bas van den Heuvel | Philips        |
+| Contributor        | Ignacio Jauregui   | Philips        |
+| Contributor        | Charles Parisot    |  |
