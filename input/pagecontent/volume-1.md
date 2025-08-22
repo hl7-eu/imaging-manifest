@@ -13,7 +13,7 @@ Figure 1:59.1-1 shows the actors directly involved in the MADO Profile and the r
 
 The Imaging Document Consumer obtains the Imaging Manifests from the local community through grouping with different actors in the ITI profiles that can provide access to the XDS / MHD infrastructure, such as the XDS.b Document Consumer or MHD Document Consumer. The XDS.b Document Consumer and MHD Document Consumer are NOT included in this profile.
 
-{% include img.html img="fhir-manifest-overview.drawio.png" caption="Figure 1:59.1-1: MADO Actor Diagram" %}
+{% include img.html img="mado-actor-diagram.drawio.png" caption="Figure 1:59.1-1: MADO Actor Diagram" %}
 
 Table 1:59.1-1 lists the transactions/content for each actor directly involved in the Manifest-based Access to DICOM Objects (MADO)  Profile. To claim compliance with this profile, an actor shall support all required transactions/content (labeled “R”) and may support the optional transactions (labeled “O”).
 
@@ -85,7 +85,9 @@ Options that may be selected for each actor in this profile, if any, are listed 
 | Imaging Document Source   | Rendered Instances (Note 3)                     | See X.2.3 |
 
 *Note 1: at least one of these two options shall be supported.*
+
 *Note 2: at least one of these two options shall be supported.*
+
 *Note 3: at least one of these two options shall be supported.*
 
 ### 1:59.3 MADO Required Grouping
