@@ -43,8 +43,9 @@ A DocumentReference profile for the Manifest DocumentReference used in MHD deplo
 * content contains kos 0..1 and fhir 0..1
 * content[kos]
   * attachment 1..1
-    * language 
-    * creation 
+    * contentType = #application/dicom
+    * data 0..1
+    * url 1..1
   * profile 1..*
     * insert SliceElement( #value, value )
   * profile contains kos-manifest 1..1 
@@ -52,8 +53,9 @@ A DocumentReference profile for the Manifest DocumentReference used in MHD deplo
     * valueCoding = $dcm#113030 // Manifest
 * content[fhir]
   * attachment 1..1
-    * language 
-    * creation 
+    * contentType = #application/fhir+json
+    * data 0..1
+    * url 1..1
   * profile 1..*
     * insert SliceElement( #value, value )
   * profile contains fhir-manifest 1..1 
