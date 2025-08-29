@@ -49,11 +49,14 @@ pages:
       title: Adapting Guidelines for Country use	
     contributors.md:
       title: Contributors
-  issues.md: Issues
+  issues.md: 
+    title: Issues
   volume-1.md: 
     title: 1:59 Manifest-based Access to DICOM Objects (MADO) Profile
   rad-1xy.md: 
     title: 3.1xy WADO-RS Get Instances [RAD-1xy]
+  manifest-envelop.md:
+    title: Manifest Envelop
   kos-manifest-specification.md:
     title: KOS manifest
   fhir-imaging-manifest.md:
@@ -85,6 +88,7 @@ menu:
   Volume 2: 
     WADO-RS Get Instances: rad-1xy.html
   Volume 3: 
+    Manifest Envelop: manifest-envelop.html
     KOS Manifest Specification: kos-manifest-specification.html
     FHIR Manifest Specification: fhir-imaging-manifest.html
   Artifacts: artifacts.html
