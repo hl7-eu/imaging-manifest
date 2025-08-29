@@ -1,6 +1,6 @@
 Profile: ImImagingStudy
 Parent: ImagingStudy
-Title: "IM Imaging Study"
+Title: "ImagingStudy: Manifest Imaging Study"
 Description: """ 
 This profile represents an imaging study instance.
 """
@@ -47,7 +47,7 @@ This profile represents an imaging study instance.
 
 Extension: ImImagingStudyInstanceDescription
 Id: instance-description
-Title: "Instance Description"
+Title: "Extension: Instance Description"
 Description: "A description of the instance in an ImagingStudy."
 Context: ImagingStudy.series.instance
 * value[x] only string
@@ -60,6 +60,7 @@ Expression: "identifier.where(system='urn:dicom:uid').value.startsWith('urn:oid:
 RuleSet: EndpointTypes
 * endpoint 0..*  
   * insert SliceElement( #profile, $this )
-* endpoint contains wado 0..1 and iid 0..1
+* endpoint contains wado 0..1 and iid 0..1 and xcwado 0..1
 * endpoint[wado] only Reference( ImWadoEndpoint )
-* endpoint[iid] only Reference( ImImageIidViewerEndpoint )
+* endpoint[xcwado] only Reference( ImXcWadoEndpoint )
+* endpoint[iid] only Reference( ImIheIidViewerEndpoint )

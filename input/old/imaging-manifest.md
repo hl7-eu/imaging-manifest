@@ -14,7 +14,7 @@ direction LR
   class ImWadoEndpoint {
   <<Endpoint>>
   }
-  class ImImageIidViewerEndpoint {
+  class ImIheIidViewerEndpoint {
   <<Endpoint>>
   }
   class ImImagingDevice {
@@ -56,10 +56,10 @@ direction LR
   ImProcedure --> ImImagingDevice: performer[imaging-device]
   ImProcedure --> PractitionerRoleEu: performer[performer]
 
-  ImImagingStudyManifest *-- ImImageIidViewerEndpoint
+  ImImagingStudyManifest *-- ImIheIidViewerEndpoint
   ImImagingStudyManifest *-- "1..*" ImWadoEndpoint
   ImImagingStudy --> ImWadoEndpoint: endpoint / series.endpoint
-  ImImagingStudy --> ImImageIidViewerEndpoint: endpoint / series.endpoint
+  ImImagingStudy --> ImIheIidViewerEndpoint: endpoint / series.endpoint
 
   
 ```

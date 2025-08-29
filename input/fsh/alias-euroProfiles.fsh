@@ -37,8 +37,8 @@ Alias: $EuDocumentReferenceUrl = http://hl7.org/fhir/StructureDefinition/Documen
 Alias: $EuEncounter            = EncounterEu
 Alias: $EuEncounterUrl         = http://hl7.eu/fhir/imaging-r5/StructureDefinition/EncounterEu
 
-Alias: $EuEndpoint             = EndpointEu
-Alias: $EuEndpointUrl          = http://hl7.eu/fhir/imaging-r5/StructureDefinition/EndpointEu
+Alias: $EuEndpoint             = Endpoint
+Alias: $EuEndpointUrl          = http://hl7.eu/fhir/imaging-r5/StructureDefinition/Endpoint
 
 Alias: $EuHumanName            = HumanName
 Alias: $EuHumanNameUrl         = http://hl7.org/fhir/StructureDefinition/HumanName
@@ -49,20 +49,20 @@ Alias: $EuEpisodeOfCareUrl     = http://hl7.org/fhir/StructureDefinition/Episode
 Alias: $EuImagingStudy         = ImagingStudy
 Alias: $EuImagingStudyUrl      = http://hl7.org/fhir/StructureDefinition/ImagingStudy
 
-Alias: $EuLocation             = http://hl7.eu/fhir/base-r5/StructureDefinition/location-eu
-Alias: $EuLocationUrl          = http://hl7.eu/fhir/base-r5/StructureDefinition/location-eu
+Alias: $EuLocation             = Location
+Alias: $EuLocationUrl          = http://hl7.org/fhir/StructureDefinition/Location
 
-Alias: $EuMedication           = MedicationEu
-Alias: $EuMedicationUrl        = http://hl7.eu/fhir/imaging-r5/StructureDefinition/MedicationEu
+Alias: $EuMedication           = Medication
+Alias: $EuMedicationUrl        = http://hl7.org/fhir/StructureDefinition/Medication
 
-Alias: $EuObservation          = ObservationEu
-Alias: $EuObservationUrl       = http://hl7.eu/fhir/imaging-r5/StructureDefinition/ObservationEu
+Alias: $EuObservation          = Observation
+Alias: $EuObservationUrl       = http://hl7.org/fhir/StructureDefinition/Observation
 
 Alias: $EuMedicationAdministration = MedicationAdministration
 Alias: $EuMedicationAdministrationUrl = http://hl7.org/fhir/StructureDefinition/MedicationAdministration
 
-Alias: $EuOrganization         = http://hl7.eu/fhir/base-r5/StructureDefinition/organization-eu
-Alias: $EuOrganizationUrl      = http://hl7.eu/fhir/base-r5/StructureDefinition/organization-eu
+Alias: $EuOrganization         = Organization
+Alias: $EuOrganizationUrl      = http://hl7.org/fhir/StructureDefinition/Organization
 
 Alias: $EuPatient              = http://hl7.eu/fhir/base-r5/StructureDefinition/patient-eu
 Alias: $EuPatientUrl           = http://hl7.eu/fhir/base-r5/StructureDefinition/patient-eu
@@ -70,35 +70,15 @@ Alias: $EuPatientUrl           = http://hl7.eu/fhir/base-r5/StructureDefinition/
 Alias: $EuPatientCore          = http://hl7.eu/fhir/base-r5/StructureDefinition/patient-core-eu
 Alias: $EuPatientCoreUrl       = http://hl7.eu/fhir/base-r5/StructureDefinition/patient-core-eu
 
-Alias: $EuPatientAnimal        = PatientAnimalEu
-Alias: $EuPatientAnimalUrl     = http://hl7.eu/fhir/base-r5/StructureDefinition/Patient-animal-eu
+Alias: $EuPractitionerRole     = PractitionerRoleEu
+Alias: $EuPractitionerRoleUrl  = http://hl7.org/fhir/StructureDefinition/PractitionerRole
 
-Alias: $EuPractitionerRole     = http://hl7.eu/fhir/base-r5/StructureDefinition/practitionerRole-eu
-Alias: $EuPractitionerRoleUrl  = http://hl7.eu/fhir/base-r5/StructureDefinition/practitionerRole-eu
+Alias: $EuPractitioner         = Practitioner
+Alias: $EuPractitionerUrl      = http://hl7.org/fhir/StructureDefinition/Practitioner
 
-Alias: $EuPractitioner         = http://hl7.eu/fhir/base-r5/StructureDefinition/practitioner-eu
-Alias: $EuPractitionerUrl      = http://hl7.eu/fhir/base-r5/StructureDefinition/practitioner-eu
-
-Alias: $EuProcedure            = ProcedureEu
-Alias: $EuProcedureUrl         = http://hl7.eu/fhir/imaging-r5/StructureDefinition/ProcedureEu
-
-Alias: $EuRange                = RangeEu
-Alias: $EuRangeUrl             = http://hl7.eu/fhir/imaging-r5/StructureDefinition/RangeEu
-
-Alias: $EuRelatedPerson        = RelatedPersonEu
-Alias: $EuRelatedPersonUrl     = http://hl7.org/fhir/StructureDefinition/RelatedPerson
+Alias: $EuProcedure            = Procedure
+Alias: $EuProcedureUrl         = http://hl7.org/fhir/StructureDefinition/Procedure
 
 Alias: $EuServiceRequest       = ServiceRequest
 Alias: $EuServiceRequestUrl    = http://hl7.org/fhir/StructureDefinition/ServiceRequest
 
-Alias: $EuQuantity             = QuantityEu
-Alias: $EuQuantityUrl          = http://hl7.eu/fhir/imaging-r5/StructureDefinition/QuantityEu
-
-Alias: $EuSimpleQuantity       = SimpleQuantityEu
-Alias: $EuSimpleQuantityUrl    = http://hl7.eu/fhir/imaging-r5/StructureDefinition/SimpleQuantityEu
-
-Alias: $EuSpecimen             = SpecimenEu
-Alias: $EuSpecimenUrl          = http://hl7.eu/fhir/imaging-r5/StructureDefinition/SpecimenEu
-
-Alias: $EuSubstance            = Substance
-Alias: $EuSubstanceUrl         = http://hl7.org/fhir/StructureDefinition/Substance

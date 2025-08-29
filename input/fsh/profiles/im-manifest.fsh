@@ -1,6 +1,6 @@
 Profile: ImImagingStudyManifest
 Parent: Bundle
-Title: "IM ImagingStudy Manifest"
+Title: "Bundle: Imaging Manifest"
 Description: """
 This profile represents a manifest of an imaging study. It holds the ImagingStudy resource that mirrors the information in the DICOM study allow with other resources that are required to express the information in DICOM in FHIR.\n
 """
@@ -29,7 +29,7 @@ This profile represents a manifest of an imaging study. It holds the ImagingStud
 * entry[endpoint]
   * fullUrl 1..1
   * resource 1..1
-  * resource only ImWadoEndpoint or ImImageIidViewerEndpoint
+  * resource only ImWadoEndpoint or ImIheIidViewerEndpoint or ImXcWadoEndpoint
 * entry[imagingdevice]
   * fullUrl 1..1
   * resource 1..1

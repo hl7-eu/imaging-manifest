@@ -21,3 +21,4 @@ Description: "Code system for codes that are defined in DICOM but for which no m
   * #0040A171 "Observation UID" "Unique identifier for the observation Content Item (and its subsidiary Content Items, if any). The UID represents the semantic content of the observation; an encoding of the same observation with the same context into another representation (e.g., a CDA Entry) may use the same UID."
   * #00400554 "Specimen UID" "Unique identifier for the Specimen."
   * #00620021 "Tracking UID" "A unique identifier used for tracking a finding or feature, potentially across multiple reporting objects, over time."
+  * #0040E031 "HomeCommunityId" "Uniquely identifies a Community to which requests for the referenced Instances can be directed."

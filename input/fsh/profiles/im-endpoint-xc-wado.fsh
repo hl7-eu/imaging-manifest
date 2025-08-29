@@ -1,22 +1,22 @@
-Profile: ImWadoEndpoint
+Profile: ImXcWadoEndpoint
 Parent: Endpoint
-Title: "Endpoint: WADO"
+Title: "Endpoint: IHE-XC-WADO"
 Description: """
-This profile defines the WADO endpoint for accessing imaging study content.
+This profile defines the XC-WADO endpoint for accessing imaging study content.
 """
 * insert SetFmmAndStatusRule( 1, "draft" )
 
 * connectionType 
   * insert SliceElement( #value, coding )
-* connectionType contains wado 1..1 
-* connectionType[wado].coding = http://terminology.hl7.org/CodeSystem/endpoint-connection-type#dicom-wado-rs "DICOM WADO-RS"
+* connectionType contains xc-wado 1..1 
+* connectionType[xc-wado].coding = http://terminology.hl7.org/CodeSystem/endpoint-connection-type#dicom-xc-wado "IHE XC-WADO" // TODO fixe code-system
 
 * payload 
   * insert SliceElement( #value, type )
-* payload contains wadors 1..1 
-* payload[wadors]
+* payload contains xcwado 1..1 
+* payload[xcwado]
   * type 1..1 
-  * type = http://terminology.hl7.org/CodeSystem/endpoint-connection-type#dicom-wado-rs "DICOM WADO-RS"
+  * type = http://terminology.hl7.org/CodeSystem/endpoint-connection-type#dicom-xc-wado "IHE XC-WADO"
   * mimeType 
     * insert SliceElement( #value, $this )
   * mimeType contains 
@@ -62,4 +62,3 @@ This profile defines the WADO endpoint for accessing imaging study content.
   * mimeType[text-xml]        = #text/xml
   * mimeType[text-rtf]        = #text/rtf
   * mimeType[application-pdf] = #application/pdf
-
