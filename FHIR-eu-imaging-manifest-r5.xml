@@ -7,6 +7,7 @@
 <artifact deprecated="true" id="StructureDefinition/EHDSAddress" key="StructureDefinition-EHDSAddress" name="Address model"/>
 <artifact deprecated="true" id="StructureDefinition/EHDSAlertFlag" key="StructureDefinition-EHDSAlertFlag" name="Alert flag model"/>
 <artifact deprecated="true" id="StructureDefinition/EHDSAllergyIntolerance" key="StructureDefinition-EHDSAllergyIntolerance" name="Allergy intolerance model"/>
+<artifact id="ValueSet/im-anatomical-region-valueset" key="ValueSet-im-anatomical-region-valueset" name="Anatomical Region"/>
 <artifact deprecated="true" id="StructureDefinition/EHDSAppointment" key="StructureDefinition-EHDSAppointment" name="Appointment model"/>
 <artifact deprecated="true" id="StructureDefinition/EHDSAttachment" key="StructureDefinition-EHDSAttachment" name="Attachment model"/>
 <artifact deprecated="true" id="StructureDefinition/EHDSAttachments" key="StructureDefinition-EHDSAttachments" name="Attachments"/>
@@ -14,6 +15,7 @@
 <artifact deprecated="true" id="StructureDefinition/EHDSCarePlan" key="StructureDefinition-EHDSCarePlan" name="Care plan model"/>
 <artifact deprecated="true" id="StructureDefinition/EHDSClinicalImpression" key="StructureDefinition-EHDSClinicalImpression" name="Clinical impression model"/>
 <artifact id="CodeSystem/codesystem-endpoint-terminology" key="CodeSystem-codesystem-endpoint-terminology" name="CodeSystem for terminology used in Endpoint resources in the EU Imaging IG."/>
+<artifact id="StructureDefinition/CodeableReferenceWithRequiredCoding" key="StructureDefinition-CodeableReferenceWithRequiredCoding" name="CodeableReferenceWithRequiredCoding"/>
 <artifact deprecated="true" id="StructureDefinition/EHDSCondition" key="StructureDefinition-EHDSCondition" name="Condition model"/>
 <artifact deprecated="true" id="StructureDefinition/EHDSCoverage" key="StructureDefinition-EHDSCoverage" name="Coverage model"/>
 <artifact id="ValueSet/im-wado-mime-types" key="ValueSet-im-wado-mime-types" name="DICOM WADO mime types"/>
@@ -170,6 +172,7 @@
 <artifact deprecated="true" id="ValueSet/periods-of-life-value-set" key="ValueSet-periods-of-life-value-set" name="Periods of Life"/>
 <artifact deprecated="true" id="StructureDefinition/periods-of-life-extension" key="StructureDefinition-periods-of-life-extension" name="Periods of Life Extension"/>
 <artifact id="StructureDefinition/IheMhdEntryUUIDIdentifier" key="StructureDefinition-IheMhdEntryUUIDIdentifier" name="Placeholder for IHE MHD Entry UUID Identifier in FHIR R5."/>
+<artifact id="ValueSet/im-practice-settings" key="ValueSet-im-practice-settings" name="Practice Settings"/>
 <artifact deprecated="true" id="StructureDefinition/EHDSProcedure" key="StructureDefinition-EHDSProcedure" name="Procedure model"/>
 <artifact id="StructureDefinition/ImProcedure" key="StructureDefinition-ImProcedure" name="Procedure: Image Acquisition Procedure"/>
 <artifact deprecated="true" id="StructureDefinition/ImIheMhdDocumentReference" key="StructureDefinition-ImIheMhdDocumentReference" name="R5 DocumentReference for MHD deployments"/>
@@ -222,6 +225,8 @@
 <artifact deprecated="true" id="StructureDefinition/Report-ImRadiationDoseObservation" key="StructureDefinition-Report-ImRadiationDoseObservation" name="Report obligations for ImRadiationDoseObservation"/>
 <artifact deprecated="true" id="StructureDefinition/Report-ImReport" key="StructureDefinition-Report-ImReport" name="Report obligations for ImReport"/>
 <artifact deprecated="true" id="StructureDefinition/EHDSCommonHeader" key="StructureDefinition-EHDSCommonHeader" name="Resource header model"/>
+<artifact id="SearchParameter/DateImagesAcquiredSearchParameter" key="SearchParameter-DateImagesAcquiredSearchParameter" name="SearchParameter: DateImagesAcquired"/>
+<artifact id="SearchParameter/DateManifestCreatedSearchParameter" key="SearchParameter-DateManifestCreatedSearchParameter" name="SearchParameter: DateManifestCreated"/>
 <artifact deprecated="true" id="StructureDefinition/EHDSServiceRequest" key="StructureDefinition-EHDSServiceRequest" name="Service request model"/>
 <artifact id="StructureDefinition/ImOrder" key="StructureDefinition-ImOrder" name="ServiceRequest: Imaging Order"/>
 <artifact deprecated="true" id="StructureDefinition/EHDSSlot" key="StructureDefinition-EHDSSlot" name="Slot model"/>
@@ -231,10 +236,9 @@
 <artifact deprecated="true" id="StructureDefinition/EHDSTask" key="StructureDefinition-EHDSTask" name="Task model"/>
 <artifact deprecated="true" id="StructureDefinition/EHDSTelecom" key="StructureDefinition-EHDSTelecom" name="Telecom model"/>
 <artifact id="ValueSet/im-imaging-device-type" key="ValueSet-im-imaging-device-type" name="ValueSet: Imaging Device Type"/>
+<artifact id="ValueSet/im-xds-class-code-valueset" key="ValueSet-im-xds-class-code-valueset" name="XDS Class Codes"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
-<page key="volume-1" name="1:59 Manifest-based Access to DICOM Objects (MADO) Profile"/>
-<page key="rad-1xy" name="3.1xy WADO-RS Get Instances [RAD-1xy]"/>
 <page deprecated="true" key="actors-and-transactions" name="Actors and Transactions"/>
 <page key="adapting" name="Adapting Guidelines for Country use"/>
 <page deprecated="true" key="artifacts-intro" name="Artifacts"/>

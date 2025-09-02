@@ -1,3 +1,4 @@
+
 ValueSet: ImImagingManifestTypesEuVS
 Title: "HL7 EU Imaging Manifest Types"
 Description: "HL7 EU Imaging Manifest Types used in Compositions and DiagnosticReports."
