@@ -57,8 +57,8 @@ pages:
   #   title: 3.1xy WADO-RS Get Instances [RAD-1xy]
   manifest-envelop.md:
     title: Manifest Envelop
-  kos-manifest-specification.md:
-    title: KOS manifest
+  # kos-manifest-specification.md:
+  #   title: KOS manifest
   fhir-imaging-manifest.md:
     title: FHIR Imaging Manifest
 
@@ -78,7 +78,8 @@ menu:
     Adapting Guidelines for Country use: adapting.html
   Issues Log: issues.html
   Volume 1: 
-    Introduction: volume-1.html
+    # Introduction: volume-1.html
+    Introduction: https://docs.google.com/document/d/1Rq5Cd7Ate8RdR0RU-oP0uQvYA_Jz359v/edit#heading=h.5ct9ee81lsuq
     # Actors, Transactions and Content Modules: volume-1.html#591-mado-actors-transactions-and-content-modules
     Actors, Transactions and Content Modules: https://docs.google.com/document/d/1Rq5Cd7Ate8RdR0RU-oP0uQvYA_Jz359v/edit#heading=h.sj02796pqlmr
     # Actor Options: volume-1.html#1592-mado-actor-options

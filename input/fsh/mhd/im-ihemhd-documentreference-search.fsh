@@ -36,8 +36,8 @@ Searches for manifest created on a specific date.
 * code = #data-manifest-created
 * base[+] = #DocumentReference
 * type = #date
-* multipleAnd = true
-* multipleOr = true
+// * multipleAnd = true
+// * multipleOr = true
 
 // BodySite / Anatomical Region = DocumentReference.BodySite (ImagingStudy.series.bodySite)
 // standard search parameter: bodysite https://hl7.org/fhir/R5/documentreference-search.html#10.2.19
@@ -55,4 +55,18 @@ Searches for manifest created on a specific date.
 // (Other MHD generic stuff (patient ID, etc))
 // standard search param period https://hl7.org/fhir/R5/documentreference-search.html#10.2.40
 
-
+///////////////////////////// R5 version of standard IHE-MHD https://profiles.ihe.net/ITI/MHD/SearchParameter-DocumentReference-Creation.json.html
+// creation
+Instance: DocumentReference-Creation
+InstanceOf: SearchParameter
+Usage: #definition
+* name = "SearchParameter: DocumentReference-Creation"
+* title = "SearchParameter: DocumentReference-Creation"
+* status = #active
+* experimental = false 
+* description = "This SearchParameter enables finding DocumentReference by the creation dateTime."
+* code = #creation
+* base[+] = #DocumentReference
+* type = #date
+// * multipleAnd = true
+// * multipleOr = true

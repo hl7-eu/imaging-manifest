@@ -227,6 +227,7 @@
 <artifact deprecated="true" id="StructureDefinition/EHDSCommonHeader" key="StructureDefinition-EHDSCommonHeader" name="Resource header model"/>
 <artifact id="SearchParameter/DateImagesAcquiredSearchParameter" key="SearchParameter-DateImagesAcquiredSearchParameter" name="SearchParameter: DateImagesAcquired"/>
 <artifact id="SearchParameter/DateManifestCreatedSearchParameter" key="SearchParameter-DateManifestCreatedSearchParameter" name="SearchParameter: DateManifestCreated"/>
+<artifact id="SearchParameter/DocumentReference-Creation" key="SearchParameter-DocumentReference-Creation" name="SearchParameter: DocumentReference-Creation"/>
 <artifact deprecated="true" id="StructureDefinition/EHDSServiceRequest" key="StructureDefinition-EHDSServiceRequest" name="Service request model"/>
 <artifact id="StructureDefinition/ImOrder" key="StructureDefinition-ImOrder" name="ServiceRequest: Imaging Order"/>
 <artifact deprecated="true" id="StructureDefinition/EHDSSlot" key="StructureDefinition-EHDSSlot" name="Slot model"/>
@@ -252,7 +253,6 @@
 <page deprecated="true" key="imaging-manifest" name="Imaging Manifest"/>
 <page deprecated="true" key="imaging-report" name="Imaging Report"/>
 <page key="issues" name="Issues"/>
-<page key="kos-manifest-specification" name="KOS manifest"/>
 <page key="manifest-envelop" name="Manifest Envelop"/>
 <page deprecated="true" key="xtehr-mapping" name="Mapping to XtEHR Logical Model"/>
 <page deprecated="true" key="artifacts-structural" name="Structural artifacts"/>
