@@ -51,10 +51,10 @@ pages:
       title: Contributors
   issues.md: 
     title: Issues
-  volume-1.md: 
-    title: 1:59 Manifest-based Access to DICOM Objects (MADO) Profile
-  rad-1xy.md: 
-    title: 3.1xy WADO-RS Get Instances [RAD-1xy]
+  # volume-1.md: 
+  #   title: 1:59 Manifest-based Access to DICOM Objects (MADO) Profile
+  # rad-1xy.md: 
+  #   title: 3.1xy WADO-RS Get Instances [RAD-1xy]
   manifest-envelop.md:
     title: Manifest Envelop
   kos-manifest-specification.md:
@@ -79,17 +79,25 @@ menu:
   Issues Log: issues.html
   Volume 1: 
     Introduction: volume-1.html
-    Actors, Transactions and Content Modules: volume-1.html#591-mado-actors-transactions-and-content-modules
-    Actor Options: volume-1.html#1592-mado-actor-options
-    Required Groupings: volume-1.html#1593-mado-required-grouping
-    Overview: volume-1.html#1594-mado-overview
-    Security Considerations: volume-1.html#1595-mado-security-considerations
-    Cross-Profile Considerations: volume-1.html#1596-mado-cross-profile-considerations
+    # Actors, Transactions and Content Modules: volume-1.html#591-mado-actors-transactions-and-content-modules
+    Actors, Transactions and Content Modules: https://docs.google.com/document/d/1Rq5Cd7Ate8RdR0RU-oP0uQvYA_Jz359v/edit#heading=h.sj02796pqlmr
+    # Actor Options: volume-1.html#1592-mado-actor-options
+    Actor Options: https://docs.google.com/document/d/1Rq5Cd7Ate8RdR0RU-oP0uQvYA_Jz359v/edit#heading=h.598eb7603xav
+    # Required Groupings: volume-1.html#1593-mado-required-grouping
+    Required Groupings: https://docs.google.com/document/d/1Rq5Cd7Ate8RdR0RU-oP0uQvYA_Jz359v/edit#heading=h.jhz3torlj92v
+    # Overview: volume-1.html#1594-mado-overview
+    Overview: https://docs.google.com/document/d/1Rq5Cd7Ate8RdR0RU-oP0uQvYA_Jz359v/edit#heading=h.r1er32vy1yjx
+    # Security Considerations: volume-1.html#1595-mado-security-considerations
+    Security Considerations: https://docs.google.com/document/d/1Rq5Cd7Ate8RdR0RU-oP0uQvYA_Jz359v/edit#heading=h.rda7wgahjhuw
+    # Cross-Profile Considerations: volume-1.html#1596-mado-cross-profile-considerations
+    Cross-Profile Considerations: https://docs.google.com/document/d/1Rq5Cd7Ate8RdR0RU-oP0uQvYA_Jz359v/edit#heading=h.1r5p8pdph3n8
   Volume 2: 
-    WADO-RS Get Instances: rad-1xy.html
+    # WADO-RS Get Instances: rad-1xy.html
+    WADO-RS Get Instances: https://docs.google.com/document/d/1Rq5Cd7Ate8RdR0RU-oP0uQvYA_Jz359v/edit#heading=h.xt763ccz388r
   Volume 3: 
     Manifest Envelop: manifest-envelop.html
-    KOS Manifest Specification: kos-manifest-specification.html
+    # KOS Manifest Specification: kos-manifest-specification.html 
+    KOS Manifest Specification: https://docs.google.com/document/d/1Rq5Cd7Ate8RdR0RU-oP0uQvYA_Jz359v/edit#heading=h.y9b6ifwmxt1
     FHIR Manifest Specification: fhir-imaging-manifest.html
   Artifacts: artifacts.html
 
