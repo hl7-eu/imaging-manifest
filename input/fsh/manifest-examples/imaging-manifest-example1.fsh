@@ -1,3 +1,23 @@
+Instance: Example1-DocumentReference
+InstanceOf: ImManifestIheMhdDocumentReference
+Title: "Example DocumentReference"
+Description: "Example DocumentReference"
+Usage: #example
+* identifier[+]
+  * system = "urn:ietf:rfc:3986"
+  * value = "urn:oid:1.2.840.10008.5.1.4.1.1.2"
+* status = #current
+* modality = http://dicom.nema.org/resources/ontology/DCM#US "Ultrasound"
+* type = $loinc#LG51714-0	"US|Finger|Multisection|Laterality:ANY"
+* category = $xds-class-code#images
+* subject = Reference( Example1-Patient )
+* content[fhir]
+  * attachment[+]
+    * contentType = #application/fhir+json
+    * url = "./ImagingStudy/1/$generate-fhir-manifest"
+  * profile[fhir-manifest].valueCanonical = Canonical( ImImagingStudyManifest)
+      
+
 Instance: Example1-ImagingStudyManifest
 InstanceOf: ImImagingStudyManifest
 Title: "Example ImagingStudy Manifest"
