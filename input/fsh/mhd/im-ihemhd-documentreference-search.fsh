@@ -16,7 +16,7 @@ Usage: #definition
 * description = """  
 Searches for manifest representing imaging studies that were acquired on a specific date.
 """
-* code = #data-image-acquired
+* code = #date-image-acquired
 * base[+] = #DocumentReference
 * type = #date
 * multipleAnd = true
@@ -33,7 +33,7 @@ Usage: #definition
 * description = """  
 Searches for manifest created on a specific date.
 """
-* code = #data-manifest-created
+* code = #date-manifest-created
 * base[+] = #DocumentReference
 * type = #date
 // * multipleAnd = true

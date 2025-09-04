@@ -19,8 +19,8 @@ Imaging specific search parameters include:
 {:.grid}
 | **Name** | **Type** | **Description** | **Expression** |
 | =====| ===== | ===========| ========== |
-| [data-image-acquired](./SearchParameter-DateImagesAcquiredSearchParameter) | [date](https://hl7.org/fhir/R5/search.html#date) | Allows searches on the time the image was acquired. |  |
-| [data-manifest-created](./SearchParameter-DateManifestCreated) | [date](https://hl7.org/fhir/R5/search.html#date) | Allows searches on the time the manifest was created. ||
+| [date-image-acquired](./SearchParameter-DateImagesAcquiredSearchParameter) | [date](https://hl7.org/fhir/R5/search.html#date) | Allows searches on the time the image was acquired. |  |
+| [date-manifest-created](./SearchParameter-DateManifestCreated) | [date](https://hl7.org/fhir/R5/search.html#date) | Allows searches on the time the manifest was created. ||
 | [bodysite](https://hl7.org/fhir/R5/documentreference-search.html#DocumentReference-bodysite) | [token](https://hl7.org/fhir/R5/search.html#token) | The body site studied | DocumentReference.bodySite.concept |
 | [modality](https://hl7.org/fhir/R5/documentreference-search.html#DocumentReference-modality) | [token](https://hl7.org/fhir/R5/search.html#token) | The modality used | DocumentReference.modality |
 
