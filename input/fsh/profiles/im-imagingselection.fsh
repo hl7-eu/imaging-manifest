@@ -3,7 +3,7 @@ Parent: ImagingSelection
 Title: "Imaging Selection"
 Description: "Imaging Selection"
 * insert SetFmmAndStatusRule( 1, draft )
-* subject only Reference( $EuPatient )
+* subject only Reference( ImPatient )
 
 * derivedFrom 1..*
   * insert SliceElement( #profile, $this )

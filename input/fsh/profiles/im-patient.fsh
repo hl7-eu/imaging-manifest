@@ -1,5 +1,5 @@
 Profile: ImPatient
-Parent: $EuPatient
+Parent: Patient
 Title: "Patient: Imaging Patient"
 Description: "This profile on Patient represents the Imaging Patient."
 * insert SetFmmAndStatusRule( 1, draft )

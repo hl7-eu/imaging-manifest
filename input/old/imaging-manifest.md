@@ -11,7 +11,7 @@ direction LR
   class ImImagingStudyManifest {
   <<Bundle>>
   }
-  class ImWadoEndpoint {
+  class ImWadoRsEndpoint {
   <<Endpoint>>
   }
   class ImIheIidViewerEndpoint {
@@ -57,8 +57,8 @@ direction LR
   ImProcedure --> PractitionerRoleEu: performer[performer]
 
   ImImagingStudyManifest *-- ImIheIidViewerEndpoint
-  ImImagingStudyManifest *-- "1..*" ImWadoEndpoint
-  ImImagingStudy --> ImWadoEndpoint: endpoint / series.endpoint
+  ImImagingStudyManifest *-- "1..*" ImWadoRsEndpoint
+  ImImagingStudy --> ImWadoRsEndpoint: endpoint / series.endpoint
   ImImagingStudy --> ImIheIidViewerEndpoint: endpoint / series.endpoint
 
   

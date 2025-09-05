@@ -1,4 +1,4 @@
-Profile: ImWadoEndpoint
+Profile: ImWadoRsEndpoint
 Parent: Endpoint
 Title: "Endpoint: WADO"
 Description: """

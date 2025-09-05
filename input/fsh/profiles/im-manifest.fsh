@@ -21,7 +21,7 @@ This profile represents a manifest of an imaging study. It holds the ImagingStud
 * entry[patient]
   * fullUrl 1..1
   * resource 1..1
-  * resource only $EuPatient
+  * resource only ImPatient
 * entry[order]
   * fullUrl 1..1
   * resource 1..1
@@ -29,7 +29,7 @@ This profile represents a manifest of an imaging study. It holds the ImagingStud
 * entry[endpoint]
   * fullUrl 1..1
   * resource 1..1
-  * resource only ImWadoEndpoint or ImIheIidViewerEndpoint or ImXcWadoEndpoint
+  * resource only ImWadoRsEndpoint or ImIheIidViewerEndpoint or ImXcWadoEndpoint
 * entry[imagingdevice]
   * fullUrl 1..1
   * resource 1..1
@@ -37,7 +37,7 @@ This profile represents a manifest of an imaging study. It holds the ImagingStud
 * entry[practitioner]
   * fullUrl 1..1
   * resource 1..1
-  * resource only $EuPractitioner or $EuPractitionerRole
+  * resource only Practitioner or PractitionerRole
 
 
 // Profile: ImManifestImagingStudy

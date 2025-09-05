@@ -1,5 +1,5 @@
 Instance: Example-WadoEndpoint
-InstanceOf: ImWadoEndpoint
+InstanceOf: ImWadoRsEndpoint
 * status = #active
 * name = "Example WADO-RS Endpoint"
 * connectionType[wado] = http://terminology.hl7.org/CodeSystem/endpoint-connection-type#dicom-wado-rs "DICOM WADO-RS"

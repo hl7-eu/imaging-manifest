@@ -1,8 +1,8 @@
 id: hl7.fhir.eu.imaging-manifest-r5
 canonical: http://hl7.eu/fhir/imaging-manifest-r5
 name: HL7EuImagingStudyManifestR5
-title: HL7 Europe Manifest-based Access to DICOM Objects (MADO) Profile R5
-description: This guide describes how a Imaging Study Manifest can be represented in the European REALM.
+title: Manifest-based Access to DICOM Objects (MADO) Profile (FHIR-R5 elements)
+description: This guide describes FHIR R5 related elements of the IHE-MADO profile.
 status: draft # draft | active | retired | unknown
 experimental: false
 version: 0.2.0-ballot
@@ -28,8 +28,8 @@ dependencies:
   hl7.terminology.r5: 6.3.0
   hl7.fhir.uv.extensions: 5.2.0
   hl7.fhir.uv.ips: 1.1.0
-  hl7.fhir.eu.extensions: 0.1.1-ballot
-  hl7.fhir.eu.base-r5: 0.1.0-ballot
+  # hl7.fhir.eu.extensions: 0.1.1-ballot
+  # hl7.fhir.eu.base-r5: 0.1.0-ballot
   
   # eu.ehds.models: 0.1.0
   # eu.ehds.models: current

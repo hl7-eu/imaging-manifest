@@ -28,7 +28,7 @@ Description: "Key images represented as an ImagingSelection, it refers to minima
   * insert SliceElement( #type, actor )
 * performer contains performer 0..1 and device 0..1
 * performer[performer]
-  * actor only Reference( $EuPractitionerRole )
+  * actor only Reference( PractitionerRole or Practitioner )
 * performer[device]
   * actor only Reference( ImImagingDevice )
 // * study 1..1

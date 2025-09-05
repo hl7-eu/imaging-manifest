@@ -1,5 +1,5 @@
 Profile: ImProcedure
-Parent: $EuProcedure
+Parent: Procedure
 Title: "Procedure: Image Acquisition Procedure"
 Description: "This profile on Procedure represents the imaging procedure."
 * insert SetFmmAndStatusRule( 1, draft )
@@ -23,7 +23,7 @@ Description: "This profile on Procedure represents the imaging procedure."
       * insert SliceElement( #value, "$this" )
     * coding contains healthcare-professional 0..1
     * coding[healthcare-professional] = $sct#223366009 //"Healthcare professional" // TODO check this code
-  * actor only Reference($EuPractitionerRole)
+  * actor only Reference(PractitionerRole)
 * performer[imaging-device]
   * function
     * coding

@@ -4,21 +4,21 @@
 <div markdown="1" class="stu-note">
 **IMPORTANT**: MADO is NOT yet recommended for production use.
 
-This is the 0.2.0-build version of the specification. 
+**IMPORTANT**:This profile is in the process of being transferred to IHE-RAD. When IHE-RAD has published the MADO profile, the parts in this specification covered by the IHE-RAD-MADO profile will be removed and replaced to a reference to the IHE-RAD-MADO profile.
+
+This is the 0.2.0-build version of the specification.
 
 Profiles released for Trial Implementation by HL7/IHE Europe typically ARE expected to be stable enough for production use; however, this release of IRA is intended for experimental implementation and feedback.
 
 The source of this IG is stored on github [https://github.com/hl7-eu/imaging-manifest](https://github.com/hl7-eu/imaging-manifest).
 
 The content of this implementation guide is discussed HL7 EU calls ([HL7-eu imaging on Confluence](https://confluence.hl7.org/spaces/HEU/pages/321160129/Imaging+meetings)).
-   
+
 This version is based on FHIR R5. A FHIR R4 version will be derived from this ballot version and is expected to be published in the near future.  
 
 Experimental implementation feedback may result in backward incompatible changes to the profile.
 
-Links to FHIRcast throughout this profile will be updated to the final version when the official version is published.
 
-| [Significant Changes, Open and Closed Issues](issues.html) |
 {: .grid}
 
 </div>
@@ -41,11 +41,11 @@ The development of this implementation guide is promoted by HL7 Europe, but real
 
 In term of structure of the profile here the skeleton:
 
-1. The volume 1 is the profile overview in term of Actor/Transactions, the overall use case and associated scenarios. Volume 1 alsos state the required and optional transactions, as well as the required/optional grouping. 
+1. The volume 1 is the profile overview in term of Actor/Transactions, the overall use case and associated scenarios. Volume 1 alsos state the required and optional transactions, as well as the required/optional grouping.
 2. Volume 2 Chapter on the WADO-RS Retrieve Transaction.
 3. A volume 3 Chapter on the Manifest content that includes a section A on the DICOM KOS based Manifest, and one section B on the FHIR based Manifest. The section C (for information) would include the mapping of A to B and B from A
 
-### Dependencies
+### FHIR specific Dependencies
 
 {% include dependency-table.xhtml %}
 

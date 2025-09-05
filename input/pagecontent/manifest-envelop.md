@@ -1,16 +1,18 @@
+{% include variable-definitions.md %}
+
 Part of the information related to accessing the content is part of the envelop in which the manifest is distributed. In the case of using {{IHE-MHD}}, the envelop used in a DocumentReference.
 
-The Profile for document reference to publish EHDS imaging manifests is documented in the {% include profile-link.html name="ImManifestIheMhdDocumentReference" %}.
+The Profile for document reference to publish EHDS imaging manifests is documented in the {% include profile-link.html name="ImManifestDocumentReference" %}.
 
-The figure below shows the {% include profile-link.html name="ImManifestIheMhdDocumentReference" %} most relevant restrictions and its relationship with the manifests.
+The figure below shows the {% include profile-link.html name="ImManifestDocumentReference" %} most relevant restrictions and its relationship with the manifests.
 
 {% include img.html img="manifest-envelop.drawio.png" caption="Figure: IHE-MHD envelop" %}
 
 The main choices illustrated in the figure are:
 
-* The {% include profile-link.html name="ImManifestIheMhdDocumentReference" %} requires to refer to either a FHIR manifest or KOS manifest or both.
-* FHIR manifest are represented as a FHIR json encoded [FHIR manifest](http:./fhir-imaging-manifest.html) that follows the profile {% include profile-link.html name="ImImagingStudyManifest" %}.
-* KOS manifest are represented as a DICOM encoded DICOM instance following the [KOS profile](http:./kos-manifest-specification.html).
+* The {% include profile-link.html name="ImManifestDocumentReference" %} requires to refer to either a FHIR manifest or KOS manifest or both.
+* A FHIR manifest is represented as a FHIR json encoded FHIR {{Bundle}} following the profile {% include profile-link.html name="ImImagingStudyManifest" %}. This Bundle contains the {{ImagingStudy}} resource as well other resources such as the {{Patient}} and various {{Endpoint}}s.
+* A KOS manifest is represented as a DICOM encoded DICOM instance following the [MADO KOS profile]([http:./kos-manifest-specification.html](https://docs.google.com/document/d/1Rq5Cd7Ate8RdR0RU-oP0uQvYA_Jz359v/edit#heading=h.y9b6ifwmxt1)).
 
 The FHIR-manifest can be losslessly translated into the KOS-manifest and vice-versa allowing applications to change the representation when needed.
 
@@ -24,7 +26,7 @@ Imaging specific search parameters include:
 | [bodysite](https://hl7.org/fhir/R5/documentreference-search.html#DocumentReference-bodysite) | [token](https://hl7.org/fhir/R5/search.html#token) | The body site studied | DocumentReference.bodySite.concept |
 | [modality](https://hl7.org/fhir/R5/documentreference-search.html#DocumentReference-modality) | [token](https://hl7.org/fhir/R5/search.html#token) | The modality used | DocumentReference.modality |
 
-General MHD search parameters are:
+General {{iheMhd}} defined search parameters are:
 
 {:.grid}
 | **Name** | **Type** | **Description** | **Expression** |

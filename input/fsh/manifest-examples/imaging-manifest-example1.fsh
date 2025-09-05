@@ -1,5 +1,5 @@
 Instance: Example1-DocumentReference
-InstanceOf: ImManifestIheMhdDocumentReference
+InstanceOf: ImManifestDocumentReference
 Title: "Example DocumentReference"
 Description: "Example DocumentReference"
 Usage: #example
@@ -20,7 +20,7 @@ Usage: #example
 
 Instance: Example1-ImagingStudyManifest
 InstanceOf: ImImagingStudyManifest
-Title: "Example ImagingStudy Manifest"
+Title: "Example ImagingStudy Manifest 1"
 Description: "Example ImagingStudy Manifest"
 Usage: #example
 * type = #searchset
@@ -125,7 +125,7 @@ Usage: #inline
 * birthDate = 2002-01-01
 
 Instance: Example1-referrer
-InstanceOf: PractitionerEu
+InstanceOf: Practitioner
 Title: "Example Performer"
 Usage: #inline
 * id = "referrer"
