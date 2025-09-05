@@ -1,6 +1,6 @@
 Profile: ImImagingDevice
 Parent: Device
-Title: "Im Imaging Device"
+Title: "Device: Imaging Acquisition Device"
 Description: """The device the made the image."""	
 * insert SetFmmAndStatusRule( 1, draft )
 * status 1..1
@@ -14,7 +14,7 @@ Description: """The device the made the image."""
 
 ValueSet: ImImagingDeviceType
 Id: im-imaging-device-type
-Title: "Imaging Device Type"
+Title: "ValueSet: Imaging Device Type"
 Description: "Imaging Device Type."
 * insert SNOMEDCopyrightForVS
 * ^experimental = false

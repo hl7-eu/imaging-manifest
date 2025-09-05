@@ -1,6 +1,6 @@
 Profile: ImImagingStudy
 Parent: ImagingStudy
-Title: "IM Imaging Study"
+Title: "ImagingStudy: Manifest Imaging Study"
 Description: """ 
 This profile represents an imaging study instance.
 """
@@ -13,7 +13,7 @@ This profile represents an imaging study instance.
 * identifier[studyInstanceUid] only ImStudyInstanceUidIdentifier
 
 * subject 1..1
-* subject only Reference( $EuPatient or $EuDevice )
+* subject only Reference( ImPatient or Device )
 
 // reference to the order that has the Accession Number and including the Accession Number as identifier
 * basedOn
@@ -30,10 +30,10 @@ This profile represents an imaging study instance.
   * performer contains performer 0..1 and device 0..1 and custodian 0..1
   * performer[performer]
     * function = http://terminology.hl7.org/CodeSystem/v3-ParticipationType#PRF
-    * actor only Reference( $EuPractitionerRole )
+    * actor only Reference( PractitionerRole or Practitioner)
   * performer[custodian]
     * function = http://terminology.hl7.org/CodeSystem/v3-ParticipationType#CST
-    * actor only Reference( $EuOrganization )
+    * actor only Reference( Organization )
   * performer[device]
     * function = http://terminology.hl7.org/CodeSystem/v3-ParticipationType#DEV
     * actor only Reference( ImImagingDevice ) 
@@ -47,7 +47,7 @@ This profile represents an imaging study instance.
 
 Extension: ImImagingStudyInstanceDescription
 Id: instance-description
-Title: "Instance Description"
+Title: "Extension: Instance Description"
 Description: "A description of the instance in an ImagingStudy."
 Context: ImagingStudy.series.instance
 * value[x] only string
@@ -60,6 +60,7 @@ Expression: "identifier.where(system='urn:dicom:uid').value.startsWith('urn:oid:
 RuleSet: EndpointTypes
 * endpoint 0..*  
   * insert SliceElement( #profile, $this )
-* endpoint contains wado 0..1 and iid 0..1
-* endpoint[wado] only Reference( ImWadoEndpoint )
-* endpoint[iid] only Reference( ImImageIidViewerEndpoint )
+* endpoint contains wadors 0..1 and iid 0..1 and xcwado 0..1
+* endpoint[wadors] only Reference( ImWadoRsEndpoint )
+* endpoint[xcwado] only Reference( ImXcWadoEndpoint )
+* endpoint[iid] only Reference( ImIheIidViewerEndpoint )

@@ -1,0 +1,15 @@
+@startuml
+    participant Requester
+    participant Responder
+
+    group Get Instances
+        Requester -> Responder ++: Get Instances Request
+        Responder --> Requester --: GetInstances Response
+    end
+
+    group Get Rendered Instances
+        Requester -> Responder ++: Get Rendered Instances Request
+        Responder --> Requester --: Get Rendered Instances Response
+    end
+
+@enduml

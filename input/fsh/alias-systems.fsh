@@ -7,6 +7,7 @@ Alias: $atc = http://www.whocc.no/atc
 Alias: $condition-category = http://terminology.hl7.org/CodeSystem/condition-category
 Alias: $data-absent-reason = http://terminology.hl7.org/CodeSystem/data-absent-reason
 Alias: $data-absent-reason-cs =  http://terminology.hl7.org/CodeSystem/data-absent-reason
+Alias: $dcm = http://dicom.nema.org/resources/ontology/DCM
 Alias: $diagnosis-role = http://terminology.hl7.org/CodeSystem/diagnosis-role
 Alias: $dicomOntology = http://dicom.nema.org/resources/ontology/DCM
 Alias: $edqm = https://standardterms.edqm.eu
@@ -14,7 +15,7 @@ Alias: $encounter-status = http://hl7.org/fhir/encounter-status
 Alias: $iccc3 = http://terminology.hl7.org/CodeSystem/iccc-3 // FAKE URL NOT YET ASSIGNED !!
 Alias: $icd03 = http://terminology.hl7.org/CodeSystem/icd-o-3
 Alias: $icd10 = http://hl7.org/fhir/sid/icd-10
-Alias: $loinc =  http://loinc.org
+Alias: $loinc = http://loinc.org
 Alias: $dcm = http://dicom.nema.org/resources/ontology/DCM
 Alias: $medicalDevice-cs = urn:oid:1.3.6.1.4.1.12559.11.10.1.3.1.44.6 // ===> to be checked <====
 Alias: $niaid = http://niaid.nih.gov
@@ -37,7 +38,7 @@ Alias: $v3-NullFlavor = http://terminology.hl7.org/CodeSystem/v3-NullFlavor
 Alias: $v3-ObservationInterpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
 Alias: $v3-ParticipationType = http://terminology.hl7.org/CodeSystem/v3-ParticipationType
 Alias: $v3-RoleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
-
+Alias: $xds-class-code = urn:oid:1.3.6.1.4.1.19376.1.2.6.1
 // --- SID
 Alias: $oid = urn:ietf:rfc:1155
 Alias: $uri = urn:ietf:rfc:3986

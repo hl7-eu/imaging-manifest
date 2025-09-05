@@ -3,7 +3,7 @@ Parent: ImagingSelection
 Title: "Imaging Selection"
 Description: "Imaging Selection"
 * insert SetFmmAndStatusRule( 1, draft )
-* subject only Reference( $EuPatient )
+* subject only Reference( ImPatient )
 
 * derivedFrom 1..*
   * insert SliceElement( #profile, $this )
@@ -13,7 +13,7 @@ Description: "Imaging Selection"
 
 Profile: ImSrInstanceImagingSelection
 Parent: ImImagingSelection
-Title: "Imaging Selection referring to a DICOM SR instance"
+Title: "Imaging Selection: DICOM SR instance reference"
 Description: "Imaging Selection referring to a DICOM SR instance"
 * insert SetFmmAndStatusRule( 1, draft )
 * identifier 1..*

@@ -2,7 +2,7 @@
 
 Instance: Example2-ImagingStudyManifest
 InstanceOf: ImImagingStudyManifest
-Title: "Example ImagingStudy Manifest"
+Title: "Example ImagingStudy Manifest 2"
 Description: "Example ImagingStudy Manifest"
 Usage: #example
 * type = #searchset
@@ -70,7 +70,7 @@ Usage: #inline
 * birthDate = 2002-01-01
 
 Instance: Example2-referrer
-InstanceOf: PractitionerEu
+InstanceOf: Practitioner
 Title: "Example Performer"
 Usage: #inline
 * id = "referrer"

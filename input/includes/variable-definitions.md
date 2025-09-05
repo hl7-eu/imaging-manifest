@@ -9,6 +9,7 @@
 {% assign iheRad            = "[IHE-RAD](https://profiles.ihe.net/RAD/)" %}
 {% assign iheIid            = "[IHE-IID](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_Suppl_IID.pdf)" %}
 {% assign iheIDR            = "[IHE-IDR](https://build.fhir.org/ig/IHE/RAD.IDR/)" %}
+{% assign iheMhd            = "[IHE-MHD](https://profiles.ihe.net/ITI/MHD/)" %}
 
 {% assign hl7EuBase         = "[HL7 EU Base](https://build.fhir.org/ig/hl7-eu/base-r5/)" %}
 {% assign hl7EuExtensions   = "[HL7 Europe Extensions](https://build.fhir.org/ig/hl7-eu/extensions-r5/)" %}
