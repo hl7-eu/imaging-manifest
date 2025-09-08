@@ -23,7 +23,14 @@ Description: "Key images represented as an ImagingSelection, it refers to minima
     * resource 0..0
     * resourceReference 1..1
     * resourceReference only Reference(ImagingSelection)
-* code from https://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_7010.html (preferred)
+
+* code from https://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_7010.html (extensible)
+
+* category 
+  * insert SliceElement( #value, type )
+* category contains key-image 1..1 
+* category[key-image] = $loinc#55113-5 // "Key Images
+
 * performer
   * insert SliceElement( #type, actor )
 * performer contains performer 0..1 and device 0..1
