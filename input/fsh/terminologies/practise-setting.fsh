@@ -1,7 +1,7 @@
 ValueSet:   PracticeSettingsVs
 Id:	        im-practice-settings
 Title:	    "Practice Settings"
-Description:   """A list with practice settings to be used for filtering manifests."""
+Description:   """A list with practice settings to be used for filtering manifests (source IHE PCC)"""
 * $sct#28351000087106 //Addiction specialty
 * $sct#25931000087108 //Adolescent medicine
 * $sct#715184008 //Aerospace medicine

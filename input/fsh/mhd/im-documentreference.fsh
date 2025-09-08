@@ -15,11 +15,16 @@ A DocumentReference profile for the Manifest DocumentReference used in MHD deplo
 
 * category 1..* 
   * insert SliceElement( #value, $this )
-* category contains class-code 0..*
-* category[class-code] from XdsClassCodeVs (preferred)
+* category contains class-code 1..1 and service-section 0..*
+* category[class-code] from XdsClassCodeVs (required)
+* category[class-code] = $xds-class-code#IMAGES //"Images"
+  * ^short = "The class code of this DocumentReference, for manifest this set to IMAGES."
+* category[service-section] from http://hl7.org/fhir/ValueSet/diagnostic-service-sections (extensible)
   
 
-* practiceSetting from PracticeSettingsVs (preferred)
+* practiceSetting from PracticeSettingsVs (extensible)
+  * ^short = "The practice setting of the imaging manifest."
+  * ^definition = "This field may be used to provide additional information about the practice setting where the imaging manifest was created."
 
 * type 1..1 
 * type from ImImagingManifestTypesEuVS (preferred) 
