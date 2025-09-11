@@ -23,7 +23,7 @@ This profile represents an imaging study instance.
 
 * endpoint 0..*  
   * insert SliceElement( #profile, $this )
-* endpoint contains viewer 0..1 and iid 0..1 and xcwado 0..1 and wadors 0..1
+* endpoint contains viewer 0..* and iid 0..* and xcwado 0..* and wadors 0..*
 * endpoint[viewer] only Reference( ImImageViewerEndpoint )
 * endpoint[iid] only Reference( ImIheIidViewerEndpoint )
 * endpoint[wadors] only Reference( ImWadoRsEndpoint )
@@ -46,7 +46,7 @@ This profile represents an imaging study instance.
 
   * endpoint 0..*  
     * insert SliceElement( #profile, $this )
-  * endpoint contains wadors 0..1 and xcwado 0..1
+  * endpoint contains wadors 0..* and xcwado 0..*
   * endpoint[wadors] only Reference( ImWadoRsEndpoint )
   * endpoint[xcwado] only Reference( ImXcWadoEndpoint )
 
