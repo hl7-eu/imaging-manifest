@@ -10,7 +10,8 @@ Description: "This code system defines various codes used to define ValueSets fo
 * #connection-type "Endpoint connection type"  "The type of connection that the endpoint supports."
   * #ihe-iid       "IHE IID endpoint"          "IHE IID endpoint connection type."
   * #ihe-xcwado    "IHE XC-WADO endpoint"      "IHE XC WADO endpoint connection type."
-  
+  * #dicom-image-viewer   "DICOM image viewer"  "Connection that allows viewing a certain imaging study."
+
 // ValueSet:   ImWadoMimeTypes
 // Id:	        im-wado-mime-types
 // Title:	    "DICOM WADO mime types"

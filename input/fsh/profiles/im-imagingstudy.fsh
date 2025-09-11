@@ -21,7 +21,13 @@ This profile represents an imaging study instance.
 * basedOn contains imorderaccession 0..1
 * insert BasedOnImOrderReference( imorderaccession )
 
-* insert EndpointTypes 
+* endpoint 0..*  
+  * insert SliceElement( #profile, $this )
+* endpoint contains viewer 0..1 and iid 0..1 and xcwado 0..1 and wadors 0..1
+* endpoint[viewer] only Reference( ImImageViewerEndpoint )
+* endpoint[iid] only Reference( ImIheIidViewerEndpoint )
+* endpoint[wadors] only Reference( ImWadoRsEndpoint )
+* endpoint[xcwado] only Reference( ImXcWadoEndpoint )
 
 * series
   * performer.function from ImImagingStudyPerformerTypeVS (extensible)
@@ -38,7 +44,11 @@ This profile represents an imaging study instance.
     * function = http://terminology.hl7.org/CodeSystem/v3-ParticipationType#DEV
     * actor only Reference( ImImagingDevice ) 
 
-  * insert EndpointTypes 
+  * endpoint 0..*  
+    * insert SliceElement( #profile, $this )
+  * endpoint contains wadors 0..1 and xcwado 0..1
+  * endpoint[wadors] only Reference( ImWadoRsEndpoint )
+  * endpoint[xcwado] only Reference( ImXcWadoEndpoint )
 
   * instance
     * extension contains 
@@ -57,10 +67,3 @@ Description: "A DICOM instance UID must start with 'urn:oid:'"
 Severity: #warning
 Expression: "identifier.where(system='urn:dicom:uid').value.startsWith('urn:oid:')"
 
-RuleSet: EndpointTypes
-* endpoint 0..*  
-  * insert SliceElement( #profile, $this )
-* endpoint contains wadors 0..1 and iid 0..1 and xcwado 0..1
-* endpoint[wadors] only Reference( ImWadoRsEndpoint )
-* endpoint[xcwado] only Reference( ImXcWadoEndpoint )
-* endpoint[iid] only Reference( ImIheIidViewerEndpoint )
