@@ -255,7 +255,6 @@
 <page key="index" name="Home"/>
 <page deprecated="true" key="imaging-manifest" name="Imaging Manifest"/>
 <page deprecated="true" key="imaging-report" name="Imaging Report"/>
-<page key="issues" name="Issues"/>
 <page key="manifest-envelop" name="Manifest Envelop"/>
 <page deprecated="true" key="xtehr-mapping" name="Mapping to XtEHR Logical Model"/>
 <page deprecated="true" key="artifacts-structural" name="Structural artifacts"/>

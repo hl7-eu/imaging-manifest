@@ -27,7 +27,7 @@ Description: "Key images represented as an ImagingSelection, it refers to minima
 * code from https://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_7010.html (extensible)
 
 * category 
-  * insert SliceElement( #value, type )
+  * insert SliceElement( #value, $this )
 * category contains key-image 1..1 
 * category[key-image] = $loinc#55113-5 // "Key Images
 

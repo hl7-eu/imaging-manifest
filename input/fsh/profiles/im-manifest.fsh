@@ -6,7 +6,9 @@ This profile represents a manifest of an imaging study. It holds the ImagingStud
 """
 * insert SetFmmAndStatusRule( 1, draft )
 * entry 
-  * insert SliceElement( #profile, resource )
+  * insert SliceElement( #type, [[resource]] )
+  * fullUrl 1..1
+  * resource 1..1
 * entry 
     contains imagingstudy 1..1  
     and      patient 0..1
@@ -15,28 +17,16 @@ This profile represents a manifest of an imaging study. It holds the ImagingStud
     and      imagingdevice 0..*
     and      practitioner 0..*
 * entry[imagingstudy]
-  * fullUrl 1..1
-  * resource 1..1
   * resource only ImImagingStudy
 * entry[patient]
-  * fullUrl 1..1
-  * resource 1..1
   * resource only ImPatient
 * entry[order]
-  * fullUrl 1..1
-  * resource 1..1
   * resource only ImOrder
 * entry[endpoint]
-  * fullUrl 1..1
-  * resource 1..1
   * resource only ImWadoRsEndpoint or ImIheIidViewerEndpoint or ImXcWadoEndpoint
 * entry[imagingdevice]
-  * fullUrl 1..1
-  * resource 1..1
   * resource only ImImagingDevice
 * entry[practitioner]
-  * fullUrl 1..1
-  * resource 1..1
   * resource only Practitioner or PractitionerRole
 
 

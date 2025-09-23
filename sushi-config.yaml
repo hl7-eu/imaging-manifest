@@ -55,8 +55,8 @@ pages:
     title: Volume 1
   mado-volume2.md:
     title: Volume 2
-  issues.md: 
-    title: Issues
+  # issues.md: 
+  #   title: Issues
   # volume-1.md: 
   #   title: 1:59 Manifest-based Access to DICOM Objects (MADO) Profile
   # rad-1xy.md: 
@@ -84,7 +84,7 @@ menu:
     Changes: changes.html
     Dependencies: index.html#fhir-specific-dependencies
     Adapting Guidelines for Country use: adapting.html
-  Issues Log: issues.html
+  # Issues Log: issues.html
   Volume 1: mado-volume1.html
     # Introduction: volume-1.html
     # Introduction: https://docs.google.com/document/d/1Rq5Cd7Ate8RdR0RU-oP0uQvYA_Jz359v/edit#heading=h.5ct9ee81lsuq
