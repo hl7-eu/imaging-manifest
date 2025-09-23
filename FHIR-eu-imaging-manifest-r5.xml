@@ -260,6 +260,10 @@
 <page deprecated="true" key="xtehr-mapping" name="Mapping to XtEHR Logical Model"/>
 <page deprecated="true" key="artifacts-structural" name="Structural artifacts"/>
 <page key="toc" name="Table of Contents"/>
+<page key="mado-volume1" name="Volume 1"/>
+<page key="mado-volume2" name="Volume 2"/>
+<page key="mado-volume3-KOS" name="Volume 3 - KOS"/>
 <page deprecated="true" key="xtehr" name="XtEHR"/>
 <page deprecated="true" key="xtehr-logical-model" name="XtEHR Logical Model"/>
+<page key="mado-intro" name="mado"/>
 </specification>
