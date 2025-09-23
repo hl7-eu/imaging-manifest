@@ -5,11 +5,11 @@ title: Manifest-based Access to DICOM Objects (MADO) Profile (FHIR-R5 elements)
 description: This guide describes FHIR R5 related elements of the IHE-MADO profile.
 status: draft # draft | active | retired | unknown
 experimental: false
-version: 0.2.0-ballot
+version: 0.2.0-snapshot1
 fhirVersion: 5.0.0 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 #fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2025+
-releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
+releaseLabel: draft # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 jurisdiction: 	http://unstats.un.org/unsd/methods/m49/m49.htm#150 "Europe" # urn:iso:std:iso:3166#EU
 publisher:
