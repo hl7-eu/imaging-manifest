@@ -17,7 +17,7 @@ publisher:
   url: http://hl7.eu
   # email: test@example.org
 copyright: >-
-  Used by permission of HL7 Europe, all rights reserved Creative Commons License
+  Copyright HL7 Europe. Licensed under Creative Commons public domain (CC0 1.0).
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 
 # The dependencies property corresponds to IG.dependsOn. The key is the

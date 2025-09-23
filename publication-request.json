@@ -1,0 +1,14 @@
+{
+  "package-id" : "hl7.fhir.eu.imaging-manifest-r5",
+  "version" : "0.2.0-snapshot1",
+  "path" : "http://hl7.eu/fhir/imaging-manifest-r5/0.2.0-snapshot1",
+  "ci-build": "https://build.fhir.org/ig/hl7-eu/imaging-manifest",
+  "first": true,
+  "desc" : "This is the first ballot of the Imaging Manifest FHIR IG STU 1",
+  "category" : "Imaging",
+  "introduction" : "This guide describes FHIR R5 related elements of the IHE-MADO profile.",
+  "title" : "Manifest-based Access to DICOM Objects (MADO) Profile (FHIR-R5 elements)",
+  "mode": "milestone",
+  "status" : "preview",
+  "sequence" : "STU 1"
+}
