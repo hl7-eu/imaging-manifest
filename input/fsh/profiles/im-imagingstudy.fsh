@@ -63,7 +63,7 @@ Context: ImagingStudy.series.instance
 * value[x] only string
 
 Invariant: im-imagingstudy-01
-Description: "A DICOM instance UID must start with 'urn:oid:'"
+Description: "A DICOM instance UID must start with 'ihe:urn:oid:'"
 Severity: #warning
-Expression: "identifier.where(system='urn:dicom:uid').value.startsWith('urn:oid:')"
+Expression: "identifier.where(system='urn:dicom:uid').value.startsWith('ihe:urn:oid:')"
 
