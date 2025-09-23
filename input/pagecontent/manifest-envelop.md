@@ -12,7 +12,7 @@ The main choices illustrated in the figure are:
 
 * The {% include profile-link.html name="ImManifestDocumentReference" %} requires to refer to either a FHIR manifest or KOS manifest or both.
 * A FHIR manifest is represented as a FHIR json encoded FHIR {{Bundle}} following the profile {% include profile-link.html name="ImImagingStudyManifest" %}. This Bundle contains the {{ImagingStudy}} resource as well other resources such as the {{Patient}} and various {{Endpoint}}s.
-* A KOS manifest is represented as a DICOM encoded DICOM instance following the [MADO KOS profile]([http:./kos-manifest-specification.html](https://docs.google.com/document/d/1Rq5Cd7Ate8RdR0RU-oP0uQvYA_Jz359v/edit#heading=h.y9b6ifwmxt1)).
+* A KOS manifest is represented as a DICOM encoded DICOM instance following the MADO KOS profile.
 
 The FHIR-manifest can be losslessly translated into the KOS-manifest and vice-versa allowing applications to change the representation when needed.
 
@@ -21,8 +21,8 @@ Imaging specific search parameters include:
 {:.grid}
 | **Name** | **Type** | **Description** | **Expression** |
 | =====| ===== | ===========| ========== |
-| [date-image-acquired](./SearchParameter-DateImagesAcquiredSearchParameter) | [date](https://hl7.org/fhir/R5/search.html#date) | Allows searches on the time the image was acquired. |  |
-| [date-manifest-created](./SearchParameter-DateManifestCreated) | [date](https://hl7.org/fhir/R5/search.html#date) | Allows searches on the time the manifest was created. ||
+| [date-image-acquired](./SearchParameter-DateImagesAcquiredSearchParameter.html) | [date](https://hl7.org/fhir/R5/search.html#date) | Allows searches on the time the image was acquired. |  |
+| [date-manifest-created](./SearchParameter-DateManifestCreatedSearchParameter.html) | [date](https://hl7.org/fhir/R5/search.html#date) | Allows searches on the time the manifest was created. ||
 | [bodysite](https://hl7.org/fhir/R5/documentreference-search.html#DocumentReference-bodysite) | [token](https://hl7.org/fhir/R5/search.html#token) | The body site studied | DocumentReference.bodySite.concept |
 | [modality](https://hl7.org/fhir/R5/documentreference-search.html#DocumentReference-modality) | [token](https://hl7.org/fhir/R5/search.html#token) | The modality used | DocumentReference.modality |
 
