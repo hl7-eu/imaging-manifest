@@ -1,0 +1,73 @@
+Profile: ImKeyImageImagingSelection
+Parent: ImImagingSelection
+Title: "ImagingSelection: Key image"
+Description: "Key images represented as an ImagingSelection, it refers to minimal 1 instance."
+* insert SetFmmAndStatusRule( 1, draft )
+
+* extension contains 
+    $artifact-title-url            named title 0..1 and
+    $artifact-description-url      named description 0..1 and 
+    $artifact-related-artifact-url named kin-instance 0..1
+* extension[title] 
+  * ^short = "Key image title"
+  * ^definition = "The title of the key image object"
+* extension[description] 
+  * ^short = "Key Image description"
+  * ^definition = "The description of the key image"
+* extension[kin-instance] 
+  * ^short = "KIN"
+  * ^definition = "Optional reference to the instance storing the KIN"
+  * valueRelatedArtifact 1..1
+    * type = #derived-from
+    * document 0..0
+    * resource 1..1
+    * resource only Canonical(http://hl7.org/fhir/4.0/StructureDefinition/R5-ImagingSelection-for-R4)
+//R5    * resource 0..0
+//R5    * resourceReference 1..1
+//R5    * resourceReference only Reference(ImagingSelection)
+
+// code
+* extension[ImagingSelection].extension[code].valueCodeableConcept from https://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_7010.html (extensible)
+//R5* code from https://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_7010.html (extensible)
+
+// category
+* extension[ImagingSelection].extension[category] 1..* 
+* extension[ImagingSelection].extension[category] contains key-image 1..1 
+* extension[ImagingSelection].extension[category][key-image].valueCodeableConcept = $loinc#55113-5 // "Key Images
+
+//R5* category 
+//R5  * insert SliceElement( #value, $this )
+//R5* category contains key-image 1..1 
+//R5* category[key-image] = $loinc#55113-5 // "Key Images
+
+// performer
+* extension[ImagingSelection].extension[performer] contains performer 0..1 and device 0..1
+* extension[ImagingSelection].extension[performer][performer].valueReference only Reference( PractitionerRole or Practitioner )
+* extension[ImagingSelection].extension[performer][device].valueReference only Reference( ImImagingDevice )
+
+//R5* performer
+//R5  * insert SliceElement( #type, actor )
+//R5* performer contains performer 0..1 and device 0..1
+//R5* performer[performer]
+//R5  * actor only Reference( PractitionerRole or Practitioner )
+//R5* performer[device]
+//R5  * actor only Reference( ImImagingDevice )
+// * study 1..1
+
+// Series UID and Instance UID
+* extension[ImagingSelection].extension[seriesUid] 1..1
+* extension[ImagingSelection].extension[seriesUid].value[x] 1..1
+//R5* seriesUid 1..1
+
+* extension[ImagingSelection].extension[instance] 1..*
+* extension[ImagingSelection].extension[instance].extension[uid].value[x] 1..1
+//R5* instance 1..*
+//R5  * uid 1..1
+
+
+
+// Profile: KinRelatedArtifact
+// Parent:  RelatedArtifact
+// Title:   "Related artifact pointing at source KIN object"
+// Description: ""
+// // * type = #derived-from

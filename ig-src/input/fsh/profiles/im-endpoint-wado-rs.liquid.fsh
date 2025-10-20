@@ -1,0 +1,104 @@
+Profile: ImWadoRsEndpoint
+Parent: Endpoint
+Title: "Endpoint: WADO"
+Description: """
+This profile defines the WADO endpoint for accessing imaging study content.
+"""
+* insert SetFmmAndStatusRule( 1, "draft" )
+
+* insert setEndpointConnectionType( wadors, [[http://terminology.hl7.org/CodeSystem/endpoint-connection-type#dicom-wado-rs]] "DICOM WADO-RS"]] )
+
+// payload type
+{{R4}}* payloadType
+{{R4}}  * insert SliceElement( #value, type )
+{{R4}}* payloadType contains wadors 1..1 
+{{R4}}* payloadType[wadors] = http://terminology.hl7.org/CodeSystem/endpoint-connection-type#dicom-wado-rs "DICOM WADO-RS"
+{{R4}}* payloadMimeType 
+{{R4}}  * insert SliceElement( #value, $this )
+{{R4}}* payloadMimeType  contains 
+
+{{R5}}* payload 
+{{R5}}  * insert SliceElement( #value, type )
+{{R5}}* payload contains wadors 1..1 
+{{R5}}* payload[wadors]
+{{R5}}  * type 1..1 
+{{R5}}  * type = http://terminology.hl7.org/CodeSystem/endpoint-connection-type#dicom-wado-rs "DICOM WADO-RS"
+{{R5}}  * mimeType 
+{{R5}}    * insert SliceElement( #value, $this )
+{{R5}}  * mimeType contains 
+      // source dicom
+      dicom 1..1 and 
+      dicom-octet 1..1 and
+      dicom-xml 1..1 and 
+      dicom-json 1..1 and 
+      // image
+      image-jpg 1..1 and
+      image-gif 1..1 and
+      image-jp2 1..1 and
+      image-jph 1..1 and
+      image-jxl 1..1 and
+      // multiframe
+      // image-gif 0..1 and
+      // image-jxl 0..1 and
+      // video
+      video-mpeg 1..1 and
+      video-mp4 1..1 and
+      video-H265 1..1 and
+      // text
+      text-html 1..1 and
+      text-plain 1..1 and
+      text-xml 1..1 and  
+      text-rtf 1..1 and
+      application-pdf 1..1
+
+{{R5}}  * mimeType[dicom]           = #application/dicom
+{{R4}}* payloadMimeType[dicom]      = #application/dicom
+    
+{{R5}}  * mimeType[dicom-octet]   = #application/octet-stream
+{{R4}}* payloadMimeType[dicom-octet]   = #application/octet-stream
+
+{{R5}}  * mimeType[dicom-xml]       = #application/dicom+xml
+{{R4}}* payloadMimeType[dicom-xml]       = #application/dicom+xml
+
+{{R5}}  * mimeType[dicom-json]      = #application/json
+{{R4}}* payloadMimeType[dicom-json]      = #application/json
+
+{{R5}}  * mimeType[image-jpg]       = #image/jpg
+{{R4}}* payloadMimeType[image-jpg]       = #image/jpg
+
+{{R5}}  * mimeType[image-gif]       = #image/gif
+{{R4}}* payloadMimeType[image-gif]       = #image/gif
+
+{{R5}}  * mimeType[image-jp2]       = #image/jp2
+{{R4}}* payloadMimeType[image-jp2]       = #image/jp2
+
+{{R5}}  * mimeType[image-jph]       = #image/jph
+{{R4}}* payloadMimeType[image-jph]       = #image/jph
+
+{{R5}}  * mimeType[image-jxl]       = #image/jxl
+{{R4}}* payloadMimeType[image-jxl]       = #image/jxl
+
+{{R5}}  * mimeType[video-mpeg]      = #video/mpeg
+{{R4}}* payloadMimeType[video-mpeg]      = #video/mpeg
+
+{{R5}}  * mimeType[video-mp4]       = #video/mp4
+{{R4}}* payloadMimeType[video-mp4]       = #video/mp4
+
+{{R5}}  * mimeType[video-H265]      = #video/H265
+{{R4}}* payloadMimeType[video-H265]      = #video/H265
+
+{{R5}}  * mimeType[text-html]       = #text/html
+{{R4}}* payloadMimeType[text-html]       = #text/html
+
+{{R5}}  * mimeType[text-plain]      = #text/plain
+{{R4}}* payloadMimeType[text-plain]      = #text/plain
+
+{{R5}}  * mimeType[text-xml]        = #text/xml
+{{R4}}* payloadMimeType[text-xml]        = #text/xml
+
+{{R5}}  * mimeType[text-rtf]        = #text/rtf
+{{R4}}* payloadMimeType[text-rtf]        = #text/rtf
+
+{{R5}}  * mimeType[application-pdf] = #application/pdf
+{{R4}}* payloadMimeType[application-pdf] = #application/pdf
+
