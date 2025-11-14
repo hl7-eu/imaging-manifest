@@ -1,0 +1,529 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "hl7.fhir.eu.imaging-manifest-r4",
+  "url": "http://hl7.eu/fhir/imaging-manifest-r4/ImplementationGuide/hl7.fhir.eu.imaging-manifest-r4",
+  "version": "0.2.1-build",
+  "name": "HL7EuImagingStudyManifestR4",
+  "title": "Manifest-based Access to DICOM Objects (MADO) Profile (FHIR-R4 elements)",
+  "status": "draft",
+  "experimental": false,
+  "publisher": "HL7 Europe",
+  "contact": [
+    {
+      "name": "HL7 Europe",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7.eu"
+        }
+      ]
+    }
+  ],
+  "description": "This guide describes FHIR R4 related elements of the IHE-MADO profile.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "150",
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "display": "Europe"
+        }
+      ]
+    }
+  ],
+  "copyright": "Copyright HL7 Europe. Licensed under Creative Commons public domain (CC0 1.0).",
+  "packageId": "hl7.fhir.eu.imaging-manifest-r4",
+  "license": "CC0-1.0",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "dependsOn": [
+    {
+      "packageId": "hl7.terminology.r5",
+      "version": "6.3.0",
+      "uri": "http://terminology.hl7.org",
+      "id": "hl7_terminology_r5"
+    },
+    {
+      "packageId": "hl7.fhir.uv.extensions",
+      "version": "5.2.0",
+      "uri": "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
+      "id": "hl7_fhir_uv_extensions"
+    },
+    {
+      "packageId": "hl7.fhir.uv.ips",
+      "version": "1.1.0",
+      "uri": "http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips",
+      "id": "hl7_fhir_uv_ips"
+    },
+    {
+      "packageId": "hl7.fhir.uv.xver-r5.r4",
+      "version": "0.0.1-snapshot-2",
+      "uri": "http://hl7.org/fhir/5.0/ImplementationGuide/hl7.fhir.uv.xver-r5.r4",
+      "id": "hl7_fhir_uv_xver_r5_r4"
+    }
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "ValueSet/im-anatomical-region-valueset"
+        },
+        "name": "Anatomical Region",
+        "description": "A shortlist of anatomical regions that can be used for searching reports and manifests.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ImImagingStudyManifest"
+        },
+        "name": "Bundle: Imaging Manifest",
+        "description": "This profile represents a manifest of an imaging study. It holds the ImagingStudy resource that mirrors the information in the DICOM study allow with other resources that are required to express the information in DICOM in FHIR.\n",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/codesystem-endpoint-terminology"
+        },
+        "name": "CodeSystem for terminology used in Endpoint resources in the EU Imaging IG.",
+        "description": "This code system defines various codes used to define ValueSets for Endpoints within the HL7-EU imaging IG.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/DateImagesAcquiredSearchParameter"
+        },
+        "name": "DateImagesAcquiredSearchParameter",
+        "description": "Searches for manifest representing imaging studies that were acquired on a specific date.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/DateManifestCreatedSearchParameter"
+        },
+        "name": "DateManifestCreatedSearchParameter",
+        "description": "Searches for manifest created on a specific date.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ImImagingDevice"
+        },
+        "name": "Device: Imaging Acquisition Device",
+        "description": "The device the made the image.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/codesystem-diagnostic-report-support-info"
+        },
+        "name": "Diagnostic Report Support Info Code System",
+        "description": "Code system for codes to be used in `DiagnosticReport.supportInfo` for imaging reports.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/valueset-diagnosticreport-report-support-info"
+        },
+        "name": "DiagnosticReport supportInfo codes",
+        "description": "Codes to be used in `DiagnosticReport.supportInfo` for imaging reports.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/DocumentReference-Creation"
+        },
+        "name": "DocumentReference-Creation",
+        "description": "This SearchParameter enables finding DocumentReference by the creation dateTime.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ImIheIidViewerEndpoint"
+        },
+        "name": "EndPoint: IDD Image Viewer",
+        "description": "This profile defines a placeholder for an Endpoint for a viewer that can be used to access the study, serie it is present on.\nThe application is based on [IHE-IID](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_Suppl_IID.pdf).",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ImXcWadoEndpoint"
+        },
+        "name": "Endpoint: IHE-XC-WADO",
+        "description": "This profile defines the XC-WADO endpoint for accessing imaging study content.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ImImageViewerEndpoint"
+        },
+        "name": "EndPoint: Image Viewer",
+        "description": "An Endpoint holding the URL of an image viewer that can be used to see the DICOM Study it is present on. \n\nIt is RECOMMENDED that the URL to the viewer is formatted according to [IHE-IID](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_Suppl_IID.pdf), but other formats are possible as well.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ImWadoRsEndpoint"
+        },
+        "name": "Endpoint: WADO",
+        "description": "This profile defines the WADO endpoint for accessing imaging study content.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "DocumentReference/Example1-DocumentReference"
+        },
+        "name": "Example DocumentReference",
+        "description": "Example DocumentReference",
+        "exampleCanonical": "http://hl7.eu/fhir/imaging-manifest-r4/StructureDefinition/ImManifestDocumentReference"
+      },
+      {
+        "reference": {
+          "reference": "Bundle/Example1-ImagingStudyManifest"
+        },
+        "name": "Example ImagingStudy Manifest 1",
+        "description": "Example ImagingStudy Manifest",
+        "exampleCanonical": "http://hl7.eu/fhir/imaging-manifest-r4/StructureDefinition/ImImagingStudyManifest"
+      },
+      {
+        "reference": {
+          "reference": "Bundle/Example2-ImagingStudyManifest"
+        },
+        "name": "Example ImagingStudy Manifest 2",
+        "description": "Example ImagingStudy Manifest",
+        "exampleCanonical": "http://hl7.eu/fhir/imaging-manifest-r4/StructureDefinition/ImImagingStudyManifest"
+      },
+      {
+        "reference": {
+          "reference": "Endpoint/Example-WadoEndpoint"
+        },
+        "name": "Example-WadoEndpoint",
+        "exampleCanonical": "http://hl7.eu/fhir/imaging-manifest-r4/StructureDefinition/ImWadoRsEndpoint"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/instance-description"
+        },
+        "name": "Extension: Instance Description",
+        "description": "A description of the instance in an ImagingStudy.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/ImImagingManifestTypesEuVS"
+        },
+        "name": "HL7 EU Imaging Manifest Types",
+        "description": "HL7 EU Imaging Manifest Types used in Compositions and DiagnosticReports.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/im-accession-number-identifier"
+        },
+        "name": "Identifier: Accession Number",
+        "description": "This profile on Identifier represents the Accession Number for the Imaging Order.\n\nWithin a Hospital Information System environment, accession numbers will **usually** uniquely identify a manifest or report but are not required to **always** map 1:1 with a report or manifest due to certain imaging workflows. The imaging report may not be uniquely identified by accession number in an overread scenario (two radiologists reading a single imaging study). The manifest may not be uniquely identified by accession number in the case that the RIS imaging request (accession number assigner) requires two imaging modalities to perform the exam, and thus produces two image manifests.\n\nIn order to ensure uniqueness **across** Hospital Information Systems, accession numbers are required to have a system value that identifies the namespace for the issuing authority (ensuring their global uniqueness).",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/im-sop-instance-uid-identifier"
+        },
+        "name": "Identifier: Imaging SOP Class UID Identifier",
+        "description": "This profile on Identifier represents the SOP Class UID (0008,0018) for the Imaging Order.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/im-study-id-identifier"
+        },
+        "name": "Identifier: Study ID",
+        "description": "This profile on Identifier represents the Study ID (0020,0010) for the Imaging Order.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/im-study-instance-uid-identifier"
+        },
+        "name": "Identifier: Study Instance UID",
+        "description": "This profile on Identifier represents the Study Instance UID (0020,000D) for the Imaging Order.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ActorDefinition/ImManifestProvider"
+        },
+        "name": "Imaging Manifest Reports Provider/Creator",
+        "description": "This actor is responsible for creating/providing the Imaging Manifest resources.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/im-procedure-type"
+        },
+        "name": "Imaging Procedure Type",
+        "description": "This value set includes all imaging procedure types.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ImImagingSelection"
+        },
+        "name": "Imaging Selection",
+        "description": "Imaging Selection",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ImSrInstanceImagingSelection"
+        },
+        "name": "Imaging Selection: DICOM SR instance reference",
+        "description": "Imaging Selection referring to a DICOM SR instance",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/im-imaging-study-performer-type"
+        },
+        "name": "Imaging Study Performer Type Value Set",
+        "description": "Imaging Study series performer type codes, it extends on the base set defined in the FHIR specification.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ActorDefinition/ImReportProvider"
+        },
+        "name": "Imaging Study Report Provider/Creator",
+        "description": "The actor responsible for creating/providing the Imaging Report resources.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ImKeyImageImagingSelection"
+        },
+        "name": "ImagingSelection: Key image",
+        "description": "Key images represented as an ImagingSelection, it refers to minimal 1 instance.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ImagingSelectionCodeExtension"
+        },
+        "name": "ImagingSelectionCodeExtension",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ImImagingStudy"
+        },
+        "name": "ImagingStudy: Manifest Imaging Study",
+        "description": "This profile represents an imaging study instance.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ImManifestDocumentReference"
+        },
+        "name": "Manifest DocumentReference for MHD deployments",
+        "description": "A DocumentReference profile for the Manifest DocumentReference used in MHD deployments. ",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/codesystem-missing-dicom-terminology"
+        },
+        "name": "Missing DICOM Terminology",
+        "description": "Code system for codes that are defined in DICOM but for which no matching code system is available in FHIR.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "OperationDefinition/ImagingStudy-fhir-manifest"
+        },
+        "name": "OperationDefinition: create a FHIR manifest",
+        "description": "This operation generates a FHIR manifest from an ImagingStudy resource by extracting relevant metadata and packaging it according to the FHIR imaging manifest specification.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ImPatient"
+        },
+        "name": "Patient: Imaging Patient",
+        "description": "This profile on Patient represents the Imaging Patient.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/IheMhdEntryUUIDIdentifier"
+        },
+        "name": "Placeholder for IHE MHD Entry UUID Identifier in FHIR R5.",
+        "description": "entryUUID Identifier holding a UUID, based on [IHE-MHD R4](https://profiles.ihe.net/ITI/MHD/StructureDefinition-IHE.MHD.EntryUUID.Identifier.html).",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/im-practice-settings"
+        },
+        "name": "Practice Settings",
+        "description": "A list with practice settings to be used for filtering manifests (source IHE PCC)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ImProcedure"
+        },
+        "name": "Procedure: Image Acquisition Procedure",
+        "description": "This profile on Procedure represents the imaging procedure.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ImOrder"
+        },
+        "name": "ServiceRequest: Imaging Order",
+        "description": "This profile on ServiceRequest represents the order for the Imaging Study and report.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/im-imaging-device-type"
+        },
+        "name": "ValueSet: Imaging Device Type",
+        "description": "Imaging Device Type.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/im-xds-class-code-valueset"
+        },
+        "name": "XDS Class Codes",
+        "description": "A list of XDS class codes that can be used for filtering manifests (zie [XDS_classCode_MetaData_Coding_System](https://wiki.ihe.net/index.php/XDS_classCode_Metadata_Coding_System)).\nNote a IHE needs to make a formal FHIR CodeSystem for this,",
+        "exampleBoolean": false
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": [
+        {
+          "nameUrl": "index.html",
+          "title": "Home",
+          "generation": "markdown",
+          "page": [
+            {
+              "nameUrl": "changes.html",
+              "title": "Changes",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "adapting.html",
+              "title": "Adapting Guidelines for Country use",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "contributors.html",
+              "title": "Contributors",
+              "generation": "markdown"
+            }
+          ]
+        },
+        {
+          "nameUrl": "mado-intro.html",
+          "title": "MADO profile",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "mado-volume1.html",
+          "title": "Volume 1",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "mado-volume2.html",
+          "title": "Volume 2",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "manifest-envelop.html",
+          "title": "Manifest Envelop",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "mado-volume3-KOS.html",
+          "title": "Volume 3 - KOS",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "fhir-imaging-manifest.html",
+          "title": "FHIR Imaging Manifest",
+          "generation": "markdown"
+        }
+      ]
+    },
+    "parameter": [
+      {
+        "code": "copyrightyear",
+        "value": "2025+"
+      },
+      {
+        "code": "releaselabel",
+        "value": "ci-build"
+      },
+      {
+        "code": "apply-contact",
+        "value": "false"
+      },
+      {
+        "code": "default-contact",
+        "value": "true"
+      },
+      {
+        "code": "default-copyright",
+        "value": "true"
+      },
+      {
+        "code": "apply-copyright",
+        "value": "false"
+      },
+      {
+        "code": "apply-jurisdiction",
+        "value": "true"
+      },
+      {
+        "code": "apply-license",
+        "value": "false"
+      },
+      {
+        "code": "default-license",
+        "value": "true"
+      },
+      {
+        "code": "apply-publisher",
+        "value": "true"
+      },
+      {
+        "code": "apply-version",
+        "value": "false"
+      },
+      {
+        "code": "default-version",
+        "value": "true"
+      },
+      {
+        "code": "show-inherited-invariants",
+        "value": "true"
+      },
+      {
+        "code": "usage-stats-opt-out",
+        "value": "true"
+      },
+      {
+        "code": "releaselabel",
+        "value": "0.2.1-build"
+      },
+      {
+        "code": "special-url-base",
+        "value": "https://www.xt-ehr.eu/specifications/fhir"
+      }
+    ]
+  }
+}

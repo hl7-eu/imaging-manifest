@@ -1,0 +1,63 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "im-study-id-identifier",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "draft"
+    }
+  ],
+  "url": "http://hl7.eu/fhir/imaging-manifest-r4/StructureDefinition/im-study-id-identifier",
+  "name": "ImStudyIdIdentifier",
+  "title": "Identifier: Study ID",
+  "status": "draft",
+  "description": "This profile on Identifier represents the Study ID (0020,0010) for the Imaging Order.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "EU",
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.html",
+          "display": "Europe"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "type": "Identifier",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Identifier",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Identifier.type",
+        "path": "Identifier.type",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "00200010",
+              "system": "http://hl7.eu/fhir/imaging-manifest-r4/CodeSystem/codesystem-missing-dicom-terminology",
+              "display": "Study Id"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Identifier.system",
+        "path": "Identifier.system",
+        "patternUri": "urn:dicom:id"
+      },
+      {
+        "id": "Identifier.value",
+        "path": "Identifier.value",
+        "min": 1
+      }
+    ]
+  }
+}

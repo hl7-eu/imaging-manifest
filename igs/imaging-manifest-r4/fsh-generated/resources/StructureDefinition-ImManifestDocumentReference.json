@@ -1,0 +1,343 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ImManifestDocumentReference",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "draft"
+    }
+  ],
+  "url": "http://hl7.eu/fhir/imaging-manifest-r4/StructureDefinition/ImManifestDocumentReference",
+  "name": "ImManifestDocumentReference",
+  "title": "Manifest DocumentReference for MHD deployments",
+  "status": "draft",
+  "description": "A DocumentReference profile for the Manifest DocumentReference used in MHD deployments. ",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "EU",
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.html",
+          "display": "Europe"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "DocumentReference",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/DocumentReference",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "DocumentReference",
+        "path": "DocumentReference",
+        "constraint": [
+          {
+            "key": "im-docref-1",
+            "severity": "error",
+            "human": "At least a KOS or FHIR manifest needs to be present.",
+            "expression": "content.value.subsumes( $dcm#113030) or content.value.endsWith('ImManifestDocumentReference')",
+            "source": "http://hl7.eu/fhir/imaging-manifest-r4/StructureDefinition/ImManifestDocumentReference"
+          }
+        ]
+      },
+      {
+        "id": "DocumentReference.extension",
+        "path": "DocumentReference.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "DocumentReference.extension:practiceSetting",
+        "path": "DocumentReference.extension",
+        "sliceName": "practiceSetting",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.practiceSetting"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DocumentReference.extension:practiceSetting.extension",
+        "path": "DocumentReference.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "DocumentReference.extension:practiceSetting.value[x]",
+        "path": "DocumentReference.extension.value[x]",
+        "short": "The practice setting of the imaging manifest.",
+        "definition": "This field may be used to provide additional information about the practice setting where the imaging manifest was created.",
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "http://hl7.eu/fhir/imaging-manifest-r4/ValueSet/im-practice-settings"
+        }
+      },
+      {
+        "id": "DocumentReference.extension:bodySite",
+        "path": "DocumentReference.extension",
+        "sliceName": "bodySite",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.bodySite"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DocumentReference.extension:bodySite.extension",
+        "path": "DocumentReference.extension.extension",
+        "min": 1
+      },
+      {
+        "id": "DocumentReference.extension:bodySite.extension:concept",
+        "path": "DocumentReference.extension.extension",
+        "sliceName": "concept",
+        "min": 1
+      },
+      {
+        "id": "DocumentReference.extension:bodySite.extension:concept.extension",
+        "path": "DocumentReference.extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "DocumentReference.extension:bodySite.extension:concept.value[x]",
+        "path": "DocumentReference.extension.extension.value[x]",
+        "short": "The anatomical region of the patient that is the focus of the imaging manifest, concept field is required.",
+        "definition": "This field may be used to provide additional information about the anatomical region of interest for the imaging manifest.",
+        "comment": "This element corresponds to ImagingStudy.series.bodySite.",
+        "min": 1,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.eu/fhir/imaging-manifest-r4/ValueSet/im-anatomical-region-valueset"
+        }
+      },
+      {
+        "id": "DocumentReference.extension:bodySite.value[x]",
+        "path": "DocumentReference.extension.value[x]",
+        "max": "0"
+      },
+      {
+        "id": "DocumentReference.extension:modality",
+        "path": "DocumentReference.extension",
+        "sliceName": "modality",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.modality"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DocumentReference.extension:modality.extension",
+        "path": "DocumentReference.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "DocumentReference.extension:modality.value[x]",
+        "path": "DocumentReference.extension.value[x]",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html"
+        }
+      },
+      {
+        "id": "DocumentReference.modifierExtension",
+        "path": "DocumentReference.modifierExtension",
+        "max": "0"
+      },
+      {
+        "id": "DocumentReference.identifier",
+        "path": "DocumentReference.identifier",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "system"
+            }
+          ],
+          "rules": "open",
+          "ordered": false
+        },
+        "min": 1
+      },
+      {
+        "id": "DocumentReference.identifier:entry-uuid",
+        "path": "DocumentReference.identifier",
+        "sliceName": "entry-uuid",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier",
+            "profile": [
+              "http://hl7.eu/fhir/imaging-manifest-r4/StructureDefinition/IheMhdEntryUUIDIdentifier"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DocumentReference.type",
+        "path": "DocumentReference.type",
+        "short": "Type of Imaging Manifest",
+        "definition": "Specifies that it refers to a Imaging Manifest",
+        "comment": "Corresponds to the type of the Imaging Manifest resource.",
+        "min": 1,
+        "binding": {
+          "strength": "preferred",
+          "valueSet": "http://hl7.eu/fhir/imaging-manifest-r4/ValueSet/ImImagingManifestTypesEuVS"
+        }
+      },
+      {
+        "id": "DocumentReference.category",
+        "path": "DocumentReference.category",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this"
+            }
+          ],
+          "rules": "open",
+          "ordered": false
+        },
+        "min": 1
+      },
+      {
+        "id": "DocumentReference.category:class-code",
+        "path": "DocumentReference.category",
+        "sliceName": "class-code",
+        "short": "The class code of this DocumentReference, for manifest this set to IMAGES.",
+        "min": 1,
+        "max": "1",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "IMAGES",
+              "system": "ihe:urn:oid:1.3.6.1.4.1.19376.1.2.6.1"
+            }
+          ]
+        },
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.eu/fhir/imaging-manifest-r4/ValueSet/im-xds-class-code-valueset"
+        }
+      },
+      {
+        "id": "DocumentReference.category:service-section",
+        "path": "DocumentReference.category",
+        "sliceName": "service-section",
+        "min": 0,
+        "max": "*",
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "http://hl7.org/fhir/ValueSet/diagnostic-service-sections"
+        }
+      },
+      {
+        "id": "DocumentReference.subject",
+        "path": "DocumentReference.subject",
+        "min": 1
+      },
+      {
+        "id": "DocumentReference.custodian",
+        "path": "DocumentReference.custodian",
+        "short": "Organization that manages the Imaging Manifest"
+      },
+      {
+        "id": "DocumentReference.custodian.identifier",
+        "path": "DocumentReference.custodian.identifier",
+        "min": 1
+      },
+      {
+        "id": "DocumentReference.custodian.identifier.type",
+        "path": "DocumentReference.custodian.identifier.type",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "0040E031",
+              "system": "http://hl7.eu/fhir/imaging-manifest-r4/CodeSystem/codesystem-missing-dicom-terminology"
+            }
+          ]
+        }
+      },
+      {
+        "id": "DocumentReference.content",
+        "path": "DocumentReference.content",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "value"
+            }
+          ],
+          "rules": "open",
+          "description": "Manifest can be KOS or FHIR.",
+          "ordered": false
+        }
+      },
+      {
+        "id": "DocumentReference.content:kos",
+        "path": "DocumentReference.content",
+        "sliceName": "kos",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "DocumentReference.content:kos.attachment.contentType",
+        "path": "DocumentReference.content.attachment.contentType",
+        "patternCode": "application/dicom"
+      },
+      {
+        "id": "DocumentReference.content:kos.attachment.url",
+        "path": "DocumentReference.content.attachment.url",
+        "min": 1
+      },
+      {
+        "id": "DocumentReference.content:fhir",
+        "path": "DocumentReference.content",
+        "sliceName": "fhir",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "DocumentReference.content:fhir.attachment.contentType",
+        "path": "DocumentReference.content.attachment.contentType",
+        "patternCode": "application/fhir+json"
+      },
+      {
+        "id": "DocumentReference.content:fhir.attachment.url",
+        "path": "DocumentReference.content.attachment.url",
+        "min": 1
+      }
+    ]
+  }
+}

@@ -31,6 +31,17 @@ Description: "This profile on Identifier represents the Study Instance UID (0020
 * type 0..1
 * type = MissingDicomTerminology#0020000D "Study Instance UID" 
 
+Profile: ImStudyIdIdentifier
+Parent: Identifier
+Id: im-study-id-identifier
+Title: "Identifier: Study ID"
+Description: "This profile on Identifier represents the Study ID (0020,0010) for the Imaging Order."
+* insert SetFmmAndStatusRule( 1, draft )
+* system = "urn:dicom:id"
+* value 1..1
+* type 0..1
+* type = MissingDicomTerminology#00200010 "Study Id" 
+
 Profile: ImSopInstanceUidIdentifier
 Parent: Identifier
 Id: im-sop-instance-uid-identifier

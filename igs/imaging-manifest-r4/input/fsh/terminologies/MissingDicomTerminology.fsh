@@ -16,6 +16,7 @@ Description: "Code system for codes that are defined in DICOM but for which no m
   * #00181002 "Device UID" "Unique identifier of the equipment."
   * #00181008 "Manufacturer Device Class UID" "Manufacturer Device Class UID"
   * #0020000D "Study Instance UID" "Unique identifier for the Study."
+  * #00200010 "Study ID" "Study ID."
   * #0020000E "Series Instance UID" "Unique identifier of the Series."
   * #00080050 "Accession Number" "A departmental Information System generated number that identifies the Imaging Service Request."
   * #0040A171 "Observation UID" "Unique identifier for the observation Content Item (and its subsidiary Content Items, if any). The UID represents the semantic content of the observation; an encoding of the same observation with the same context into another representation (e.g., a CDA Entry) may use the same UID."

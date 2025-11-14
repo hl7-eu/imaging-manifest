@@ -1,0 +1,34 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "ImImagingManifestTypesEuVS",
+  "id": "ImImagingManifestTypesEuVS",
+  "title": "HL7 EU Imaging Manifest Types",
+  "description": "HL7 EU Imaging Manifest Types used in Compositions and DiagnosticReports.",
+  "url": "http://hl7.eu/fhir/imaging-manifest-r5/ValueSet/ImImagingManifestTypesEuVS",
+  "experimental": false,
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "STATUS",
+            "op": "=",
+            "value": "ACTIVE"
+          },
+          {
+            "property": "SCALE_TYP",
+            "op": "=",
+            "value": "Doc"
+          },
+          {
+            "property": "CLASS",
+            "op": "=",
+            "value": "RAD"
+          }
+        ]
+      }
+    ]
+  }
+}

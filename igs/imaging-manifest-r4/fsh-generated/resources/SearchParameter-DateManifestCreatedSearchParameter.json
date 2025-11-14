@@ -1,0 +1,14 @@
+{
+  "resourceType": "SearchParameter",
+  "id": "DateManifestCreatedSearchParameter",
+  "url": "http://hl7.eu/fhir/imaging-manifest-r4/SearchParameter/DateManifestCreatedSearchParameter",
+  "base": [
+    "DocumentReference"
+  ],
+  "name": "SearchParameter: DateManifestCreated",
+  "status": "active",
+  "experimental": false,
+  "description": "Searches for manifest created on a specific date.",
+  "code": "date-manifest-created",
+  "type": "date"
+}

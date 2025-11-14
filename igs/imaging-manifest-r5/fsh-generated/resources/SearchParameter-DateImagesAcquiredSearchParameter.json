@@ -1,0 +1,17 @@
+{
+  "resourceType": "SearchParameter",
+  "id": "DateImagesAcquiredSearchParameter",
+  "url": "http://hl7.eu/fhir/imaging-manifest-r5/SearchParameter/DateImagesAcquiredSearchParameter",
+  "base": [
+    "DocumentReference"
+  ],
+  "name": "SearchParameter: DateImagesAcquired",
+  "title": "SearchParameter: DateImagesAcquired",
+  "status": "active",
+  "experimental": false,
+  "description": "Searches for manifest representing imaging studies that were acquired on a specific date.",
+  "code": "date-image-acquired",
+  "type": "date",
+  "multipleAnd": true,
+  "multipleOr": true
+}

@@ -1,0 +1,130 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ImIheIidViewerEndpoint",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "draft"
+    }
+  ],
+  "url": "http://hl7.eu/fhir/imaging-manifest-r5/StructureDefinition/ImIheIidViewerEndpoint",
+  "name": "ImIheIidViewerEndpoint",
+  "title": "EndPoint: IDD Image Viewer",
+  "status": "draft",
+  "description": "This profile defines a placeholder for an Endpoint for a viewer that can be used to access the study, serie it is present on.\nThe application is based on [IHE-IID](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_Suppl_IID.pdf).",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "EU",
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.html",
+          "display": "Europe"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "5.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Endpoint",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Endpoint",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Endpoint.connectionType",
+        "path": "Endpoint.connectionType",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "coding"
+            }
+          ],
+          "rules": "open",
+          "ordered": false
+        }
+      },
+      {
+        "id": "Endpoint.connectionType:iid",
+        "path": "Endpoint.connectionType",
+        "sliceName": "iid",
+        "min": 1,
+        "max": "1",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "ihe-iid",
+              "system": "http://hl7.eu/fhir/imaging-manifest-r5/CodeSystem/codesystem-endpoint-terminology",
+              "display": "IHE IID endpoint"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Endpoint.payload",
+        "path": "Endpoint.payload",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "type"
+            }
+          ],
+          "rules": "open",
+          "ordered": false
+        },
+        "min": 1
+      },
+      {
+        "id": "Endpoint.payload:wadors",
+        "path": "Endpoint.payload",
+        "sliceName": "wadors",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Endpoint.payload:wadors.type",
+        "path": "Endpoint.payload.type",
+        "min": 1,
+        "max": "1",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "dicom-wado-rs",
+              "system": "http://terminology.hl7.org/CodeSystem/endpoint-connection-type",
+              "display": "DICOM WADO-RS"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Endpoint.payload:wadors.mimeType",
+        "path": "Endpoint.payload.mimeType",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this"
+            }
+          ],
+          "rules": "open",
+          "ordered": false
+        },
+        "min": 1
+      },
+      {
+        "id": "Endpoint.payload:wadors.mimeType:text-html",
+        "path": "Endpoint.payload.mimeType",
+        "sliceName": "text-html",
+        "min": 1,
+        "max": "1",
+        "patternCode": "text/html"
+      }
+    ]
+  }
+}

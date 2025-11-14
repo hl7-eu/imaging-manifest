@@ -65,19 +65,19 @@ In term of structure of the profile here the skeleton:
 
 ### FHIR specific Dependencies
 
-{% include dependency-table.xhtml %}
+{% include dependency-table-en.xhtml %}
 
 ### Cross Version Analysis
 
-{% include cross-version-analysis.xhtml %}
+{% include cross-version-analysis-en.xhtml %}
 
 ### Global Profiles
 
-{% include globals-table.xhtml %}
+{% include globals-table-en.xhtml %}
 
 ### IP statements
 
-{% include ip-statements.xhtml %}
+{% include ip-statements-en.xhtml %}
 
 ### Authors and Contributors
 

@@ -1,0 +1,54 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ImImageViewerEndpoint",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "draft"
+    }
+  ],
+  "url": "http://hl7.eu/fhir/imaging-manifest-r4/StructureDefinition/ImImageViewerEndpoint",
+  "name": "ImImageViewerEndpoint",
+  "title": "EndPoint: Image Viewer",
+  "status": "draft",
+  "description": "An Endpoint holding the URL of an image viewer that can be used to see the DICOM Study it is present on. \n\nIt is RECOMMENDED that the URL to the viewer is formatted according to [IHE-IID](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_Suppl_IID.pdf), but other formats are possible as well.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "EU",
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.html",
+          "display": "Europe"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Endpoint",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Endpoint",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Endpoint.connectionType",
+        "path": "Endpoint.connectionType",
+        "patternCoding": {
+          "code": "dicom-image-viewer",
+          "system": "http://hl7.eu/fhir/imaging-manifest-r4/CodeSystem/codesystem-endpoint-terminology",
+          "display": "DICOM image viewer"
+        }
+      },
+      {
+        "id": "Endpoint.address",
+        "path": "Endpoint.address",
+        "short": "URL of the Image Viewer for this study"
+      }
+    ]
+  }
+}

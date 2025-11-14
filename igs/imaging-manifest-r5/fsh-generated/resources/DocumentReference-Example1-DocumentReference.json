@@ -1,0 +1,70 @@
+{
+  "resourceType": "DocumentReference",
+  "id": "Example1-DocumentReference",
+  "meta": {
+    "profile": [
+      "http://hl7.eu/fhir/imaging-manifest-r5/StructureDefinition/ImManifestDocumentReference"
+    ]
+  },
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "ihe:urn:oid:1.2.840.10008.5.1.4.1.1.2"
+    }
+  ],
+  "modality": [
+    {
+      "coding": [
+        {
+          "code": "US",
+          "system": "http://dicom.nema.org/resources/ontology/DCM",
+          "display": "Ultrasound"
+        }
+      ]
+    }
+  ],
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "images",
+          "system": "ihe:urn:oid:1.3.6.1.4.1.19376.1.2.6.1"
+        }
+      ]
+    },
+    {
+      "coding": [
+        {
+          "code": "IMAGES",
+          "system": "ihe:urn:oid:1.3.6.1.4.1.19376.1.2.6.1"
+        }
+      ]
+    }
+  ],
+  "content": [
+    {
+      "attachment": {
+        "contentType": "application/fhir+json",
+        "url": "./ImagingStudy/1/$generate-fhir-manifest"
+      },
+      "profile": [
+        {
+          "valueCanonical": "http://hl7.eu/fhir/imaging-manifest-r5/StructureDefinition/ImImagingStudyManifest"
+        }
+      ]
+    }
+  ],
+  "status": "current",
+  "type": {
+    "coding": [
+      {
+        "code": "LG51714-0",
+        "system": "http://loinc.org",
+        "display": "US|Finger|Multisection|Laterality:ANY"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/patient"
+  }
+}

@@ -6,22 +6,23 @@ Description: "Imaging Selection"
 * insert SetFmmAndStatusRule( 1, draft )
 * subject only Reference( ImPatient )
 
+// derivedFrom
 * extension[ImagingSelection]
   * extension[derivedFrom] 1..* // contains derived-study 1..1
 //     * insert SliceElement( #profile, [[$this.where(url='derived').valueReference.resolve()]] )
   * extension[derivedFrom] contains derived-study 1..1
   * extension[derivedFrom][derived-study].valueReference only Reference( ImImagingStudy )
-* extension[ImagingSelection].extension contains ImagingSelectionCodeExtension named code 1..1
-* extension[ImagingSelection].extension[code].value[x] only CodeableConcept
-// //R5* derivedFrom 1..*
-//   * insert SliceElement( #profile, $this )
-// * derivedFrom contains study 1..1
-// * derivedFrom[study] only Reference( ImImagingStudy )
 
 //R5* derivedFrom 1..*
 //R5  * insert SliceElement( #profile, $this )
 //R5* derivedFrom contains study 1..1
 //R5* derivedFrom[study] only Reference( ImImagingStudy )
+
+// code
+// * extension[ImagingSelection].extension contains ImagingSelectionCodeExtension named code 1..1
+// * extension[ImagingSelection].extension[code].value[x] only CodeableConcept
+* extension contains ImagingSelectionCodeExtension named code 1..1
+* extension[code].value[x] only CodeableConcept
 
 
 Profile: ImSrInstanceImagingSelection

@@ -27,7 +27,8 @@ Description: "Key images represented as an ImagingSelection, it refers to minima
 {{R5}}    * resourceReference only Reference(ImagingSelection)
 
 // code
-{{R4}}* extension[ImagingSelection].extension[code].valueCodeableConcept from https://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_7010.html (extensible)
+// {{R4}}* extension[ImagingSelection].extension[code].valueCodeableConcept from https://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_7010.html (extensible)
+{{R4}}* extension[code].valueCodeableConcept from https://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_7010.html (extensible)
 {{R5}}* code from https://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_7010.html (extensible)
 
 // category

@@ -9,8 +9,9 @@ This profile represents an imaging study instance.
 
 * identifier
   * insert SliceElement( #value, system )
-* identifier contains studyInstanceUid 1..1
+* identifier contains studyInstanceUid 1..1 and studyId 0..1
 * identifier[studyInstanceUid] only ImStudyInstanceUidIdentifier
+* identifier[studyId] only ImStudyIdIdentifier
 
 * subject 1..1
 * subject only Reference( ImPatient or Device )
