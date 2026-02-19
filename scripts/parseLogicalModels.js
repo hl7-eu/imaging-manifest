@@ -81,7 +81,7 @@ function readStructureDefinitions(directory) {
 // Main execution
 function main( ) {
     // Directory containing XtEHR-models   
-    const modelsDir = path.join(__dirname, process.argv[2]?process.argv[2]:'XtEHR-models');
+    const modelsDir = path.join(__dirname, process.argv[2]?process.argv[2]:'XtEHR-models/xt-ehr-common-0.2.0/fsh-generated/resources');
     const tgtFile = path.join(__dirname, process.argv[3]?process.argv[3]:'xtehr-model.csv');
 
     console.log( `Reading XtEHR-models from ${modelsDir} and writing to ${tgtFile}` );
@@ -126,19 +126,19 @@ function main( ) {
     updateAssociation( imagingReportStructure, structures, classes, associations );
     
     // mermaid diagram
-    {  
-        let writable = fs.createWriteStream('../input/includes/xtEHR-model.md');
-        writable.write('```mermaid\n');
-        writable.write('classDiagram\n');
-        writable.write('direction LR\n');
+    //{  
+    //    let writable = fs.createWriteStream('../input/includes/xtEHR-model.md');
+    //    writable.write('```mermaid\n');
+    //    writable.write('classDiagram\n');
+    //    writable.write('direction LR\n');
         // classes.forEach( cls => { writable.write(`class ${cls} \n`); });
-        associations.forEach( assoc => { writable.write(`${assoc} \n`); });
-        classes.forEach( cls => { 
+    //    associations.forEach( assoc => { writable.write(`${assoc} \n`); });
+    //    classes.forEach( cls => { 
             // writable.write(`link ${cls} "https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/StructureDefinition-${cls}.html"\n`);
-        });
+    //    });
         
-        writable.write('```\n');
-    }
+    //    writable.write('```\n');
+    //}
     // plantuml
     // {
     //     let writable = fs.createWriteStream('../input/includes/xtEHR-model.plantuml');

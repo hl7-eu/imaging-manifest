@@ -1,0 +1,21 @@
+@startuml
+    participant  "Imaging Document Consumer" as IDC
+    participant  "Imaging Document Source" as IDS
+
+    == GET and Select study/series/instance uids ==
+
+    IDC -> IDC: Access Imaging Study Manifest
+
+    alt 
+    else study level
+        IDC -> IDC: select study references
+    else series level
+        IDC -> IDC: select series references
+    else instance level
+        IDC -> IDC: select instance references
+    end
+
+    == Get Instances ==
+    IDC -> IDS ++ : WADO-RS Get Instances [RAD-1xy] for study/series/instances
+    IDS <-- IDC -- : return instances
+@enduml

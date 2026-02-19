@@ -1,0 +1,49 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "AnatomicalRegionVs",
+  "id": "im-anatomical-region-valueset",
+  "title": "Anatomical Region",
+  "description": "A shortlist of anatomical regions that can be used for searching reports and manifests.",
+  "url": "http://hl7.eu/fhir/imaging-manifest-r5/ValueSet/im-anatomical-region-valueset",
+  "experimental": false,
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "63337009"
+          },
+          {
+            "code": "38266002"
+          },
+          {
+            "code": "53120007"
+          },
+          {
+            "code": "61685007"
+          },
+          {
+            "code": "67734004"
+          },
+          {
+            "code": "774007"
+          },
+          {
+            "code": "113257007"
+          },
+          {
+            "code": "80891009"
+          },
+          {
+            "code": "76752008"
+          },
+          {
+            "code": "737561001"
+          }
+        ]
+      }
+    ]
+  }
+}
