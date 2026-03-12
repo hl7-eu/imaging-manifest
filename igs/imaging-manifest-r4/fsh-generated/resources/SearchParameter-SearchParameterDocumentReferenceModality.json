@@ -1,0 +1,21 @@
+{
+  "resourceType": "SearchParameter",
+  "id": "SearchParameterDocumentReferenceModality",
+  "url": "http://hl7.eu/fhir/imaging-manifest/SearchParameter/SearchParameterDocumentReferenceModality",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "trial-use"
+    }
+  ],
+  "base": [
+    "DocumentReference"
+  ],
+  "name": "DocumentReferenceModality",
+  "status": "active",
+  "experimental": false,
+  "description": "Searches for document references with a specific modality.",
+  "code": "modality",
+  "type": "token",
+  "expression": "DocumentReference.extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.modality').value"
+}

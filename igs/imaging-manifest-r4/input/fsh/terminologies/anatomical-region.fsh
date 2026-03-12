@@ -1,5 +1,5 @@
-ValueSet:   AnatomicalRegionVs
-Id:	        im-anatomical-region-valueset
+ValueSet:   ValueSetAnatomicalRegion
+Id:	        mado-anatomical-region-valueset
 Title:	    "Anatomical Region"
 Description:   """A shortlist of anatomical regions that can be used for searching reports and manifests."""
 * ^experimental = false

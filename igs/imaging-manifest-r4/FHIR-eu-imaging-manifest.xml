@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ciUrl="" defaultVersion="current" defaultWorkgroup="eu" url="http://hl7.eu/fhir/imaging-manifest">
+<version code="current" url=""/>
+<artifactPageExtension value="-definitions"/>
+<artifactPageExtension value="-examples"/>
+<artifactPageExtension value="-mappings"/>
+<artifact id="ValueSet/mado-anatomical-region-valueset" key="ValueSet-mado-anatomical-region-valueset" name="Anatomical Region"/>
+<artifact id="StructureDefinition/MadoManifestBundle" key="StructureDefinition-MadoManifestBundle" name="Bundle: Imaging Manifest"/>
+<artifact id="CapabilityStatement/EehrxfImagingManifestAccessProvider" key="CapabilityStatement-EehrxfImagingManifestAccessProvider" name="EEHRxF Imaging Manifest Document Access Provider CapabilityStatement"/>
+<artifact id="CapabilityStatement/EehrxfImagingReportDocumentConsumer" key="CapabilityStatement-EehrxfImagingReportDocumentConsumer" name="EEHRxF Imaging Report Document Consumer CapabilityStatement"/>
+<artifact id="StructureDefinition/MadoIHEmhdFhirReference" key="StructureDefinition-MadoIHEmhdFhirReference" name="EEHRxF MHD DocumentReference Profile for Imaging Reports"/>
+<artifact id="StructureDefinition/MadoIHEmhdKosReference" key="StructureDefinition-MadoIHEmhdKosReference" name="EEHRxF MHD DocumentReference Profile for Imaging Reports"/>
+<artifact id="SearchParameter/SearchParameterDocumentReferenceBodySite" key="SearchParameter-SearchParameterDocumentReferenceBodySite" name="SearchParameterDocumentReferenceBodySite"/>
+<artifact id="SearchParameter/SearchParameterDocumentReferenceModality" key="SearchParameter-SearchParameterDocumentReferenceModality" name="SearchParameterDocumentReferenceModality"/>
+<page key="NA" name="(NA)"/>
+<page key="many" name="(many)"/>
+<page key="artifacts" name="Artifacts Summary"/>
+<page key="index" name="Imaging Report"/>
+<page key="xtehr-mapping" name="Mapping to XTEHR"/>
+<page key="DICOM-mapping" name="Mappings from DICOM KOS"/>
+<page key="FHIR-mapping" name="Mappings from FHIR"/>
+<page key="toc" name="Table of Contents"/>
+</specification>

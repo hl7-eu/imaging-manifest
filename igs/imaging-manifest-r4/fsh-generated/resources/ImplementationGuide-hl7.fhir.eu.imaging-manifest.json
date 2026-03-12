@@ -1,0 +1,249 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "hl7.fhir.eu.imaging-manifest",
+  "url": "http://hl7.eu/fhir/imaging-manifest/ImplementationGuide/hl7.fhir.eu.imaging-manifest",
+  "version": "0.2.1-build",
+  "name": "HL7EuImagingManifest",
+  "title": "IHEeu/HL7eu Imaging Manifest R4",
+  "status": "draft",
+  "experimental": false,
+  "publisher": "HL7 Europe",
+  "contact": [
+    {
+      "name": "HL7 Europe",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7.eu"
+        }
+      ]
+    }
+  ],
+  "description": "This guide describes how a Imaging Manifest can be represented in the European REALM using FHIR R4.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "150",
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "display": "Europe"
+        }
+      ]
+    }
+  ],
+  "copyright": "Copyright HL7 Europe. Licensed under Creative Commons public domain (CC0 1.0).",
+  "packageId": "hl7.fhir.eu.imaging-manifest",
+  "license": "CC0-1.0",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "dependsOn": [
+    {
+      "packageId": "hl7.fhir.eu.base",
+      "version": "current",
+      "uri": "http://hl7.eu/fhir/base/ImplementationGuide/hl7.fhir.eu.base",
+      "id": "hl7_fhir_eu_base"
+    },
+    {
+      "packageId": "hl7.fhir.uv.extensions.r4",
+      "version": "5.2.0",
+      "uri": "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
+      "id": "hl7_fhir_uv_extensions_r4"
+    },
+    {
+      "packageId": "hl7.fhir.uv.xver-r5.r4",
+      "version": "0.0.1-snapshot-2",
+      "uri": "http://hl7.org/fhir/5.0/ImplementationGuide/hl7.fhir.uv.xver-r5.r4",
+      "id": "hl7_fhir_uv_xver_r5_r4"
+    },
+    {
+      "packageId": "hl7.terminology.r4",
+      "version": "7.0.1",
+      "uri": "http://terminology.hl7.org",
+      "id": "hl7_terminology_r4"
+    },
+    {
+      "packageId": "hl7.fhir.eu.eu-health-data-api",
+      "version": "current",
+      "uri": "http://hl7.eu/fhir/eu-health-data-api/ImplementationGuide/hl7.fhir.eu.eu-health-data-api",
+      "id": "hl7_fhir_eu_eu_health_data_api"
+    },
+    {
+      "packageId": "ihe.iti.mhd",
+      "version": "4.2.3",
+      "uri": "https://profiles.ihe.net/ITI/MHD/ImplementationGuide/ihe.iti.mhd",
+      "id": "ihe_iti_mhd"
+    },
+    {
+      "id": "DICOM",
+      "packageId": "fhir.dicom",
+      "uri": "http://fhir.org/packages/fhir.dicom/ImplementationGuide/fhir.dicom",
+      "version": "2025.3.20250714"
+    }
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "ValueSet/mado-anatomical-region-valueset"
+        },
+        "name": "Anatomical Region",
+        "description": "A shortlist of anatomical regions that can be used for searching reports and manifests.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/MadoManifestBundle"
+        },
+        "name": "Bundle: Imaging Manifest",
+        "description": "This profile represents a manifest of an imaging study. It holds the ImagingStudy resource that mirrors the information in the DICOM study allow with other resources that are required to express the information in DICOM in FHIR.\n",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CapabilityStatement/EehrxfImagingManifestAccessProvider"
+        },
+        "name": "EEHRxF Imaging Manifest Document Access Provider CapabilityStatement",
+        "description": "CapabilityStatement for the EEHRxF Imaging Manifest Document Access Provider actor. This composite actor\nprovides access to EEHRxF FHIR Documents by serving them to Document Consumers via query APIs.\n",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CapabilityStatement/EehrxfImagingReportDocumentConsumer"
+        },
+        "name": "EEHRxF Imaging Report Document Consumer CapabilityStatement",
+        "description": "CapabilityStatement for the EEHRxF Imaging Report Document Consumer actor. This composite actor\nconsumes EEHRxF FHIR Imaging Report Documents by querying a Imaging Report Document Access Provider.\n",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/MadoIHEmhdKosReference"
+        },
+        "name": "EEHRxF MHD DocumentReference Profile for Imaging Reports",
+        "description": "Profile for DocumentReference resources used in the EEHRxF context, based on the IHE MHD Minimal DocumentReference profile. This profile is used for the DocumentReference resources that represent imaging manifests using the DICOM KOS format in the EEHRxF context. It includes additional constraints and extensions specific to imaging manifests, such as the type of report, the clinical specialty, and the anatomical region of interest.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/MadoIHEmhdFhirReference"
+        },
+        "name": "EEHRxF MHD DocumentReference Profile for Imaging Reports",
+        "description": "Profile for DocumentReference resources used in the EEHRxF context, based on the IHE MHD Minimal DocumentReference profile. This profile is used for the DocumentReference resources that represent imaging manifests using the FHIR format in the EEHRxF context. It includes additional constraints and extensions specific to imaging manifests, such as the type of report, the clinical specialty, the anatomical region of interest, and the profile of the imaging report.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/SearchParameterDocumentReferenceBodySite"
+        },
+        "name": "SearchParameterDocumentReferenceBodySite",
+        "description": "Searches for document references with a specific body site.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/SearchParameterDocumentReferenceModality"
+        },
+        "name": "SearchParameterDocumentReferenceModality",
+        "description": "Searches for document references with a specific modality.",
+        "exampleBoolean": false
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": [
+        {
+          "nameUrl": "index.html",
+          "title": "Imaging Report",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "xtehr-mapping.html",
+          "title": "Mapping to XTEHR",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "FHIR-mapping.html",
+          "title": "Mappings from FHIR",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "DICOM-mapping.html",
+          "title": "Mappings from DICOM KOS",
+          "generation": "markdown"
+        }
+      ]
+    },
+    "parameter": [
+      {
+        "code": "copyrightyear",
+        "value": "2025+"
+      },
+      {
+        "code": "releaselabel",
+        "value": "ci-build"
+      },
+      {
+        "code": "apply-contact",
+        "value": "false"
+      },
+      {
+        "code": "default-contact",
+        "value": "true"
+      },
+      {
+        "code": "default-copyright",
+        "value": "true"
+      },
+      {
+        "code": "apply-copyright",
+        "value": "false"
+      },
+      {
+        "code": "apply-jurisdiction",
+        "value": "true"
+      },
+      {
+        "code": "apply-license",
+        "value": "false"
+      },
+      {
+        "code": "default-license",
+        "value": "true"
+      },
+      {
+        "code": "apply-publisher",
+        "value": "true"
+      },
+      {
+        "code": "apply-version",
+        "value": "false"
+      },
+      {
+        "code": "default-version",
+        "value": "true"
+      },
+      {
+        "code": "show-inherited-invariants",
+        "value": "true"
+      },
+      {
+        "code": "usage-stats-opt-out",
+        "value": "true"
+      },
+      {
+        "code": "path-binary",
+        "value": "input/binaries"
+      },
+      {
+        "code": "releaselabel",
+        "value": "0.2.1-build"
+      },
+      {
+        "code": "special-url-base",
+        "value": "https://www.xt-ehr.eu/specifications/fhir"
+      }
+    ]
+  }
+}

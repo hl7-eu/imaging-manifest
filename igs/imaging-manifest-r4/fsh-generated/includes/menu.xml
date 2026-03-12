@@ -10,48 +10,23 @@
 {% endcomment %} -->
 
 <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Home
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Mappings
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="index.html">Introduction</a>
+        <a href="xtehr-mapping.html">Mapping to XTEHR</a>
       </li>
       <li>
-        <a href="changes.html">Changes</a>
+        <a href="FHIR-mapping.html">Mapping from FHIR</a>
       </li>
       <li>
-        <a href="index.html#fhir-specific-dependencies">Dependencies</a>
-      </li>
-      <li>
-        <a href="adapting.html">Adapting Guidelines for Country use</a>
+        <a href="DICOM-mapping.html">Mapping from DICOM KOS</a>
       </li>
     </ul>
-  </li>
-  <li>
-    <a href="mado-volume1.html">Volume 1</a>
-  </li>
-  <li>
-    <a href="mado-volume2.html">Volume 2</a>
-  </li>
-  <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Volume 3
-      <b class="caret"></b>
-    </a>
-    <ul class="dropdown-menu">
-      <li>
-        <a href="manifest-envelop.html">Manifest Envelop</a>
-      </li>
-      <li>
-        <a href="mado-volume3-KOS.html">KOS Manifest Specification</a>
-      </li>
-      <li>
-        <a href="fhir-imaging-manifest.html">FHIR Manifest Specification</a>
-      </li>
-    </ul>
-  </li>
-  <li>
-    <a href="artifacts.html">Artifacts</a>
   </li>
 </ul>

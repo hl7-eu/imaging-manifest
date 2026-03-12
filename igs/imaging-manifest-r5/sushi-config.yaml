@@ -1,8 +1,8 @@
 id: hl7.fhir.eu.imaging-manifest-r5
 canonical: http://hl7.eu/fhir/imaging-manifest-r5
-name: HL7EuImagingStudyManifestR5
-title: Manifest-based Access to DICOM Objects (MADO) Profile (FHIR-R5 elements)
-description: This guide describes FHIR R5 related elements of the IHE-MADO profile.
+name: HL7EuImagingManifest
+title: IHEeu/HL7eu Imaging Manifest R5
+description: This guide describes how a Imaging Manifest can be represented in the European REALM using FHIR R5.
 status: draft # draft | active | retired | unknown
 experimental: false
 version: 0.2.1-build
@@ -18,88 +18,43 @@ publisher:
   # email: test@example.org
 copyright: >-
   Copyright HL7 Europe. Licensed under Creative Commons public domain (CC0 1.0).
-# license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
+license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 
 # The dependencies property corresponds to IG.dependsOn. The key is the
 # package id and the value is the version (or dev/current). For advanced
 # use cases, the value can be an object with keys for id, uri, and version.
 #
 dependencies:
+  hl7.fhir.eu.base-r5: current
+  
+  
   hl7.terminology.r5: 6.3.0
-  hl7.fhir.uv.extensions: 5.2.0
-  hl7.fhir.uv.ips: 1.1.0
+  hl7.fhir.uv.extensions: 5.3.0-ballot
+  hl7.fhir.eu.extensions: 1.2.0
+    
+  hl7.fhir.eu.eu-health-data-api: current
+  ihe.iti.mhd: 4.2.3
+  # eu.ehds.models: 0.1.0
+  # eu.ehds.models: current
+  # required for medication extensions
+  # ihe.pharm.mpd: current
+  fhir.dicom: 
+    id: DICOM
+    uri: http://fhir.org/packages/fhir.dicom/ImplementationGuide/fhir.dicom
+    version: 2025.3.20250714
+  
   
 pages:
   index.md:
-    title: Home
-    changes.md: 
-      title: Changes
-    adapting.md: 
-      title: Adapting Guidelines for Country use	
-    contributors.md:
-      title: Contributors
-  mado-intro.md:
-    title: MADO profile
-  mado-volume1.md:
-    title: Volume 1
-  mado-volume2.md:
-    title: Volume 2
-  # issues.md: 
-  #   title: Issues
-  # volume-1.md: 
-  #   title: 1:59 Manifest-based Access to DICOM Objects (MADO) Profile
-  # rad-1xy.md: 
-  #   title: 3.1xy WADO-RS Get Instances [RAD-1xy]
-  manifest-envelop.md:
-    title: Manifest Envelop
-  # kos-manifest-specification.md:
-  #   title: KOS manifest
-  mado-volume3-KOS.md:
-    title: Volume 3 - KOS
-  fhir-imaging-manifest.md:
-    title: FHIR Imaging Manifest
+      title: Imaging Report
 
-# ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
-# │ The menu property will be used to generate the input/menu.xml file. The menu is represented    │
-# │ as a simple structure where the YAML key is the menu item name and the value is the URL.       │
-# │ The IG publisher currently only supports one level deep on sub-menus. To provide a             │
-# │ custom menu.xml file, do not include this property and include a `menu.xml` file in            │
-# │ input/includes. To use a provided input/includes/menu.xml file, delete the "menu"              │
-# │ property below.                                                                                │
-# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-menu:
-  Home:
-    Introduction: index.html
-    Changes: changes.html
-    Dependencies: index.html#fhir-specific-dependencies
-    Adapting Guidelines for Country use: adapting.html
-  # Issues Log: issues.html
-  Volume 1: mado-volume1.html
-    # Introduction: volume-1.html
-    # Introduction: https://docs.google.com/document/d/1Rq5Cd7Ate8RdR0RU-oP0uQvYA_Jz359v/edit#heading=h.5ct9ee81lsuq
-    # # Actors, Transactions and Content Modules: volume-1.html#591-mado-actors-transactions-and-content-modules
-    # Actors, Transactions and Content Modules: https://docs.google.com/document/d/1Rq5Cd7Ate8RdR0RU-oP0uQvYA_Jz359v/edit#heading=h.sj02796pqlmr
-    # # Actor Options: volume-1.html#1592-mado-actor-options
-    # Actor Options: https://docs.google.com/document/d/1Rq5Cd7Ate8RdR0RU-oP0uQvYA_Jz359v/edit#heading=h.598eb7603xav
-    # # Required Groupings: volume-1.html#1593-mado-required-grouping
-    # Required Groupings: https://docs.google.com/document/d/1Rq5Cd7Ate8RdR0RU-oP0uQvYA_Jz359v/edit#heading=h.jhz3torlj92v
-    # # Overview: volume-1.html#1594-mado-overview
-    # Overview: https://docs.google.com/document/d/1Rq5Cd7Ate8RdR0RU-oP0uQvYA_Jz359v/edit#heading=h.r1er32vy1yjx
-    # # Security Considerations: volume-1.html#1595-mado-security-considerations
-    # Security Considerations: https://docs.google.com/document/d/1Rq5Cd7Ate8RdR0RU-oP0uQvYA_Jz359v/edit#heading=h.rda7wgahjhuw
-    # # Cross-Profile Considerations: volume-1.html#1596-mado-cross-profile-considerations
-    # Cross-Profile Considerations: https://docs.google.com/document/d/1Rq5Cd7Ate8RdR0RU-oP0uQvYA_Jz359v/edit#heading=h.1r5p8pdph3n8
-  Volume 2: mado-volume2.html
-    # WADO-RS Get Instances: rad-1xy.html
-    # WADO-RS Get Instances: https://docs.google.com/document/d/1Rq5Cd7Ate8RdR0RU-oP0uQvYA_Jz359v/edit#heading=h.xt763ccz388r
-  Volume 3: 
-    Manifest Envelop: manifest-envelop.html
-    # KOS Manifest Specification: kos-manifest-specification.html 
-    KOS Manifest Specification: mado-volume3-KOS.html
-    FHIR Manifest Specification: fhir-imaging-manifest.html
-  Artifacts: artifacts.html
-
-# The parameters property represents IG.definition.parameter. Rather 
+  xtehr-mapping.md:
+      title: Mapping to XTEHR
+  FHIR-mapping.md:
+      title: Mappings from FHIR
+  DICOM-mapping.md:
+      title: Mappings from DICOM KOS
+# The parameters property represents IG.definition.parameter. Rather
 # than a list of code/value pairs (as in the ImplementationGuide
 # resource), the code is the YAML key. If a parameter allows repeating
 # values, the value in the YAML should be a sequence/array.
@@ -123,16 +78,31 @@ parameters:
   default-version: true
   show-inherited-invariants: true
   usage-stats-opt-out: true
+  path-binary:  input/binaries
   # packages: ./package-cache
   releaselabel: 0.2.1-build
-
+  
   special-url-base: https://www.xt-ehr.eu/specifications/fhir
   # add all fsh results to _data directory
   # produce-jekyll-data: true
   # broken links are not errors, but warnings
   # rule-broken-links: warning
   
- 
+#
+# ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
+# │ The menu property will be used to generate the input/menu.xml file. The menu is represented    │
+# │ as a simple structure where the YAML key is the menu item name and the value is the URL.       │
+# │ The IG publisher currently only supports one level deep on sub-menus. To provide a             │
+# │ custom menu.xml file, do not include this property and include a `menu.xml` file in            │
+# │ input/includes. To use a provided input/includes/menu.xml file, delete the "menu"              │
+# │ property below.                                                                                │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+menu:
+  Home: index.html
+  Mappings:
+    Mapping to XTEHR: xtehr-mapping.html
+    Mapping from FHIR: FHIR-mapping.html
+    Mapping from DICOM KOS: DICOM-mapping.html
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
 # │  resource. These properties are less commonly needed than those above.                         │

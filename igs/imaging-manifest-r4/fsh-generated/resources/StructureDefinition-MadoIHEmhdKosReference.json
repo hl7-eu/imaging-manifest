@@ -1,0 +1,263 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "MadoIHEmhdKosReference",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 1
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "draft"
+    }
+  ],
+  "url": "http://hl7.eu/fhir/imaging-manifest/StructureDefinition/MadoIHEmhdKosReference",
+  "name": "MadoIHEmhdKosReference",
+  "title": "EEHRxF MHD DocumentReference Profile for Imaging Reports",
+  "status": "draft",
+  "description": "Profile for DocumentReference resources used in the EEHRxF context, based on the IHE MHD Minimal DocumentReference profile. This profile is used for the DocumentReference resources that represent imaging manifests using the DICOM KOS format in the EEHRxF context. It includes additional constraints and extensions specific to imaging manifests, such as the type of report, the clinical specialty, and the anatomical region of interest.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "EU",
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.html",
+          "display": "Europe"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "DocumentReference",
+  "baseDefinition": "http://hl7.eu/fhir/eu-health-data-api/StructureDefinition/EehrxfMhdDocumentReference",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "DocumentReference.extension",
+        "path": "DocumentReference.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "DocumentReference.extension:bodysite",
+        "path": "DocumentReference.extension",
+        "sliceName": "bodysite",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.bodySite"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DocumentReference.extension:bodysite.extension",
+        "path": "DocumentReference.extension.extension",
+        "min": 1
+      },
+      {
+        "id": "DocumentReference.extension:bodysite.extension:concept",
+        "path": "DocumentReference.extension.extension",
+        "sliceName": "concept",
+        "short": "The anatomical region of the patient that is the focus of the imaging manifest, concept field is required.",
+        "definition": "This field may be used to provide additional information about the anatomical region of interest for the imaging manifest.",
+        "min": 1
+      },
+      {
+        "id": "DocumentReference.extension:bodysite.extension:concept.extension",
+        "path": "DocumentReference.extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "DocumentReference.extension:bodysite.extension:concept.value[x]",
+        "path": "DocumentReference.extension.extension.value[x]",
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "http://hl7.eu/fhir/imaging-manifest/ValueSet/mado-anatomical-region-valueset"
+        }
+      },
+      {
+        "id": "DocumentReference.extension:bodysite.value[x]",
+        "path": "DocumentReference.extension.value[x]",
+        "max": "0"
+      },
+      {
+        "id": "DocumentReference.extension:modality",
+        "path": "DocumentReference.extension",
+        "sliceName": "modality",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.modality"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DocumentReference.type",
+        "path": "DocumentReference.type",
+        "short": "Type of Imaging Diagnostic Report",
+        "definition": "Defines the document type, it is recommended to take this from the suggested LOINC set. It should correspond with the value on DiagnosticReport.code.",
+        "min": 1
+      },
+      {
+        "id": "DocumentReference.type.coding",
+        "path": "DocumentReference.type.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this"
+            }
+          ],
+          "rules": "open",
+          "ordered": false
+        },
+        "min": 1
+      },
+      {
+        "id": "DocumentReference.type.coding:imaging-manifest",
+        "path": "DocumentReference.type.coding",
+        "sliceName": "imaging-manifest",
+        "min": 1,
+        "max": "1",
+        "patternCoding": {
+          "code": "18748-4",
+          "system": "http://loinc.org"
+        }
+      },
+      {
+        "id": "DocumentReference.category",
+        "path": "DocumentReference.category",
+        "min": 1
+      },
+      {
+        "id": "DocumentReference.category.coding",
+        "path": "DocumentReference.category.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this"
+            }
+          ],
+          "rules": "open",
+          "ordered": false
+        },
+        "min": 1
+      },
+      {
+        "id": "DocumentReference.category.coding:priority-area",
+        "path": "DocumentReference.category.coding",
+        "sliceName": "priority-area",
+        "min": 1,
+        "max": "1",
+        "patternCoding": {
+          "code": "Medical-Imaging",
+          "system": "http://hl7.eu/fhir/eu-health-data-api/CodeSystem/eehrxf-document-priority-category-cs"
+        }
+      },
+      {
+        "id": "DocumentReference.custodian",
+        "path": "DocumentReference.custodian",
+        "short": "Organization that manages the Imaging Report",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.eu/fhir/base/StructureDefinition/organization-eu"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DocumentReference.relatesTo",
+        "path": "DocumentReference.relatesTo",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this"
+            }
+          ],
+          "rules": "open",
+          "ordered": false
+        }
+      },
+      {
+        "id": "DocumentReference.relatesTo:fhirReference",
+        "path": "DocumentReference.relatesTo",
+        "sliceName": "fhirReference",
+        "short": "Reference to the DocumentReference resource that contains the DICOM KOS manifest that corresponds to this imaging report in FHIR format",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "DocumentReference.relatesTo:fhirReference.code",
+        "path": "DocumentReference.relatesTo.code",
+        "patternCode": "transforms"
+      },
+      {
+        "id": "DocumentReference.relatesTo:fhirReference.target",
+        "path": "DocumentReference.relatesTo.target",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.eu/fhir/imaging-manifest/StructureDefinition/MadoIHEmhdFhirReference"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DocumentReference.content.extension",
+        "path": "DocumentReference.content.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "DocumentReference.content.extension:profile",
+        "path": "DocumentReference.content.extension",
+        "sliceName": "profile",
+        "short": "Contains the profile of the referred report",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.content.profile"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

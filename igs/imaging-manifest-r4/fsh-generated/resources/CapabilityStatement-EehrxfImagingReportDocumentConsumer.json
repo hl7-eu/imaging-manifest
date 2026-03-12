@@ -1,0 +1,298 @@
+{
+  "resourceType": "CapabilityStatement",
+  "id": "EehrxfImagingReportDocumentConsumer",
+  "url": "http://hl7.eu/fhir/imaging-manifest/CapabilityStatement/EehrxfImagingReportDocumentConsumer",
+  "title": "EEHRxF ImagingReport Document Consumer CapabilityStatement",
+  "description": "CapabilityStatement for the EEHRxF Imaging Report Document Consumer actor. This composite actor\nconsumes EEHRxF FHIR Imaging Report Documents by querying a Imaging Report Document Access Provider.\n",
+  "format": [
+    "json",
+    "xml"
+  ],
+  "rest": [
+    {
+      "security": {
+        "service": [
+          {
+            "coding": [
+              {
+                "code": "SMART-on-FHIR",
+                "system": "http://hl7.org/fhir/restful-security-service"
+              }
+            ]
+          }
+        ],
+        "cors": false,
+        "description": "SMART Backend Services authorization is REQUIRED for all transactions.\nSystems SHALL:\n- Authenticate using JWT client credentials (RFC 7523)\n- Request appropriate scopes for document access\n- Use TLS 1.2 or higher for all communications\n\nRequired scopes:\n- system/DocumentReference.read, system/DocumentReference.search (read and search DocumentReference - ITI-67)\n- system/Binary.read (read Binary for document retrieval - ITI-68)\n- system/Patient.read, system/Patient.search (read and search Patient for context - ITI-78)"
+      },
+      "resource": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode": "SHALL"
+            }
+          ],
+          "interaction": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "read",
+              "documentation": "Read DocumentReference by logical ID"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "search-type",
+              "documentation": "Search DocumentReference (ITI-67)"
+            }
+          ],
+          "searchParam": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "patient",
+              "definition": "http://hl7.org/fhir/SearchParameter/clinical-patient",
+              "type": "reference",
+              "documentation": "The patient the document is about (SHALL support)"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "type",
+              "definition": "http://hl7.org/fhir/SearchParameter/clinical-type",
+              "type": "token",
+              "documentation": "Kind of document (LOINC code) - SHALL support for clinical precision filtering"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "_id",
+              "definition": "http://hl7.org/fhir/SearchParameter/Resource-id",
+              "type": "token",
+              "documentation": "Logical id of this artifact"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHOULD"
+                }
+              ],
+              "name": "category",
+              "definition": "http://hl7.org/fhir/SearchParameter/DocumentReference-category",
+              "type": "token",
+              "documentation": "Categorization of document (XDS ClassCode) - SHOULD support for coarse filtering"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHOULD"
+                }
+              ],
+              "name": "date",
+              "definition": "http://hl7.org/fhir/SearchParameter/clinical-date",
+              "type": "date",
+              "documentation": "When this document reference was created"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHOULD"
+                }
+              ],
+              "name": "status",
+              "definition": "http://hl7.org/fhir/SearchParameter/DocumentReference-status",
+              "type": "token",
+              "documentation": "current | superseded | entered-in-error"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHOULD"
+                }
+              ],
+              "name": "identifier",
+              "definition": "http://hl7.org/fhir/SearchParameter/clinical-identifier",
+              "type": "token",
+              "documentation": "Master Version Specific Identifier"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHOULD"
+                }
+              ],
+              "name": "bodysite",
+              "definition": "http://hl7.eu/fhir/imaging-manifest/SearchParameter/SearchParameterDocumentReferenceBodySite",
+              "type": "token",
+              "documentation": "Anatomical region of the related imaging study"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHOULD"
+                }
+              ],
+              "name": "modality",
+              "definition": "http://hl7.eu/fhir/imaging-manifest/SearchParameter/SearchParameterDocumentReferenceModality",
+              "type": "token",
+              "documentation": "Modality of the related imaging study"
+            }
+          ],
+          "type": "DocumentReference",
+          "documentation": "DocumentReference resources are queried using the ITI-67 Find Document References\ntransaction to discover available documents for a patient."
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode": "SHALL"
+            }
+          ],
+          "interaction": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "read",
+              "documentation": "Retrieve document content (ITI-68)"
+            }
+          ],
+          "type": "Binary",
+          "documentation": "Binary resources contain the actual document content and are retrieved using the\nITI-68 Retrieve Document transaction."
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode": "SHALL"
+            }
+          ],
+          "interaction": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "read",
+              "documentation": "Read Patient by logical ID"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "search-type",
+              "documentation": "Search for patients (PDQm ITI-78)"
+            }
+          ],
+          "searchParam": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "identifier",
+              "definition": "http://hl7.org/fhir/SearchParameter/Patient-identifier",
+              "type": "token",
+              "documentation": "Patient identifier (e.g., national ID, MRN) - required for patient lookup"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "_id",
+              "definition": "http://hl7.org/fhir/SearchParameter/Resource-id",
+              "type": "token",
+              "documentation": "Patient logical ID"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHOULD"
+                }
+              ],
+              "name": "family",
+              "definition": "http://hl7.org/fhir/SearchParameter/individual-family",
+              "type": "string",
+              "documentation": "Patient family name"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHOULD"
+                }
+              ],
+              "name": "given",
+              "definition": "http://hl7.org/fhir/SearchParameter/individual-given",
+              "type": "string",
+              "documentation": "Patient given name"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHOULD"
+                }
+              ],
+              "name": "birthdate",
+              "definition": "http://hl7.org/fhir/SearchParameter/individual-birthdate",
+              "type": "date",
+              "documentation": "Patient date of birth"
+            }
+          ],
+          "type": "Patient",
+          "documentation": "Patient resources are searched to establish patient context before querying for documents.\nThis uses PDQm [ITI-78] with identifier as a required search parameter."
+        }
+      ],
+      "mode": "client",
+      "documentation": "The Imaging Report Document Consumer Actor queries for document metadata and retrieves documents\nfrom a Imaging Report Document Access Provider. It also queries for patient context using PDQm.\nAll transactions require SMART Backend Services authorization."
+    }
+  ],
+  "name": "EEHRxFImagingReportDocumentConsumer",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-02-11",
+  "publisher": "HL7 Europe",
+  "kind": "requirements",
+  "fhirVersion": "4.0.1"
+}

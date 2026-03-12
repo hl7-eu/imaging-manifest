@@ -1,0 +1,17 @@
+class MhdDocumentReference
+
+class ManifestBundle{
+  type = #collection
+}
+
+MhdDocumentReference -> ManifestBundle: content.attachment.url
+
+class ProvenanceManifest{
+
+}
+
+ProvenanceManifest -> Device: agent.who
+' ProvenanceManifest -> Organization: agent.who
+' ProvenanceManifest -> Practitioner: agent.who
+
+

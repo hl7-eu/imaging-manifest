@@ -1,0 +1,21 @@
+{
+  "resourceType": "SearchParameter",
+  "id": "SearchParameterDocumentReferenceBodySite",
+  "url": "http://hl7.eu/fhir/imaging-manifest/SearchParameter/SearchParameterDocumentReferenceBodySite",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "trial-use"
+    }
+  ],
+  "base": [
+    "DocumentReference"
+  ],
+  "name": "DocumentReferenceBodySite",
+  "status": "active",
+  "experimental": false,
+  "description": "Searches for document references with a specific body site.",
+  "code": "bodysite",
+  "type": "token",
+  "expression": "DocumentReference.extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.bodySite').extension('concept').value"
+}

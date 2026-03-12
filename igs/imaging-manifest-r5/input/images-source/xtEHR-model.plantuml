@@ -1,0 +1,4 @@
+class EHDSImagingStudy
+class EHDSPatient
+
+EHDSImagingStudy -> EHDSPatient
