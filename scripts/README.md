@@ -15,16 +15,7 @@ The XtEHR source files are stored in XtEHR-models. This section explains the pro
 
 ### Download and extract logical model
 
-Updating these files is done using following process:
-
-Enter source directory:
-> cd XtEHR-models
-
-Download model files:
-> wget  http://build.fhir.org/ig/Xt-EHR/xt-ehr-common/definitions.json.zip
-
-Unzip file
-> unzip definitions.json.zip
+Updating these files is done using the script `downloadXtEHRModel.sh`.
 
 ### Create xtehr-model.csv file
 

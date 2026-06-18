@@ -1,0 +1,830 @@
+{
+  "index-version" : 2,
+  "files" : [{
+    "filename" : "ImplementationGuide-xtehr.eu.ehds.models.json",
+    "resourceType" : "ImplementationGuide",
+    "id" : "xtehr.eu.ehds.models",
+    "url" : "http://www.xt-ehr.eu/fhir/models/ImplementationGuide/xtehr.eu.ehds.models",
+    "version" : "1.0.0"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSAddress.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSAddress",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSAddress",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSAddress",
+    "derivation" : "specialization"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSAdministeredDosage.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSAdministeredDosage",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSAdministeredDosage",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSAdministeredDosage",
+    "derivation" : "specialization"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSAdvanceDirective.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSAdvanceDirective",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSAdvanceDirective",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSAdvanceDirective",
+    "derivation" : "specialization"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSAdvanceDirectiveObligations.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSAdvanceDirectiveObligations",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSAdvanceDirectiveObligations",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSAdvanceDirective",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSAlert.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSAlert",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSAlert",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSAlert",
+    "derivation" : "specialization"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSAlertObligations.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSAlertObligations",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSAlertObligations",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSAlert",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSAllergyIntolerance.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSAllergyIntolerance",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSAllergyIntolerance",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSAllergyIntolerance",
+    "derivation" : "specialization"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSAllergyIntoleranceObligations.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSAllergyIntoleranceObligations",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSAllergyIntoleranceObligations",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSAllergyIntolerance",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSAttachment.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSAttachment",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSAttachment",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSAttachment",
+    "derivation" : "specialization"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSBodyStructure.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSBodyStructure",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSBodyStructure",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSBodyStructure",
+    "derivation" : "specialization"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSBodyStructureLaboratoryObligations.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSBodyStructureLaboratoryObligations",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSBodyStructureLaboratoryObligations",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSBodyStructure",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSCarePlan.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSCarePlan",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSCarePlan",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSCarePlan",
+    "derivation" : "specialization"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSCondition.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSCondition",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSCondition",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSCondition",
+    "derivation" : "specialization"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSConditionLaboratoryObligations.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSConditionLaboratoryObligations",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSConditionLaboratoryObligations",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSCondition",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSConditionObligations.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSConditionObligations",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSConditionObligations",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSCondition",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSCurrentPregnancy.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSCurrentPregnancy",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSCurrentPregnancy",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSCurrentPregnancy",
+    "derivation" : "specialization"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSCurrentPregnancyObligations.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSCurrentPregnancyObligations",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSCurrentPregnancyObligations",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSCurrentPregnancy",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSDataSet.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSDataSet",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDataSet",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDataSet",
+    "derivation" : "specialization"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSDevice.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSDevice",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDevice",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDevice",
+    "derivation" : "specialization"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSDeviceLaboratoryObligations.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSDeviceLaboratoryObligations",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDeviceLaboratoryObligations",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDevice",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSDeviceObligations.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSDeviceObligations",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDeviceObligations",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDevice",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSDeviceUse.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSDeviceUse",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDeviceUse",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDeviceUse",
+    "derivation" : "specialization"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSDeviceUseObligations.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSDeviceUseObligations",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDeviceUseObligations",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDeviceUse",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSDischargeReport.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSDischargeReport",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDischargeReport",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDischargeReport",
+    "derivation" : "specialization"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSDischargeReportObligations.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSDischargeReportObligations",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDischargeReportObligations",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDischargeReport",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSDocument.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSDocument",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDocument",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDocument",
+    "derivation" : "specialization"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSDosage.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSDosage",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDosage",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDosage",
+    "derivation" : "specialization"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSDosageObligations.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSDosageObligations",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDosageObligations",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSDosage",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSEncounter.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSEncounter",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSEncounter",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSEncounter",
+    "derivation" : "specialization"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSEndpoint.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSEndpoint",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSEndpoint",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSEndpoint",
+    "derivation" : "specialization"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSHealthProfessional.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSHealthProfessional",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSHealthProfessional",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSHealthProfessional",
+    "derivation" : "specialization"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSHealthProfessionalLaboratoryObligations.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSHealthProfessionalLaboratoryObligations",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSHealthProfessionalLaboratoryObligations",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSHealthProfessional",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSHealthProfessionalObligations.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSHealthProfessionalObligations",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSHealthProfessionalObligations",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSHealthProfessional",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSHumanName.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSHumanName",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSHumanName",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSHumanName",
+    "derivation" : "specialization"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSImagingReport.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSImagingReport",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSImagingReport",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSImagingReport",
+    "derivation" : "specialization"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSImagingReportObligations.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSImagingReportObligations",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSImagingReportObligations",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSImagingReport",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSImagingStudy.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSImagingStudy",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSImagingStudy",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSImagingStudy",
+    "derivation" : "specialization"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSImagingStudyObligations.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSImagingStudyObligations",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSImagingStudyObligations",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSImagingStudy",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSImmunisation.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSImmunisation",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSImmunisation",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSImmunisation",
+    "derivation" : "specialization"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSImmunisationLaboratoryObligations.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSImmunisationLaboratoryObligations",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSImmunisationLaboratoryObligations",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSImmunisation",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSImmunisationObligations.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSImmunisationObligations",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSImmunisationObligations",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSImmunisation",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSLaboratoryObservation.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSLaboratoryObservation",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSLaboratoryObservation",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSLaboratoryObservation",
+    "derivation" : "specialization"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSLaboratoryObservationObligations.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSLaboratoryObservationObligations",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSLaboratoryObservationObligations",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSLaboratoryObservation",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSLaboratoryReport.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSLaboratoryReport",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSLaboratoryReport",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSLaboratoryReport",
+    "derivation" : "specialization"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSLaboratoryReportObligations.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSLaboratoryReportObligations",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSLaboratoryReportObligations",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSLaboratoryReport",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSLocation.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSLocation",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSLocation",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSLocation",
+    "derivation" : "specialization"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSMedication.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSMedication",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedication",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedication",
+    "derivation" : "specialization"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSMedicationAdministration.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSMedicationAdministration",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationAdministration",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationAdministration",
+    "derivation" : "specialization"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSMedicationAdministrationLaboratoryObligations.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSMedicationAdministrationLaboratoryObligations",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationAdministrationLaboratoryObligations",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationAdministration",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSMedicationAdministrationObligations.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSMedicationAdministrationObligations",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationAdministrationObligations",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationAdministration",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSMedicationDispense.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSMedicationDispense",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationDispense",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationDispense",
+    "derivation" : "specialization"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSMedicationDispenseObligations.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSMedicationDispenseObligations",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationDispenseObligations",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationDispense",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSMedicationLaboratoryObligations.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSMedicationLaboratoryObligations",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationLaboratoryObligations",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedication",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSMedicationObligations.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSMedicationObligations",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationObligations",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedication",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSMedicationPrescription.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSMedicationPrescription",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescription",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescription",
+    "derivation" : "specialization"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSMedicationPrescriptionObligations.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSMedicationPrescriptionObligations",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescriptionObligations",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationPrescription",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSMedicationUse.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSMedicationUse",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationUse",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationUse",
+    "derivation" : "specialization"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSMedicationUseLaboratoryObligations.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSMedicationUseLaboratoryObligations",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationUseLaboratoryObligations",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationUse",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSMedicationUseObligations.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSMedicationUseObligations",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationUseObligations",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSMedicationUse",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSObservation.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSObservation",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSObservation",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSObservation",
+    "derivation" : "specialization"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSObservationObligations.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSObservationObligations",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSObservationObligations",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSObservation",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSOrganisation.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSOrganisation",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSOrganisation",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSOrganisation",
+    "derivation" : "specialization"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSOrganisationLaboratoryObligations.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSOrganisationLaboratoryObligations",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSOrganisationLaboratoryObligations",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSOrganisation",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSOrganisationObligations.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSOrganisationObligations",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSOrganisationObligations",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSOrganisation",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSPatient.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSPatient",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSPatient",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSPatient",
+    "derivation" : "specialization"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSPatientLaboratoryObligations.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSPatientLaboratoryObligations",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSPatientLaboratoryObligations",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSPatient",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSPatientObligations.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSPatientObligations",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSPatientObligations",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSPatient",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSPatientSummary.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSPatientSummary",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSPatientSummary",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSPatientSummary",
+    "derivation" : "specialization"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSPatientSummaryObligations.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSPatientSummaryObligations",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSPatientSummaryObligations",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSPatientSummary",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSPregnancyHistory.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSPregnancyHistory",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSPregnancyHistory",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSPregnancyHistory",
+    "derivation" : "specialization"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSProcedure.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSProcedure",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSProcedure",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSProcedure",
+    "derivation" : "specialization"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSProcedureLaboratoryObligations.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSProcedureLaboratoryObligations",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSProcedureLaboratoryObligations",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSProcedure",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSProcedureObligations.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSProcedureObligations",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSProcedureObligations",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSProcedure",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSRelatedPerson.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSRelatedPerson",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSRelatedPerson",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSRelatedPerson",
+    "derivation" : "specialization"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSRelatedPersonLaboratoryObligations.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSRelatedPersonLaboratoryObligations",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSRelatedPersonLaboratoryObligations",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSRelatedPerson",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSRelatedPersonObligations.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSRelatedPersonObligations",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSRelatedPersonObligations",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSRelatedPerson",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSServiceRequest.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSServiceRequest",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSServiceRequest",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSServiceRequest",
+    "derivation" : "specialization"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSServiceRequestLaboratoryObligations.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSServiceRequestLaboratoryObligations",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSServiceRequestLaboratoryObligations",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSServiceRequest",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSSpecimen.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSSpecimen",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSSpecimen",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSSpecimen",
+    "derivation" : "specialization"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSSpecimenLaboratoryObligations.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSSpecimenLaboratoryObligations",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSSpecimenLaboratoryObligations",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSSpecimen",
+    "derivation" : "constraint"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSTelecom.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSTelecom",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSTelecom",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSTelecom",
+    "derivation" : "specialization"
+  },
+  {
+    "filename" : "StructureDefinition-EHDSTravelHistory.json",
+    "resourceType" : "StructureDefinition",
+    "id" : "EHDSTravelHistory",
+    "url" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSTravelHistory",
+    "version" : "1.0.0",
+    "kind" : "logical",
+    "type" : "http://www.xt-ehr.eu/fhir/models/StructureDefinition/EHDSTravelHistory",
+    "derivation" : "specialization"
+  }]
+}

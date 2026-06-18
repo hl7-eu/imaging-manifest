@@ -1,0 +1,28 @@
+name: validate
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    types: [opened, synchronize] # This will trigger the workflow only when a PR is opened or updated with new commits
+  workflow_dispatch:
+
+jobs:
+  sushi:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install Sushi
+        run: sudo npm install -g fsh-sushi
+
+      - name: Validate with Sushi
+        run: sushi .
+      
+      - name: Update publisher
+        run: _updatePublisher.sh -f -y
+
+      - name: Run publisher
+        run: _genonce.sh
+      

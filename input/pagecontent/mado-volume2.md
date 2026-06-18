@@ -1,1 +1,3 @@
-{% include redirect.html redirect="https://euridice.org/wp-content/uploads/2025/09/IHE_RAD-Suppl_MADO_Profile-draft_0.6.pdf#page=27" %}
+This page reflects Volume 2 of the MADO specification [MADO Volume 2](https://build.fhir.org/ig/IHE/RAD.MADO/volume-2.html). It extends Volume of {{iheMado}} with EU specific elements.
+
+No EU specific changes have been identified.

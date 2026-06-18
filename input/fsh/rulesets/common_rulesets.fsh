@@ -39,3 +39,4 @@ RuleSet: LOINCCopyrightForVS
 
 RuleSet: UCUMCopyrightForVS
 * ^copyright = "The UCUM codes, UCUM table (regardless of format), and UCUM Specification are copyright 1999-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. https://ucum.org/trac/wiki/TermsOfUse"
+

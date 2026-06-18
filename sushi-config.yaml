@@ -1,13 +1,13 @@
-id: hl7.fhir.eu.imaging-manifest-r5
-canonical: http://hl7.eu/fhir/imaging-manifest-r5
-name: HL7EuImagingStudyManifestR5
-title: Manifest-based Access to DICOM Objects (MADO) Profile (FHIR-R5 elements)
-description: This guide describes FHIR R5 related elements of the IHE-MADO profile.
+id: hl7.fhir.eu.imaging-manifest
+canonical: http://hl7.eu/fhir/imaging-manifest
+name: HL7EuImagingStudyManifest
+title: EU Manifest-based Access to DICOM Objects (MADO)
+description: This guide describes FHIR R4 related elements of the IHE-MADO profile.
 status: draft # draft | active | retired | unknown
 experimental: false
 version: 0.2.1-build
-fhirVersion: 5.0.0 # https://www.hl7.org/fhir/valueset-FHIR-version.html
-#fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
+# fhirVersion: 5.0.0 # https://www.hl7.org/fhir/valueset-FHIR-version.html
+fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2025+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
@@ -25,40 +25,29 @@ copyright: >-
 # use cases, the value can be an object with keys for id, uri, and version.
 #
 dependencies:
-  hl7.terminology.r5: 6.3.0
+  hl7.terminology: current
   hl7.fhir.uv.extensions: 5.2.0
-  hl7.fhir.uv.ips: 1.1.0
-  
+  ihe.rad.mado: current
+  hl7.fhir.eu.base: 2.0.0
+  hl7.fhir.eu.extensions.r4:
+    uri: http://hl7.eu/fhir/extensions/ImplementationGuide/hl7.fhir.eu.extensions
+    version: 1.2.0
+  xtehr.eu.ehds.models: 1.0.0
+
 pages:
   index.md:
     title: Home
     changes.md: 
       title: Changes
-    adapting.md: 
-      title: Adapting Guidelines for Country use	
-    contributors.md:
-      title: Contributors
-  mado-intro.md:
-    title: MADO profile
+    current-status.md:
+      title: Current Status
   mado-volume1.md:
     title: Volume 1
   mado-volume2.md:
     title: Volume 2
-  # issues.md: 
-  #   title: Issues
-  # volume-1.md: 
-  #   title: 1:59 Manifest-based Access to DICOM Objects (MADO) Profile
-  # rad-1xy.md: 
-  #   title: 3.1xy WADO-RS Get Instances [RAD-1xy]
-  manifest-envelop.md:
-    title: Manifest Envelop
-  # kos-manifest-specification.md:
-  #   title: KOS manifest
-  mado-volume3-KOS.md:
-    title: Volume 3 - KOS
-  fhir-imaging-manifest.md:
-    title: FHIR Imaging Manifest
-
+  mado-volume3.md:
+    title: Volume 3
+  
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │ The menu property will be used to generate the input/menu.xml file. The menu is represented    │
 # │ as a simple structure where the YAML key is the menu item name and the value is the URL.       │
@@ -72,31 +61,15 @@ menu:
     Introduction: index.html
     Changes: changes.html
     Dependencies: index.html#fhir-specific-dependencies
-    Adapting Guidelines for Country use: adapting.html
+    Copyright: index.html#ip-statements
+    Current Status: current-status.html
   # Issues Log: issues.html
+  XtEHR model: https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/en/overview-medicalimages.html
   Volume 1: mado-volume1.html
-    # Introduction: volume-1.html
-    # Introduction: https://docs.google.com/document/d/1Rq5Cd7Ate8RdR0RU-oP0uQvYA_Jz359v/edit#heading=h.5ct9ee81lsuq
-    # # Actors, Transactions and Content Modules: volume-1.html#591-mado-actors-transactions-and-content-modules
-    # Actors, Transactions and Content Modules: https://docs.google.com/document/d/1Rq5Cd7Ate8RdR0RU-oP0uQvYA_Jz359v/edit#heading=h.sj02796pqlmr
-    # # Actor Options: volume-1.html#1592-mado-actor-options
-    # Actor Options: https://docs.google.com/document/d/1Rq5Cd7Ate8RdR0RU-oP0uQvYA_Jz359v/edit#heading=h.598eb7603xav
-    # # Required Groupings: volume-1.html#1593-mado-required-grouping
-    # Required Groupings: https://docs.google.com/document/d/1Rq5Cd7Ate8RdR0RU-oP0uQvYA_Jz359v/edit#heading=h.jhz3torlj92v
-    # # Overview: volume-1.html#1594-mado-overview
-    # Overview: https://docs.google.com/document/d/1Rq5Cd7Ate8RdR0RU-oP0uQvYA_Jz359v/edit#heading=h.r1er32vy1yjx
-    # # Security Considerations: volume-1.html#1595-mado-security-considerations
-    # Security Considerations: https://docs.google.com/document/d/1Rq5Cd7Ate8RdR0RU-oP0uQvYA_Jz359v/edit#heading=h.rda7wgahjhuw
-    # # Cross-Profile Considerations: volume-1.html#1596-mado-cross-profile-considerations
-    # Cross-Profile Considerations: https://docs.google.com/document/d/1Rq5Cd7Ate8RdR0RU-oP0uQvYA_Jz359v/edit#heading=h.1r5p8pdph3n8
   Volume 2: mado-volume2.html
     # WADO-RS Get Instances: rad-1xy.html
     # WADO-RS Get Instances: https://docs.google.com/document/d/1Rq5Cd7Ate8RdR0RU-oP0uQvYA_Jz359v/edit#heading=h.xt763ccz388r
-  Volume 3: 
-    Manifest Envelop: manifest-envelop.html
-    # KOS Manifest Specification: kos-manifest-specification.html 
-    KOS Manifest Specification: mado-volume3-KOS.html
-    FHIR Manifest Specification: fhir-imaging-manifest.html
+  Volume 3: mado-volume3.html
   Artifacts: artifacts.html
 
 # The parameters property represents IG.definition.parameter. Rather 
