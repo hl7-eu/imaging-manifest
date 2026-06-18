@@ -46,6 +46,12 @@ This implementation guide defines the European specific {{iheMado}} specificatio
 
 The specification is to be used in a variety of deployment models, which includes the EHDS use cases: exchange data within healthcare organizations, across nations/regions and cross border information exchange. In all of these use cases it is important that it is compatible with the existing ecosystem.
 
+### Summary of differences
+
+* Update the MADO profiles to use the required EU profiles
+* Mapping on the XtEHR model for ImagingStudy
+* Requiring anatomical regions with values from the anatomical region valueset.
+
 ### Relationship and scope boundaries
 
 This guide is part of the broader European EHDS-aligned interoperability landscape and focuses on the imaging report model and related access patterns. It is designed to be complementary to other EHDS family guides and to remain interoperable with established IHE workflows.
