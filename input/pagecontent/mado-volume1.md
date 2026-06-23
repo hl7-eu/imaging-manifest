@@ -1,3 +1,5 @@
+{% include variable-definitions.md %}
+
 This page reflects Volume 1 of the MADO specification [MADO Volume 1](https://build.fhir.org/ig/IHE/RAD.MADO/volume-1.html). It extends Volume of {{iheMado}} with EU specific elements.
 
 The EU specific requirements include:

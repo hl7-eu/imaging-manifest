@@ -1,9 +1,9 @@
-Instance: EuImagingReportProducer
+Instance: EuMadoImagingManifestProducer
 InstanceOf: ActorDefinition
-Title: "ActorDefinition: Imaging Report Producer"
-Description: "The actor responsible for producing the Imaging Report resources."
+Title: "ActorDefinition: Imaging Manifest Producer"
+Description: "The actor responsible for producing the Imaging Manifest resources."
 Usage: #definition
-* name = "EuImagingReportProducer"
+* name = "EuImagingManifestProducer"
 * title = "Imaging Report provider"
 * status = #draft
 * description = "Provides the Imaging Report."

@@ -8,3 +8,9 @@ Profile on [[[MadoRequestedProcedure]]] that specifies the EU specific elements.
 
 // Indicate EU core as additional profile that is complied with
 * subject only Reference( EuMadoPatient )
+
+* identifier[accession-number]
+  * insert setProducerObligation( #SHALL:populate, "Required by MADO" )
+
+* identifier[placer]
+  * insert setProducerObligation( #SHALL:able-to-populate, "Required by MADO" )

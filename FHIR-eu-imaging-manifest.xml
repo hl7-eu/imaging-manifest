@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.eu/fhir/imaging-manifest-r5/0.2.0-snapshot1" ciUrl="https://build.fhir.org/ig/hl7-eu/imaging-manifest" defaultVersion="current" defaultWorkgroup="eu" url="http://hl7.eu/fhir/imaging-manifest">
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.eu/fhir/imaging-manifest/0.2.0-snapshot1" ciUrl="https://build.fhir.org/ig/hl7-eu/imaging-manifest" defaultVersion="current" defaultWorkgroup="eu" url="http://hl7.eu/fhir/imaging-manifest">
 <version code="current" url="https://build.fhir.org/ig/hl7-eu/imaging-manifest"/>
-<version code="0.2.0-snapshot1" url="http://hl7.eu/fhir/imaging-manifest-r5/0.2.0-snapshot1"/>
+<version code="0.2.0-snapshot1" url="http://hl7.eu/fhir/imaging-manifest/0.2.0-snapshot1"/>
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
-<artifact id="ActorDefinition/EuMadoImagingReportConsumer" key="ActorDefinition-EuMadoImagingReportConsumer" name="ActorDefinition: Imaging Manifest Consumer"/>
-<artifact id="ActorDefinition/EuImagingReportProducer" key="ActorDefinition-EuImagingReportProducer" name="ActorDefinition: Imaging Report Producer"/>
+<artifact id="ActorDefinition/EuMadoImagingManifestConsumer" key="ActorDefinition-EuMadoImagingManifestConsumer" name="ActorDefinition: Imaging Manifest Consumer"/>
+<artifact id="ActorDefinition/EuMadoImagingManifestProducer" key="ActorDefinition-EuMadoImagingManifestProducer" name="ActorDefinition: Imaging Manifest Producer"/>
 <artifact id="StructureDefinition/EuMadoComposition" key="StructureDefinition-EuMadoComposition" name="EU MADO Composition"/>
+<artifact id="StructureDefinition/EuMadoCreator" key="StructureDefinition-EuMadoCreator" name="EU MADO Creator"/>
+<artifact id="StructureDefinition/EuMadoCreatorOrganization" key="StructureDefinition-EuMadoCreatorOrganization" name="EU MADO Creator Organization"/>
 <artifact id="StructureDefinition/EuMadoDicomKosDocumentReference" key="StructureDefinition-EuMadoDicomKosDocumentReference" name="EU MADO MHD DocumentReference Profile for DICOM KOS Imaging Manifests"/>
 <artifact id="StructureDefinition/EuMadoFhirDocumentReference" key="StructureDefinition-EuMadoFhirDocumentReference" name="EU MADO MHD DocumentReference Profile for FHIR Imaging Study Manifest"/>
 <artifact id="StructureDefinition/EuMadoPatient" key="StructureDefinition-EuMadoPatient" name="EU MADO Patient"/>
 <artifact id="StructureDefinition/EuMadoRequestedProcedure" key="StructureDefinition-EuMadoRequestedProcedure" name="EU MADO Requested Procedure"/>
+<artifact id="StructureDefinition/EuMadoWadoEndpoint" key="StructureDefinition-EuMadoWadoEndpoint" name="EU MADO WADO Endpoint"/>
+<artifact id="StructureDefinition/EuMadoWebViewerEndpoint" key="StructureDefinition-EuMadoWebViewerEndpoint" name="EU MADO Web Viewer Endpoint"/>
 <artifact id="CapabilityStatement/IHE.RAD.MADO.DocumentResponder" key="CapabilityStatement-IHE.RAD.MADO.DocumentResponder" name="MADO Document Responder (server)"/>
 <artifact id="StructureDefinition/EuMadoBundle" key="StructureDefinition-EuMadoBundle" name="MADO EU FHIR Imaging Study Manifest Bundle"/>
 <artifact id="StructureDefinition/EuMadoImagingStudy" key="StructureDefinition-EuMadoImagingStudy" name="MADO EU Imaging Study"/>

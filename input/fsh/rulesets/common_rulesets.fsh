@@ -40,3 +40,31 @@ RuleSet: LOINCCopyrightForVS
 RuleSet: UCUMCopyrightForVS
 * ^copyright = "The UCUM codes, UCUM table (regardless of format), and UCUM Specification are copyright 1999-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. https://ucum.org/trac/wiki/TermsOfUse"
 
+RuleSet: SliceCodeableConceptWithRequiredCode( slice, system, code )
+* coding 1..*
+  * ^slicing.discriminator[+].type = #value
+  * ^slicing.discriminator[=].path = "code"
+  * ^slicing.discriminator[+].type = #value
+  * ^slicing.discriminator[=].path = "system"
+  * ^slicing.ordered               = false
+  * ^slicing.rules                 = #open
+* coding contains {slice} 1..1
+* coding[{slice}].system
+  * ^fixedUri = {system}
+* coding[{slice}].code
+  * ^fixedCode = {code}
+
+RuleSet: setConsumerAndProducerObligation( consumerObligation, producerObligation, description )
+* insert setConsumerObligation( {consumerObligation}, {description} )
+* insert setProducerObligation( {producerObligation}, {description} )
+
+RuleSet: setConsumerObligation( obligation, description )
+* insert setObligation( EuMadoImagingManifestConsumer, {obligation}, {description} )
+
+RuleSet: setProducerObligation( obligation, description )
+* insert setObligation( EuMadoImagingManifestProducer, {obligation}, {description} )
+
+RuleSet: setObligation( actor, obligation, description )
+* ^extension[http://hl7.org/fhir/StructureDefinition/obligation][+].extension[code].valueCode = {obligation}
+* ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[actor].valueCanonical = Canonical({actor})
+* ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[documentation].valueMarkdown = {description}

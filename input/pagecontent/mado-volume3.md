@@ -1,3 +1,5 @@
+{% include variable-definitions.md %}
+
 This page reflects Volume 3 of the MADO specification.
 
 
@@ -21,4 +23,4 @@ The base envelop definition is defined in [IHE MADO: Manifest Envelopes for IHE-
 
 ### Mappings between MADO FHIR and MADO DICOM KOS
 
-The mappings between the MADO FHIR and MADO DICOM KOS format are define in {{{iheMado}}} in [Mappings between MADO FHIR and MADO DICOM KOS](https://build.fhir.org/ig/IHE/RAD.MADO/mapping.html).
+The mappings between the MADO FHIR and MADO DICOM KOS format are define in {{iheMado}} in [Mappings between MADO FHIR and MADO DICOM KOS](https://build.fhir.org/ig/IHE/RAD.MADO/mapping.html).
