@@ -52,25 +52,7 @@ Profile on [[[MadoImagingStudy]]] that specifies the EU specific elements for th
   * uid MS
     * insert setConsumerAndProducerObligation( #SHOULD:process, #SHALL:able-to-populate, "EHDSImagingStudy.series.uid" )
 
-  * instance
-    * uid
-      * insert setProducerObligation( #SHALL:populate, "Required by MADO" )
-
-    * number
-      * insert setProducerObligation( #SHALL:able-to-populate, "Required by MADO" )
-
-    * sopClass
-      * insert setProducerObligation( #SHALL:able-to-populate, "Required by MADO" )
-
-    * title
-      * insert setProducerObligation( #SHALL:able-to-populate, "Required by MADO" )
-
-    * extension[number-of-frames]
-      * insert setProducerObligation( #SHALL:able-to-populate, "Required by MADO" )
-
-    * extension[ko-document-title]
-      * insert setProducerObligation( #SHALL:able-to-populate, "Required by MADO" )
-
+  
   * number MS
     * insert setConsumerAndProducerObligation( #SHOULD:process, #SHALL:able-to-populate, "EHDSImagingStudy.series.number" )
   
@@ -91,3 +73,25 @@ Profile on [[[MadoImagingStudy]]] that specifies the EU specific elements for th
   
   * started MS
     * insert setConsumerAndProducerObligation( #SHOULD:process, #SHALL:able-to-populate, "EHDSImagingStudy.series.started" )
+
+  * laterality MS
+    * insert setConsumerAndProducerObligation( #SHOULD:process, #SHALL:able-to-populate, "EHDSImagingStudy.series.started" )
+
+  * instance
+    * uid
+      * insert setProducerObligation( #SHALL:populate, "Required by MADO" )
+
+    * number
+      * insert setProducerObligation( #SHALL:able-to-populate, "Required by MADO" )
+
+    * sopClass
+      * insert setProducerObligation( #SHALL:able-to-populate, "Required by MADO" )
+
+    * title
+      * insert setProducerObligation( #SHALL:able-to-populate, "Required by MADO" )
+
+    * extension[number-of-frames]
+      * insert setProducerObligation( #SHALL:able-to-populate, "Required by MADO" )
+
+    * extension[ko-document-title]
+      * insert setProducerObligation( #SHALL:able-to-populate, "Required by MADO" )

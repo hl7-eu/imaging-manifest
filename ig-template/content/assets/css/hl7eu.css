@@ -113,20 +113,40 @@ caption {
   color: #ffffff;
 }
 
-.tgt-head {
-  background-color: #be072f;
-  color: #ffffff;
-}
-
 .src-sub {
   background-color: #adc3f6;
   font-weight: bold;
 }
 
-.tgt-sub {
+.tgt-fhir-head {
+  background-color: #be072f;
+  color: #ffffff;
+}
+.tgt-fhir-sub {
   background-color: #d78496;
   font-weight: bold;
 }
+
+.tgt-dicom-head {
+  background-color: #000099;
+  color: #ffffff;
+}
+
+.tgt-dicom-sub {
+  background-color: #ccccff;
+  font-weight: bold;
+}
+
+.tgt-rationale-head {
+  background-color: #6F2E80;
+  color: #ffffff;
+}
+
+.tgt-rationale-sub {
+  background-color: #EcD7EC;
+  font-weight: bold;
+}
+
 
 .highlight-yellow {
   background-color: #fff3b0; /* soft yellow */

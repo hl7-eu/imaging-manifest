@@ -41,13 +41,14 @@ pages:
       title: Changes
     current-status.md:
       title: Current Status
+  xtehr-mapping.md:
+    title: XtEHR Mapping
   mado-volume1.md:
     title: Volume 1
   mado-volume2.md:
     title: Volume 2
   mado-volume3.md:
     title: Volume 3
-  
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │ The menu property will be used to generate the input/menu.xml file. The menu is represented    │
 # │ as a simple structure where the YAML key is the menu item name and the value is the URL.       │
@@ -63,13 +64,13 @@ menu:
     Dependencies: index.html#fhir-specific-dependencies
     Copyright: index.html#ip-statements
     Current Status: current-status.html
-  # Issues Log: issues.html
-  XtEHR model: https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/en/overview-medicalimages.html
-  Volume 1: mado-volume1.html
-  Volume 2: mado-volume2.html
-    # WADO-RS Get Instances: rad-1xy.html
-    # WADO-RS Get Instances: https://docs.google.com/document/d/1Rq5Cd7Ate8RdR0RU-oP0uQvYA_Jz359v/edit#heading=h.xt763ccz388r
-  Volume 3: mado-volume3.html
+  Functional:
+    XtEHR model: https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/en/overview-medicalimages.html
+    MADO Volume 1 delta: mado-volume1.html
+  Implementation:
+    XtEHR mapping: xtehr-mapping.html
+    MADO Volume 2: mado-volume2.html
+    MADO Volume 3: mado-volume3.html
   Artifacts: artifacts.html
 
 # The parameters property represents IG.definition.parameter. Rather 
