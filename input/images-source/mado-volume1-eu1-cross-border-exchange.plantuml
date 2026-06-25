@@ -1,0 +1,23 @@
+@startuml
+    title EU-1 Intra-country and Cross-border Imaging Manifest Exchange
+
+    participant "Imaging Manifest Consumer" as Consumer
+    participant "Document Access Provider" as DocProvider
+    participant "Imaging Manifest Producer" as Producer
+    participant "Imaging Source (WADO-RS)" as Wado
+
+    == Discover and select manifest ==
+    Consumer -> DocProvider ++: Search patient imaging documentation
+    DocProvider --> Consumer --: Matching manifest summary metadata
+    Consumer -> DocProvider ++: Retrieve selected full manifest
+    DocProvider -> Producer ++: Resolve manifest content
+    Producer --> DocProvider --: Manifest document and references
+    DocProvider --> Consumer --: Full manifest
+
+    == Retrieve image payload ==
+    Consumer -> Consumer: Select required series and instances
+    Consumer -> Wado ++: WADO-RS retrieval for referenced objects
+    Wado --> Consumer --: DICOM instances/series payload
+    Consumer -> Consumer: Display or process images
+
+@enduml

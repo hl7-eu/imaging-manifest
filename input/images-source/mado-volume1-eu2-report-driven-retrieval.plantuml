@@ -1,0 +1,28 @@
+@startuml
+    title EU-2 Report-driven Retrieval of Imaging Data
+
+    participant "Report Consumer" as Consumer
+    participant "Document Access Provider" as DocProvider
+    participant "Imaging Manifest Producer" as Producer
+    participant "Imaging Source (WADO-RS)" as Wado
+
+    == Start from report ==
+    Consumer -> DocProvider ++: Search and retrieve imaging report
+    DocProvider --> Consumer --: Imaging report
+    Consumer -> Consumer: Determine image access is required
+
+    == Resolve linked manifest ==
+    Consumer -> DocProvider ++: Search related manifest (study identifiers)
+    DocProvider --> Consumer --: Matching manifest entries
+    Consumer -> DocProvider ++: Retrieve selected manifest
+    DocProvider -> Producer ++: Resolve manifest content
+    Producer --> DocProvider --: Manifest payload
+    DocProvider --> Consumer --: Manifest document
+
+    == Retrieve DICOM content ==
+    Consumer -> Consumer: Select target series and instances
+    Consumer -> Wado ++: WADO-RS retrieval from manifest endpoint
+    Wado --> Consumer --: DICOM content
+    Consumer -> Consumer: Render or process images with report context
+
+@enduml

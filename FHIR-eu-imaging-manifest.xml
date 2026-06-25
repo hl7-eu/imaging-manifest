@@ -7,6 +7,7 @@
 <artifactPageExtension value="-mappings"/>
 <artifact id="ActorDefinition/EuMadoImagingManifestConsumer" key="ActorDefinition-EuMadoImagingManifestConsumer" name="ActorDefinition: Imaging Manifest Consumer"/>
 <artifact id="ActorDefinition/EuMadoImagingManifestProducer" key="ActorDefinition-EuMadoImagingManifestProducer" name="ActorDefinition: Imaging Manifest Producer"/>
+<artifact id="ActorDefinition/EuMadoMhdDocumentResponder" key="ActorDefinition-EuMadoMhdDocumentResponder" name="ActorDefinition: MHD Document Responder"/>
 <artifact id="StructureDefinition/EuMadoComposition" key="StructureDefinition-EuMadoComposition" name="EU MADO Composition"/>
 <artifact id="StructureDefinition/EuMadoCreator" key="StructureDefinition-EuMadoCreator" name="EU MADO Creator"/>
 <artifact id="StructureDefinition/EuMadoCreatorOrganization" key="StructureDefinition-EuMadoCreatorOrganization" name="EU MADO Creator Organization"/>
@@ -24,6 +25,7 @@
 <page key="artifacts" name="Artifacts Summary"/>
 <page key="changes" name="Changes"/>
 <page key="current-status" name="Current Status"/>
+<page key="functional-requirements" name="Functional Requirements"/>
 <page key="index" name="Home"/>
 <page key="toc" name="Table of Contents"/>
 <page key="mado-volume1" name="Volume 1"/>

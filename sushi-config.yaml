@@ -41,6 +41,8 @@ pages:
       title: Changes
     current-status.md:
       title: Current Status
+  functional-requirements.md:
+    title: Functional Requirements
   xtehr-mapping.md:
     title: XtEHR Mapping
   mado-volume1.md:
@@ -65,10 +67,11 @@ menu:
     Copyright: index.html#ip-statements
     Current Status: current-status.html
   Functional:
+    Functional Requirements: functional-requirements.html
     XtEHR model: https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/en/overview-medicalimages.html
-    MADO Volume 1 delta: mado-volume1.html
-  Implementation:
     XtEHR mapping: xtehr-mapping.html
+  Implementation:
+    MADO Volume 1: mado-volume1.html
     MADO Volume 2: mado-volume2.html
     MADO Volume 3: mado-volume3.html
   Artifacts: artifacts.html
