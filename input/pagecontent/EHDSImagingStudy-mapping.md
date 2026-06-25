@@ -63,7 +63,7 @@ The following table shows the mapping from EHDSImagingStudy logical model elemen
     <td>header.author[x]</td>
     <td><a href="./StructureDefinition-EuMadoComposition.html">EuMadoComposition</a></td>
     <td>author[source-organization]</td>
-    <td>Institution Name (0008,0080),</td>
+    <td>Institution Name (0008,0080)</td>
     <td></td>
   </tr>
   <tr>
@@ -159,7 +159,7 @@ The following table shows the mapping from EHDSImagingStudy logical model elemen
   </tr>
   <tr>
     <td>studyCustodian</td>
-    <td><a href="./StructureDefinition-EuMadoImagingStudy.html">EuMadoImagingStudy</a></td>
+    <td><a href="./StructureDefinition-EuMadoComposition.html">EuMadoComposition</a></td>
     <td>custodian</td>
     <td></td>
     <td>DICOM KOS – Not supported</td>
@@ -232,7 +232,7 @@ The following table shows the mapping from EHDSImagingStudy logical model elemen
     <td><a href="./StructureDefinition-EuMadoImagingStudy.html">EuMadoImagingStudy</a></td>
     <td>series.specimen</td>
     <td></td>
-    <td>DICOM KOS – Not supported</td>
+    <td>Stored the DICOM study data, not in the manifest.</td>
   </tr>
   <tr>
     <td>series.started</td>
@@ -259,15 +259,15 @@ The following table shows the mapping from EHDSImagingStudy logical model elemen
     <td>series.instancesInTheSeries.instanceUid</td>
     <td><a href="./StructureDefinition-EuMadoImagingStudy.html">EuMadoImagingStudy</a></td>
     <td>series.instance.uid</td>
-    <td>SR: EV(111028,DCM,&quot;Image Library&quot;) -&gt; EV(126200,DCM,&quot;Image Library Group&quot;) -&gt; Image Library Entry (IMAGE or COMPOSITE) -&gt; Referenced SOP Sequence (0008,1199) -&gt; Referenced SOP Instance UID (0008,1150)</td>
+    <td>SR: EV(111028,DCM,&quot;Image Library&quot;) -&gt; EV(126200,DCM,&quot;Image Library Group&quot;) -&gt; Image Library Entry (IMAGE or COMPOSITE) -&gt; Referenced SOP Sequence (0008,1199) -&gt; Referenced SOP Instance UID (0008,1155)</td>
     <td></td>
   </tr>
   <tr>
     <td>series.instancesInTheSeries.sopClass</td>
     <td><a href="./StructureDefinition-EuMadoImagingStudy.html">EuMadoImagingStudy</a></td>
     <td>series.instance.sopClass</td>
+    <td>SR: EV(111028,DCM,&quot;Image Library&quot;) -&gt; EV(126200,DCM,&quot;Image Library Group&quot;) -&gt; Image Library Entry (IMAGE or COMPOSITE) -&gt; Referenced SOP Sequence (0008,1199) -&gt; Referenced SOP Class UID (0008,1150)</td>
     <td></td>
-    <td>DICOM KOS – Not supported</td>
   </tr>
   <tr>
     <td>series.instancesInTheSeries.instanceNumber</td>
@@ -288,7 +288,7 @@ The following table shows the mapping from EHDSImagingStudy logical model elemen
     <td></td>
     <td></td>
     <td></td>
-    <td>This is implemented by locating the KOS object instances, downloading them usign WADO and inspecting the content.</td>
+    <td>MADO flags the presence of a KIN. Downloading the KIN and inspecting it will provide this information.</td>
   </tr>
   <tr>
     <td>series.instancesInTheSeries.keyImage.flag</td>
@@ -309,14 +309,14 @@ The following table shows the mapping from EHDSImagingStudy logical model elemen
     <td></td>
     <td></td>
     <td></td>
-    <td>See DICOM info on refered instance</td>
+    <td>MADO flags the presence of a KIN. Downloading the KIN and inspecting it will provide this information.</td>
   </tr>
   <tr>
     <td>series.instancesInTheSeries.keyImage.instanceUID</td>
     <td></td>
     <td></td>
     <td></td>
-    <td>See DICOM info on refered instance</td>
+    <td>MADO flags the presence of a KIN. Downloading the KIN and inspecting it will provide this information.</td>
   </tr>
     </tbody>
   </table>

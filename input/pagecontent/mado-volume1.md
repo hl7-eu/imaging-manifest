@@ -1,6 +1,7 @@
+
 {% include variable-definitions.md %}
 
-This page reflects Volume 1 of the MADO specification [MADO Volume 1](https://build.fhir.org/ig/IHE/RAD.MADO/volume-1.html). It extends Volume of {{iheMado}} with EU specific elements.
+This page reflects Volume 1 of the MADO specification [MADO Volume 1](https://build.fhir.org/ig/IHE/RAD.MADO/volume-1.html). It extends Volume 1 of {{iheMado}} with EU specific elements.
 
 The EU specific requirements include:
 
@@ -8,11 +9,11 @@ The EU specific requirements include:
 * Update the MADO artifacts to refer to EU core resources.
 * Change the status of the anatomical region fields from optional to required.
 
-## EU-specific use cases (Volume 1 style)
+### EU-specific use cases (Volume 1 style)
 
-### Use case EU-1: Intra-country and cross-border exchange of imaging study information
+#### Use case EU-1: Intra-country and cross-border exchange of imaging study information
 
-#### EU-1 scope and intent
+##### EU-1 scope and intent
 
 This use case describes how imaging study metadata and access information are exchanged in the EU context, both:
 
@@ -21,20 +22,20 @@ This use case describes how imaging study metadata and access information are ex
 
 The goal is to allow a Consumer to discover and retrieve the imaging manifest and then access the required DICOM objects using standardized discovery and retrieval paths.
 
-#### EU-1 actors
+##### EU-1 actors
 
 * Imaging Manifest Producer (publishes the manifest and related metadata).
 * Imaging Manifest Consumer (queries, retrieves, and processes manifest content).
 * Document Access Provider / repository infrastructure (document discovery and retrieval).
 * Imaging Source (WADO-RS endpoint serving DICOM instances/series).
 
-#### EU-1 preconditions
+##### EU-1 preconditions
 
 * The imaging study and related metadata have been produced and published.
 * The manifest is available through document sharing infrastructure aligned with the EU Health Data API ecosystem.
 * The Consumer has legal/organizational authorization to access patient data in the intra-country or cross-border context.
 
-#### EU-1 main flow
+##### EU-1 main flow
 
 1. The Consumer searches for available imaging documentation for a patient.
 2. The Consumer retrieves manifest summary metadata and selects the relevant study.
@@ -49,30 +50,30 @@ The goal is to allow a Consumer to discover and retrieve the imaging manifest an
 </figure>
 <br clear="all"/>
 
-#### EU-1 postconditions
+##### EU-1 postconditions
 
 * The Consumer has obtained the needed imaging objects and can continue clinical review, comparison, or downstream processing.
 * The same flow supports both intra-country and cross-border exchange, differing only in trust/policy and access-governance context.
 
-### Use case EU-2: Report-driven retrieval of imaging data (relationship with Imaging Report specification)
+#### Use case EU-2: Report-driven retrieval of imaging data (relationship with Imaging Report specification)
 
-#### EU-2 scope and intent
+##### EU-2 scope and intent
 
 This use case illustrates the operational relationship between the Imaging Report specification and this Imaging Manifest specification: the workflow starts from an imaging report and continues to retrieval of the related imaging study data.
 
-#### EU-2 actors
+##### EU-2 actors
 
 * Report Consumer (typically clinician, but can also be patient-facing systems).
 * Document Access Provider.
 * Imaging Manifest Producer.
 * Imaging Source.
 
-#### EU-2 preconditions
+##### EU-2 preconditions
 
 * An imaging report is available in document sharing infrastructure.
 * The report can be linked to the corresponding manifest (for example via StudyInstanceUID and/or accession-number).
 
-#### EU-2 main flow
+##### EU-2 main flow
 
 1. The Consumer searches for imaging reports for a patient and retrieves a selected report.
 2. The Consumer reviews the report and determines that image access is needed.
@@ -88,14 +89,14 @@ This use case illustrates the operational relationship between the Imaging Repor
 <br clear="all"/>
 
 
-#### EU-2 example query pattern
+##### EU-2 example query pattern
 
 * Search report(s): `GET DocumentReference?category=http://loinc.org|85430-7&subject=Patient/{id}`
 * Search related manifest: `GET DocumentReference?category=http://loinc.org|18748-4&subject=Patient/{id}&identifier={StudyInstanceUID}`
 * Retrieve selected payload: `GET {DocumentReference.content.attachment.url}`
 * Retrieve DICOM objects: `GET {wado-rs url from manifest}`
 
-#### EU-2 postconditions
+##### EU-2 postconditions
 
 * The report-to-manifest linkage is used to retrieve study images in a deterministic way.
 * The workflow aligns with the Imaging Report use-case model while keeping image retrieval delegated to the Imaging Manifest/MADO path.

@@ -1,9 +1,26 @@
+# MADO Volume 3
+
 {% include variable-definitions.md %}
 
 This page reflects Volume 3 of the MADO specification.
 
+All the requirements of the base {{iheMado}} spec apply with the additional requirements indicated in the sections below.
 
-All the requirement of the base {{iheMado}} spec apply with the additional requirements indicated in the sections below.
+## FHIR and DICOM Representations
+
+The MADO specification supports imaging manifest representation in two complementary formats:
+
+- **FHIR Representation**: Uses FHIR Bundle and related resources (ImagingStudy, Patient, Endpoint) to represent imaging manifest metadata. This format is suitable for modern interoperable systems that support FHIR standards and is aligned with EU Health Data API requirements and Xt-EHR logical models.
+
+- **DICOM KOS Representation**: Uses DICOM Key Object Selection (KOS) to represent imaging manifest information in native DICOM format. This format is particularly suitable for legacy DICOM systems and specialized imaging workflows where DICOM-native representation is required.
+
+Both representations are semantically equivalent and can be mapped to each other. The choice between FHIR and DICOM representation depends on the deployment context:
+
+- Use FHIR representation when participating in modern health information exchange ecosystems supporting HL7 FHIR standards, cross-community exchange, and EU interoperability frameworks.
+- Use DICOM KOS representation when working with legacy imaging systems, pure DICOM workflows, or when DICOM-native compatibility is a requirement.
+- Use both representations when supporting multiple consumer types or when interoperability across FHIR and DICOM domains is needed.
+
+The sections below provide detailed profiles and requirements for each representation format, followed by mapping guidance for semantic equivalence.
 
 ### FHIR Imaging Manifest
 

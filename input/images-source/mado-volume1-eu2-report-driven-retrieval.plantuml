@@ -3,25 +3,23 @@
 
     participant "Report Consumer" as Consumer
     participant "Document Access Provider" as DocProvider
-    participant "Imaging Manifest Producer" as Producer
     participant "Imaging Source (WADO-RS)" as Wado
 
     == Start from report ==
-    Consumer -> DocProvider ++: Search and retrieve imaging report
+    Consumer -> DocProvider ++: Search and retrieve imaging report [ITI-67][ITI-68]
     DocProvider --> Consumer --: Imaging report
     Consumer -> Consumer: Determine image access is required
 
     == Resolve linked manifest ==
-    Consumer -> DocProvider ++: Search related manifest (study identifiers)
+    note over Consumer: Determine StudyInstanceUID (or AccessionNumber) from report
+    Consumer -> DocProvider ++: Search related manifest (using StudyInstanceUID or AccessionNumber) [ITI-67]
     DocProvider --> Consumer --: Matching manifest entries
-    Consumer -> DocProvider ++: Retrieve selected manifest
-    DocProvider -> Producer ++: Resolve manifest content
-    Producer --> DocProvider --: Manifest payload
+    Consumer -> DocProvider ++: Retrieve selected manifest [ITI-68]
     DocProvider --> Consumer --: Manifest document
 
     == Retrieve DICOM content ==
     Consumer -> Consumer: Select target series and instances
-    Consumer -> Wado ++: WADO-RS retrieval from manifest endpoint
+    Consumer -> Wado ++: WADO-RS retrieval from manifest endpoint [RAD-160]/[RAD-107]
     Wado --> Consumer --: DICOM content
     Consumer -> Consumer: Render or process images with report context
 
