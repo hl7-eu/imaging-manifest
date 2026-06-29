@@ -11,7 +11,7 @@ fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2025+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
-jurisdiction: 	http://unstats.un.org/unsd/methods/m49/m49.htm#150 "Europe" # urn:iso:std:iso:3166#EU
+jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#150 "Europe" # urn:iso:std:iso:3166#EU
 publisher:
   name: HL7 Europe
   url: http://hl7.eu
@@ -51,6 +51,15 @@ pages:
     title: Volume 2
   mado-volume3.md:
     title: Volume 3
+    manifest-fhir.md:
+      title: FHIR Imaging Manifest
+    manifest-dicom-kos.md:
+      title: DICOM KOS Manifest
+    manifest-envelop.md:
+      title: Manifest Envelopes for IHE-MHD
+    eu-mapping.md:
+      title: FHIR / KOS Mappings
+
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │ The menu property will be used to generate the input/menu.xml file. The menu is represented    │
 # │ as a simple structure where the YAML key is the menu item name and the value is the URL.       │
@@ -73,7 +82,11 @@ menu:
   Implementation:
     MADO Volume 1: mado-volume1.html
     MADO Volume 2: mado-volume2.html
-    MADO Volume 3: mado-volume3.html
+    MADO Volume 3 - FHIR Imaging Manifest: manifest-fhir.html
+    MADO Volume 3 - DICOM KOS Manifest: manifest-dicom-kos.html
+    MADO Volume 3 - Manifest Envelopes for IHE-MHD: manifest-envelop.html
+    MADO Volume 3 - FHIR / KOS Mappings: eu-mapping.html
+  
   Artifacts: artifacts.html
 
 # The parameters property represents IG.definition.parameter. Rather 

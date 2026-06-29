@@ -25,8 +25,12 @@
 <page key="artifacts" name="Artifacts Summary"/>
 <page key="changes" name="Changes"/>
 <page key="current-status" name="Current Status"/>
+<page key="manifest-dicom-kos" name="DICOM KOS Manifest"/>
+<page key="eu-mapping" name="FHIR / KOS Mappings"/>
+<page key="manifest-fhir" name="FHIR Imaging Manifest"/>
 <page key="functional-requirements" name="Functional Requirements"/>
 <page key="index" name="Home"/>
+<page key="manifest-envelop" name="Manifest Envelopes for IHE-MHD"/>
 <page key="toc" name="Table of Contents"/>
 <page key="mado-volume1" name="Volume 1"/>
 <page key="mado-volume2" name="Volume 2"/>

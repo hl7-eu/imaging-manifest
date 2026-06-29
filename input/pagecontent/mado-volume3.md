@@ -12,25 +12,16 @@ As is stated in {{iheMado}}, the EU MADO specification supports imaging manifest
 
 #### FHIR Imaging Manifest
 
-All EU FHIR Manifest SHALL follow the base definition of the FHIR Imaging Manifest is defined in [IHE MADO: FHIR Imaging Manifest](https://build.fhir.org/ig/IHE/RAD.MADO/fhir-imaging-manifest.html). In order to comply with the EU speficic requirements, all EU FHIR Imaging ManifestsThe additional EU specific requirements are documented in In addition, the FHIR Imaging Manifest SHALL be based on [[[EuMadoBundle]]] a profile of [[[https://profiles.ihe.net/RAD/MADO/StructureDefinition/MadoFhirBundle]]]. 
-
-This base profile refers to other EU specific derivatives of the base FHIR profiles defined in IHE-MADO.
-
-In these profiles, the requirements on the different system actors [[[EuMadoImagingManifestConsumer]]] and [[[EuMadoImagingManifestProducer]]] are expressed as Obligations.
+EU FHIR Manifests profile the IHE-MADO FHIR Imaging Manifest with EU specific obligations on the consumer and producer actors. See [FHIR Imaging Manifest](manifest-fhir.html) for details.
 
 ### DICOM KOS Manifest
 
-The base definition of the DICOM KOS Manifest is defined in [IHE MADO: DICOM KOS Manifest](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_Suppl_MADO.pdf#page=41). In addition the following EU specific requirement apply:
-
-* In TID 1602, the `TargetRegion` SHALL use a code from [[[ValueSetAnatomicalRegion]]]
-
-> TBD: What do the XtEHR requirements mean for the DICOM manifest?
-> Add table with obligation linked to DICOM
+The DICOM KOS Manifest reuses the IHE-MADO KOS definition with EU specific module and template constraints. See [DICOM KOS Manifest](manifest-dicom-kos.html) for details.
 
 ### Manifest Envelopes for IHE-MHD
 
-The base envelop definition is defined in [IHE MADO: Manifest Envelopes for IHE-MHD](https://build.fhir.org/ig/IHE/RAD.MADO/manifest-envelope.html) which are further refined in: [[[EuMadoFhirDocumentReference]]] and [[[EuMadoDicomKosDocumentReference]]]
+When distributed via {{IHE-MHD}}, manifests are referenced from a DocumentReference envelope. See [Manifest Envelopes for IHE-MHD](manifest-envelop.html) for details.
 
 ### Mappings between MADO FHIR and MADO DICOM KOS
 
-The mappings between the MADO FHIR and MADO DICOM KOS format are define in {{iheMado}} in [Mappings between MADO FHIR and MADO DICOM KOS](https://build.fhir.org/ig/IHE/RAD.MADO/mapping.html).
+The MADO FHIR and DICOM KOS formats can be losslessly mapped to each other. See [Mappings between MADO FHIR and MADO DICOM KOS](eu-mapping.html) for details.
