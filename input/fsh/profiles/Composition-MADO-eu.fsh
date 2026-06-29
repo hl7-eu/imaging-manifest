@@ -30,10 +30,12 @@ Profile on [[[MadoComposition]]] that specifies the EU specific elements.
   * insert setConsumerObligation( #SHOULD:process, "EHDSImagingStudy.subject" )
   * insert setProducerObligation( #SHALL:able-to-populate, "EHDSImagingStudy.subject" )
 
+* author[source-organization] only Reference( EuMadoCreatorOrganization )
 * author[source-organization] MS
   * insert setConsumerObligation( #SHOULD:process, "EHDSImagingStudy.author[EHDSOrganization]" )
   * insert setProducerObligation( #SHALL:able-to-populate, "EHDSImagingStudy.author[EHDSOrganization]" )
 
+* author[source-organization] only Reference( EuMadoCreator )
 * author[source-device] MS
   * insert setConsumerObligation( #SHOULD:process, "EHDSImagingStudy.author[EHDSDevice]" )
   * insert setProducerObligation( #SHALL:able-to-populate, "EHDSImagingStudy.author[EHDSDevice]" )
