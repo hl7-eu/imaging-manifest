@@ -10,16 +10,17 @@ DICOM Key Object Document attributes (PS3.3 C.17.6.2) with their IHE-MADO usage 
 <div class="table-wrap">
   <table summary="Key Object Document Module">
     <caption>Key Object Document Module</caption>
+    <colgroup><col style="width:26%"><col style="width:9%"><col style="width:8%"><col style="width:9%"><col style="width:24%"><col style="width:24%"></colgroup>
     <thead>
-      <tr><th>Attribute Name</th><th>Tag</th><th>DICOM Type</th><th>IHE Usage</th><th>Consumer Obligation</th><th>Producer Obligation</th></tr>
+      <tr><th style="text-align:center">Attribute Name</th><th style="text-align:center">Tag</th><th style="text-align:center">DICOM Type</th><th style="text-align:center">IHE Usage</th><th style="text-align:center">Consumer Obligation</th><th style="text-align:center">Producer Obligation</th></tr>
     </thead>
     <tbody>
-  <tr><td>Instance Number</td><td>(0020,0013)</td><td>1</td><td></td><td></td><td></td></tr>
-  <tr><td>Content Date</td><td>(0008,0023)</td><td>1</td><td></td><td></td><td></td></tr>
-  <tr><td>Content Time</td><td>(0008,0033)</td><td>1</td><td></td><td></td><td></td></tr>
-  <tr><td>Referenced Request Sequence</td><td>(0040,A370)</td><td>1C</td><td>R+</td><td></td><td>SHALL:able-to-populate</td></tr>
-  <tr><td>Current Requested Procedure Evidence Sequence</td><td>(0040,A375)</td><td>1</td><td></td><td></td><td></td></tr>
-  <tr><td>Identical Documents Sequence</td><td>(0040,A525)</td><td>1C</td><td></td><td></td><td></td></tr>
+  <tr><td>Instance Number</td><td style="text-align:center">(0020,0013)</td><td style="text-align:center">1</td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center"></td></tr>
+  <tr><td>Content Date</td><td style="text-align:center">(0008,0023)</td><td style="text-align:center">1</td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center"></td></tr>
+  <tr><td>Content Time</td><td style="text-align:center">(0008,0033)</td><td style="text-align:center">1</td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center"></td></tr>
+  <tr><td>Referenced Request Sequence</td><td style="text-align:center">(0040,A370)</td><td style="text-align:center">1C</td><td style="text-align:center">R+</td><td style="text-align:center"></td><td style="text-align:center">SHALL:able-to-populate</td></tr>
+  <tr><td>Current Requested Procedure Evidence Sequence</td><td style="text-align:center">(0040,A375)</td><td style="text-align:center">1</td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center"></td></tr>
+  <tr><td>Identical Documents Sequence</td><td style="text-align:center">(0040,A525)</td><td style="text-align:center">1C</td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center"></td></tr>
     </tbody>
   </table>
 </div>

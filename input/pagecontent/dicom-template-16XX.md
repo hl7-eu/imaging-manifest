@@ -9,13 +9,14 @@ DICOM SR template TID 16XX (Image Library Entry Descriptors for Key Object Selec
 <div class="table-wrap">
   <table summary="TID 16XX Image Library Entry Descriptors for Key Object Selection">
     <caption>TID 16XX Image Library Entry Descriptors for Key Object Selection</caption>
+    <colgroup><col style="width:6%"><col style="width:5%"><col style="width:13%"><col style="width:6%"><col style="width:22%"><col style="width:5%"><col style="width:8%"><col style="width:8%"><col style="width:13.5%"><col style="width:13.5%"></colgroup>
     <thead>
-      <tr><th>Row No</th><th>NL</th><th>REL with Parent</th><th>VT</th><th>Concept Name</th><th>VM</th><th>Req Type (DICOM)</th><th>Req Type (IHE)</th><th>Consumer Obligation</th><th>Producer Obligation</th></tr>
+      <tr><th style="text-align:center">Row No</th><th style="text-align:center">NL</th><th style="text-align:center">REL with Parent</th><th style="text-align:center">VT</th><th style="text-align:center">Concept Name</th><th style="text-align:center">VM</th><th style="text-align:center">Req Type (DICOM)</th><th style="text-align:center">Req Type (IHE)</th><th style="text-align:center">Consumer Obligation</th><th style="text-align:center">Producer Obligation</th></tr>
     </thead>
     <tbody>
-  <tr><td>1</td><td></td><td>HAS ACQ CONTEXT</td><td>INCLUDE</td><td>DTID 16XX Image Library Entry Descriptors for Key Object Selection</td><td>1</td><td>RC+</td><td>RC+</td><td></td><td></td></tr>
-  <tr><td>2</td><td></td><td>HAS ACQ</td><td>CODE</td><td>EV (121144, DCM, "Document Title")</td><td>1</td><td>R+</td><td>R+</td><td></td><td>SHALL:able-to-populate</td></tr>
-  <tr><td>3</td><td></td><td>HAS ACQ CONTEXT</td><td>TEXT</td><td>EV (113012, DCM, “ Key Object Description</td><td>1</td><td></td><td>RC+</td><td></td><td>SHALL:able-to-populate</td></tr>
+  <tr><td style="text-align:center">1</td><td style="text-align:center"></td><td style="text-align:center">HAS ACQ CONTEXT</td><td style="text-align:center">INCLUDE</td><td>DTID 16XX Image Library Entry Descriptors for Key Object Selection</td><td style="text-align:center">1</td><td style="text-align:center">RC+</td><td style="text-align:center">RC+</td><td style="text-align:center"></td><td style="text-align:center"></td></tr>
+  <tr><td style="text-align:center">2</td><td style="text-align:center"></td><td style="text-align:center">HAS ACQ</td><td style="text-align:center">CODE</td><td>EV (121144, DCM, "Document Title")</td><td style="text-align:center">1</td><td style="text-align:center">R+</td><td style="text-align:center">R+</td><td style="text-align:center"></td><td style="text-align:center">SHALL:able-to-populate</td></tr>
+  <tr><td style="text-align:center">3</td><td style="text-align:center"></td><td style="text-align:center">HAS ACQ CONTEXT</td><td style="text-align:center">TEXT</td><td>EV (113012, DCM, “ Key Object Description</td><td style="text-align:center">1</td><td style="text-align:center"></td><td style="text-align:center">RC+</td><td style="text-align:center"></td><td style="text-align:center">SHALL:able-to-populate</td></tr>
     </tbody>
   </table>
 </div>
