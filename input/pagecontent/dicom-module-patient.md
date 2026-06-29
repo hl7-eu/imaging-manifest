@@ -62,10 +62,10 @@ DICOM Patient attributes (PS3.3 C.7.1.1) with their IHE-MADO usage and EU-MADO C
   <tr><td>Patient Identity Removed</td><td style="text-align:center">(0012,0062)</td><td style="text-align:center">3</td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center"></td></tr>
   <tr><td>De-identification Method</td><td style="text-align:center">(0012,0063)</td><td style="text-align:center">1C</td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center"></td></tr>
   <tr><td>De-identification Method Code Sequence</td><td style="text-align:center">(0012,0064)</td><td style="text-align:center">1C</td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center"></td></tr>
-  <tr><td>Issuer of Patient ID</td><td style="text-align:center">(0010,0021)</td><td style="text-align:center"></td><td style="text-align:center">O+</td><td style="text-align:center"></td><td style="text-align:center"></td></tr>
-  <tr><td>Issuer of Patient ID Qualifiers Sequence</td><td style="text-align:center">(0010,0024)</td><td style="text-align:center"></td><td style="text-align:center">R+</td><td style="text-align:center"></td><td style="text-align:center"></td></tr>
-  <tr><td>Universal Entity ID</td><td style="text-align:center">(004 0,0032)</td><td style="text-align:center"></td><td style="text-align:center">R+</td><td style="text-align:center"></td><td style="text-align:center"></td></tr>
-  <tr><td>Universal Entity ID Type</td><td style="text-align:center">(004 0,0033)</td><td style="text-align:center"></td><td style="text-align:center">R+</td><td style="text-align:center"></td><td style="text-align:center"></td></tr>
+  <tr><td>Issuer of Patient ID</td><td style="text-align:center">(0010,0021)</td><td style="text-align:center"></td><td style="text-align:center">O+</td><td style="text-align:center"></td><td style="text-align:center">SHALL:able-to-populate</td></tr>
+  <tr><td>Issuer of Patient ID Qualifiers Sequence</td><td style="text-align:center">(0010,0024)</td><td style="text-align:center"></td><td style="text-align:center">R+</td><td style="text-align:center"></td><td style="text-align:center">SHALL:able-to-populate</td></tr>
+  <tr><td>Universal Entity ID</td><td style="text-align:center">(004 0,0032)</td><td style="text-align:center"></td><td style="text-align:center">R+</td><td style="text-align:center"></td><td style="text-align:center">SHALL:able-to-populate</td></tr>
+  <tr><td>Universal Entity ID Type</td><td style="text-align:center">(004 0,0033)</td><td style="text-align:center"></td><td style="text-align:center">R+</td><td style="text-align:center"></td><td style="text-align:center">SHALL:able-to-populate</td></tr>
     </tbody>
   </table>
 </div>
