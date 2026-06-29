@@ -1,30 +1,22 @@
-# MADO Volume 3
-
 {% include variable-definitions.md %}
 
-This page reflects Volume 3 of the MADO specification.
+This page reflects Volume 3 of the MADO specification. This page specifies the delta of this specification related to {{iheMado}} Volume 3.
 
-All the requirements of the base {{iheMado}} spec apply with the additional requirements indicated in the sections below.
+### Imaging Manifest definition
 
-## FHIR and DICOM Representations
-
-The MADO specification supports imaging manifest representation in two complementary formats:
+As is stated in {{iheMado}}, the EU MADO specification supports imaging manifest representation in two complementary formats:
 
 - **FHIR Representation**: Uses FHIR Bundle and related resources (ImagingStudy, Patient, Endpoint) to represent imaging manifest metadata. This format is suitable for modern interoperable systems that support FHIR standards and is aligned with EU Health Data API requirements and Xt-EHR logical models.
 
 - **DICOM KOS Representation**: Uses DICOM Key Object Selection (KOS) to represent imaging manifest information in native DICOM format. This format is particularly suitable for legacy DICOM systems and specialized imaging workflows where DICOM-native representation is required.
 
-Both representations are semantically equivalent and can be mapped to each other. The choice between FHIR and DICOM representation depends on the deployment context:
+#### FHIR Imaging Manifest
 
-- Use FHIR representation when participating in modern health information exchange ecosystems supporting HL7 FHIR standards, cross-community exchange, and EU interoperability frameworks.
-- Use DICOM KOS representation when working with legacy imaging systems, pure DICOM workflows, or when DICOM-native compatibility is a requirement.
-- Use both representations when supporting multiple consumer types or when interoperability across FHIR and DICOM domains is needed.
+All EU FHIR Manifest SHALL follow the base definition of the FHIR Imaging Manifest is defined in [IHE MADO: FHIR Imaging Manifest](https://build.fhir.org/ig/IHE/RAD.MADO/fhir-imaging-manifest.html). In order to comply with the EU speficic requirements, all EU FHIR Imaging ManifestsThe additional EU specific requirements are documented in In addition, the FHIR Imaging Manifest SHALL be based on [[[EuMadoBundle]]] a profile of [[[https://profiles.ihe.net/RAD/MADO/StructureDefinition/MadoFhirBundle]]]. 
 
-The sections below provide detailed profiles and requirements for each representation format, followed by mapping guidance for semantic equivalence.
+This base profile refers to other EU specific derivatives of the base FHIR profiles defined in IHE-MADO.
 
-### FHIR Imaging Manifest
-
-The base definition of the FHIR Imaging Manifest is defined in [IHE MADO: FHIR Imaging Manifest](https://build.fhir.org/ig/IHE/RAD.MADO/fhir-imaging-manifest.html). In addition, the FHIR Imaging Manifest SHALL be based on [[[EuMadoBundle]]] a profile of [[[https://profiles.ihe.net/RAD/MADO/StructureDefinition/MadoFhirBundle]]]. 
+In these profiles, the requirements on the different system actors [[[EuMadoImagingManifestConsumer]]] and [[[EuMadoImagingManifestProducer]]] are expressed as Obligations.
 
 ### DICOM KOS Manifest
 
@@ -33,6 +25,7 @@ The base definition of the DICOM KOS Manifest is defined in [IHE MADO: DICOM KOS
 * In TID 1602, the `TargetRegion` SHALL use a code from [[[ValueSetAnatomicalRegion]]]
 
 > TBD: What do the XtEHR requirements mean for the DICOM manifest?
+> Add table with obligation linked to DICOM
 
 ### Manifest Envelopes for IHE-MHD
 

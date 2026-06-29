@@ -266,7 +266,7 @@ The following table shows the mapping from EHDSImagingStudy logical model elemen
     <td>series.instancesInTheSeries.sopClass</td>
     <td><a href="./StructureDefinition-EuMadoImagingStudy.html">EuMadoImagingStudy</a></td>
     <td>series.instance.sopClass</td>
-    <td>SR: EV(111028,DCM,&quot;Image Library&quot;) -&gt; EV(126200,DCM,&quot;Image Library Group&quot;) -&gt; Image Library Entry (IMAGE or COMPOSITE) -&gt; Referenced SOP Sequence (0008,1199) -&gt; Referenced SOP Class UID (0008,1150)</td>
+    <td>Key Object Document -&gt; Current Requested Procedure Evidence Sequence (0040,A375) -&gt; Referenced Series Sequence (0008,1115) -&gt; Referenced SOP Sequence(0008,1199) -&gt; Referenced SOP Class UID(0008,1150), <br>SR: EV(111028,DCM,&quot;Image Library&quot;) -&gt; EV(126200,DCM,&quot;Image Library Group&quot;) -&gt; Image Library Entry (IMAGE or COMPOSITE) -&gt; Referenced SOP Sequence (0008,1199) -&gt; Referenced SOP Class UID (0008,1150)</td>
     <td></td>
   </tr>
   <tr>

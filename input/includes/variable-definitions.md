@@ -18,7 +18,7 @@
 {% assign hl7EuLabs         = "[HL7 EU Laboratory Reports](https://build.fhir.org/ig/hl7-eu/laboratory/branches/master/index.html)" %}
 {% assign hl7EuHdr          = "[HL7 EU Hospital Discharge Reports](https://build.fhir.org/ig/hl7-eu/hdr/index.html)" %}
 {% assign hl7EuEps          = "[HL7 Europe Patient Summary](https://build.fhir.org/ig/hl7-eu/eps/)" %}
-{% assign hl7ImagingReport  = "[HL7 Europe Imaging Report](https://build.fhir.org/ig/hl7-eu/imaging-r4/)" %}
+{% assign hl7EuImRep  = "[HL7 Europe Imaging Report](https://build.fhir.org/ig/hl7-eu/imaging-r4/)" %}
 
 {% assign ArgImg            = "[Argonaut Imaging](https://github.com/sync-for-science/imaging)" %}
 
