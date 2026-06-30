@@ -43,6 +43,32 @@ EU MADO profile for the IHE-MHD Document Reference for FHIR Imaging Study Manife
 * securityLabel
   * insert setProducerObligation( #MAY:be-populate, "Required by MADO" )
 
+// EU-MADO obligations on inherited Must Support fields without an existing producer obligation
+* identifier[entryUUID]
+  * insert setProducerObligation( #SHOULD:able-to-populate, "EU-MADO requirement" )
+* author
+  * insert setProducerObligation( #SHOULD:able-to-populate, "EU-MADO requirement" )
+
+* relatesTo[kos-reference]
+  * insert setProducerObligation( #SHOULD:able-to-populate, "EU-MADO requirement" )
+
+* content.attachment.language
+  * insert setProducerObligation( #SHOULD:able-to-populate, "EU-MADO requirement" )
+* content.attachment.creation
+  * insert setProducerObligation( #SHOULD:able-to-populate, "EU-MADO requirement" )
+* content.format
+  * insert setProducerObligation( #SHOULD:able-to-populate, "EU-MADO requirement" )
+* context
+  * insert setProducerObligation( #SHOULD:able-to-populate, "EU-MADO requirement" )
+* context.period
+  * insert setProducerObligation( #SHOULD:able-to-populate, "EU-MADO requirement" )
+* context.facilityType
+  * insert setProducerObligation( #SHOULD:able-to-populate, "EU-MADO requirement" )
+* context.practiceSetting
+  * insert setProducerObligation( #SHOULD:able-to-populate, "EU-MADO requirement" )
+* context.sourcePatientInfo
+  * insert setProducerObligation( #SHOULD:able-to-populate, "EU-MADO requirement" )
+
 
 Profile: EuMadoDicomKosDocumentReference
 Parent:  MadoDicomKosDocumentReference
@@ -61,4 +87,46 @@ MADO specific profile for the IHE-MHD Document Reference for MADO DICOM KOS Mani
 * type = $loinc#18748-4
 * extension[modality]
   * insert setProducerObligation( #SHALL:able-to-populate, "Required by MADO" )
+
+// EU-MADO obligations on inherited Must Support fields without an existing producer obligation
+* identifier
+  * insert setProducerObligation( #SHOULD:able-to-populate, "EU-MADO requirement" )
+* identifier[entryUUID]
+  * insert setProducerObligation( #SHOULD:able-to-populate, "EU-MADO requirement" )
+* type
+  * insert setProducerObligation( #SHOULD:able-to-populate, "EU-MADO requirement" )
+* category
+  * insert setProducerObligation( #SHOULD:able-to-populate, "EU-MADO requirement" )
+* subject
+  * insert setProducerObligation( #SHOULD:able-to-populate, "EU-MADO requirement" )
+* date
+  * insert setProducerObligation( #SHOULD:able-to-populate, "EU-MADO requirement" )
+* author
+  * insert setProducerObligation( #SHOULD:able-to-populate, "EU-MADO requirement" )
+* author[source-organization]
+  * insert setProducerObligation( #SHOULD:able-to-populate, "EU-MADO requirement" )
+* author[source-device]
+  * insert setProducerObligation( #SHOULD:able-to-populate, "EU-MADO requirement" )
+* relatesTo
+  * insert setProducerObligation( #SHOULD:able-to-populate, "EU-MADO requirement" )
+* relatesTo[fhir-reference]
+  * insert setProducerObligation( #SHOULD:able-to-populate, "EU-MADO requirement" )
+* securityLabel
+  * insert setProducerObligation( #SHOULD:able-to-populate, "EU-MADO requirement" )
+* content.attachment.language
+  * insert setProducerObligation( #SHOULD:able-to-populate, "EU-MADO requirement" )
+* content.attachment.creation
+  * insert setProducerObligation( #SHOULD:able-to-populate, "EU-MADO requirement" )
+* content.format
+  * insert setProducerObligation( #SHOULD:able-to-populate, "EU-MADO requirement" )
+* context
+  * insert setProducerObligation( #SHOULD:able-to-populate, "EU-MADO requirement" )
+* context.period
+  * insert setProducerObligation( #SHOULD:able-to-populate, "EU-MADO requirement" )
+* context.facilityType
+  * insert setProducerObligation( #SHOULD:able-to-populate, "EU-MADO requirement" )
+* context.practiceSetting
+  * insert setProducerObligation( #SHOULD:able-to-populate, "EU-MADO requirement" )
+* context.sourcePatientInfo
+  * insert setProducerObligation( #SHOULD:able-to-populate, "EU-MADO requirement" )
 
