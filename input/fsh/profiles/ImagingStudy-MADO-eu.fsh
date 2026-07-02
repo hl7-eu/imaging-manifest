@@ -79,7 +79,7 @@ Profile on [[[MadoImagingStudy]]] that specifies the EU specific elements for th
 
   * instance
     * uid
-      * insert setProducerObligation( #SHALL:populate, "Required by MADO" )
+      * insert setProducerObligation( #SHALL:populate, "Required by IHE-MADO" )
 
     * number
       * insert setProducerObligation( #SHALL:able-to-populate, "Required by MADO" )
