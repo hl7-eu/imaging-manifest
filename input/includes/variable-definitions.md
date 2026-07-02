@@ -10,7 +10,9 @@
 {% assign iheIid            = "[IHE-IID](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_Suppl_IID.pdf)" %}
 {% assign iheIDR            = "[IHE-IDR](https://build.fhir.org/ig/IHE/RAD.IDR/)" %}
 {% assign iheMhd            = "[IHE-MHD](https://profiles.ihe.net/ITI/MHD/)" %}
-{% assign iheMado           = "[IHE-MADO](https://profiles.ihe.net/RAD/MADO/)" %}
+{% assign iheMadoBaseUrl    = "https://build.fhir.org/ig/IHE/RAD.MADO/" %}
+<!-- {% assign iheMado           = "[IHE-MADO](https://profiles.ihe.net/RAD/MADO/)" %} -->
+{% assign iheMado           = "[IHE-MADO](" | append: iheMadoBaseUrl | append: ")" %}
 
 {% assign euHealthDataApi   = "[EU Health Data API](https://build.fhir.org/ig/euridice-org/eu-health-data-api/en/)" %}
 {% assign hl7EuBase         = "[HL7 EU Base](https://build.fhir.org/ig/hl7-eu/base-r5/)" %}

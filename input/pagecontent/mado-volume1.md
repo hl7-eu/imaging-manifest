@@ -1,7 +1,7 @@
 
 {% include variable-definitions.md %}
 
-This page reflects Volume 1 of the MADO specification [MADO Volume 1](https://build.fhir.org/ig/IHE/RAD.MADO/volume-1.html). All content in MADO Volume 1 applies to this spec as well. This pages presents the EU specific extensions to {{iheMado}} Volume 1.
+This page reflects Volume 1 of the MADO specification [MADO Volume 1]({{iheMadoBaseUrl}}volume-1.html). All content in MADO Volume 1 applies to this spec as well. This pages presents the EU specific extensions to {{iheMado}} Volume 1.
 
 ### EU-specific use case - retrieve manifest based on EU Imaging Report (informative)
 

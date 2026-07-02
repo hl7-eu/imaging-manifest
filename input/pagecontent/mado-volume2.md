@@ -4,10 +4,10 @@ This page reflects Volume 2 (Transactions) of the IHE MADO specification and doc
 
 Base references:
 
-- IHE MADO Volume 2 (HTML): [MADO Volume 2](https://build.fhir.org/ig/IHE/RAD.MADO/volume-2.html)
-- IHE MADO PDF (transactions starting page 32): [IHE RAD Supplement MADO PDF, page 32+](https://build.fhir.org/ig/IHE/RAD.MADO/IHE_RAD_Suppl_MADO.pdf#page=32)
+- IHE MADO Volume 2 (HTML): [MADO Volume 2]({{iheMadoBaseUrl}}volume-2.html)
+- IHE MADO PDF (transactions starting page 32): [IHE RAD Supplement MADO PDF, page 32+]({{iheMadoBaseUrl}}IHE_RAD_Suppl_MADO.pdf#page=32)
 
-## Delta relative to IHE MADO Volume 2
+### Delta relative to IHE MADO Volume 2
 
 No normative EU-specific change has been introduced relative to IHE MADO Volume 2.
 

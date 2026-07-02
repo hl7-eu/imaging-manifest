@@ -26,6 +26,7 @@
 <page key="changes" name="Changes"/>
 <page key="current-status" name="Current Status"/>
 <page key="manifest-dicom-kos" name="DICOM KOS Manifest"/>
+<page key="xtehr-mapping" name="EHDS logical model mapping"/>
 <page key="eu-mapping" name="FHIR / KOS Mappings"/>
 <page key="manifest-fhir" name="FHIR Imaging Manifest"/>
 <page key="functional-requirements" name="Functional Requirements"/>
@@ -35,5 +36,4 @@
 <page key="mado-volume1" name="Volume 1"/>
 <page key="mado-volume2" name="Volume 2"/>
 <page key="mado-volume3" name="Volume 3"/>
-<page key="xtehr-mapping" name="XtEHR Mapping"/>
 </specification>

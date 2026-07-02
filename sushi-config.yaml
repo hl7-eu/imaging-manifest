@@ -44,7 +44,7 @@ pages:
   functional-requirements.md:
     title: Functional Requirements
   xtehr-mapping.md:
-    title: XtEHR Mapping
+    title: EHDS logical model mapping
   mado-volume1.md:
     title: Volume 1
   mado-volume2.md:
@@ -78,7 +78,7 @@ menu:
   Functional:
     Functional Requirements: functional-requirements.html
     XtEHR model: https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/en/overview-medicalimages.html
-    XtEHR mapping: xtehr-mapping.html
+    EHDS logical model mapping: xtehr-mapping.html
   Implementation:
     MADO Volume 1: mado-volume1.html
     MADO Volume 2: mado-volume2.html

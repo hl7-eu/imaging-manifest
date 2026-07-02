@@ -10,19 +10,19 @@ Profile on [[[MadoComposition]]] that specifies the EU specific elements.
 
 
 * text MS
-  * insert setProducerObligation( #SHALL:populate, "From MADO" )
+  * insert setProducerObligation( #SHALL:populate, "From IHE-MADO" )
 * identifier MS
-  * insert setProducerObligation( #SHALL:populate, "From MADO" )
+  * insert setProducerObligation( #SHALL:populate, "From IHE-MADO" )
 
 * type = $loinc#18748-4 
 * type MS
-  * insert setProducerObligation( #SHALL:able-to-populate, "From MADO" )
+  * insert setProducerObligation( #SHALL:able-to-populate, "From IHE-MADO" )
 
 * category MS
-  * insert setProducerObligation( #SHOULD:able-to-populate, "From MADO" )
+  * insert setProducerObligation( #SHOULD:able-to-populate, "From IHE-MADO" )
 
 * title MS
-  * insert setProducerObligation( #SHALL:populate, "From MADO" )
+  * insert setProducerObligation( #SHALL:populate, "From IHE-MADO" )
 
 // Indicate EU core as additional profile that is complied with
 * subject only Reference( EuMadoPatient )
@@ -58,10 +58,10 @@ Profile on [[[MadoComposition]]] that specifies the EU specific elements.
 
 * event[imaging-study]
   * detail only Reference( EuMadoImagingStudy )
-  * insert setProducerObligation( #SHALL:populate, "From MADO" )
+  * insert setProducerObligation( #SHALL:populate, "From IHE-MADO" )
 
 * section MS
-  * insert setProducerObligation( #MAY:able-to-populate, "From MADO" )
+  * insert setProducerObligation( #MAY:able-to-populate, "From IHE-MADO" )
 
 * section.text
-  * insert setProducerObligation( #SHALL:populate, "From MADO" )
+  * insert setProducerObligation( #SHALL:populate, "From IHE-MADO" )

@@ -1,12 +1,10 @@
-# Functional Requirements
-
 {% include variable-definitions.md %}
 
 This page summarizes the functional requirements addressed by this implementation guide.
 The guide constrains and extends {{iheMado}} with EU-specific requirements and content so
 that the manifest can be used consistently in the European interoperability context.
 
-## EU-specific requirements
+### EU-specific requirements
 
 This implementation guide is intended to:
 
@@ -16,7 +14,7 @@ This implementation guide is intended to:
 * Stay compatible with EU-core profiles where EU-core requirements apply;
 * Mandate the presence of the anatomical-region extension on [[[EuMadoImagingStudy]]] and make the anatomical region value set a `required` binding.
 
-## Delta relative to IHE MADO
+### Delta relative to IHE MADO
 
 Compared with {{iheMado}}, this implementation guide introduces the following EU-specific delta:
 
@@ -25,7 +23,7 @@ Compared with {{iheMado}}, this implementation guide introduces the following EU
 * It publishes explicit Xt-EHR mapping content for the EHDS logical model to FHIR and DICOM representations used in this guide.
 * It strengthens anatomical region requirements by making the extension mandatory on the EU ImagingStudy profile and binding it to a required value set.
 
-## Requirements realized in this guide
+### Requirements realized in this guide
 
 The current implementation realizes these requirements in the following way:
 
@@ -35,7 +33,7 @@ The current implementation realizes these requirements in the following way:
 * The [[[EuMadoPatient]]] profile declares compliance with the EU-core patient profile, providing EU-core compatibility for patient data carried in the manifest.
 * The [[[EuMadoImagingStudy]]] profile requires `extension[anatomical-region] 1..*` and binds its value to [[[`ValueSetAnatomicalRegion]]] with required strength.
 
-## Summary
+### Summary
 
 In short, this implementation guide is not a generic restatement of {{iheMado}}. It is the
 EU-specific realization of MADO for the imaging-manifest use case, with added alignment to
