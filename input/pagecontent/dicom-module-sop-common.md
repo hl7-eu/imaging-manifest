@@ -3,7 +3,7 @@
 DICOM SOP Common attributes (PS3.3 C.12.1) with their IHE-MADO usage and EU-MADO Consumer/Producer obligations.
 
 <ul>
-  <li><strong>DICOM source:</strong> <a href="https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.12.1.html" target="_blank">PS3.3 C.12.1</a></li>
+  <li><strong>DICOM source:</strong> <a href="https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.12.html#table_C.12-1" target="_blank">PS3.3 C.12.1</a></li>
   <li><strong>IHE-MADO:</strong> <a href="https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_Suppl_MADO.pdf" target="_blank">IHE RAD MADO supplement</a></li>
 </ul>
 
