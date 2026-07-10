@@ -77,7 +77,6 @@ menu:
     Current Status: current-status.html
   Functional:
     Functional Requirements: functional-requirements.html
-    XtEHR model: https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/en/overview-medicalimages.html
     EHDS logical model mapping: xtehr-mapping.html
   Implementation:
     MADO Volume 1: mado-volume1.html

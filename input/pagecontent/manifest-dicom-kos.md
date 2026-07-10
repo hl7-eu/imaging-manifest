@@ -28,3 +28,4 @@ The base definition of the DICOM KOS Manifest is defined in [IHE MADO: DICOM KOS
 
 {% include dicom-template-1602-i.md %}
 
+{% include dicom-template-1609.md %}
