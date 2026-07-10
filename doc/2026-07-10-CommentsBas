@@ -1,0 +1,7 @@
+Issuer of PatientID, Issuer of Patient ID Qualitfiers Seqence, Universal Entity ID and Universal Entity ID Type
+* Suggestion is to remove SHALL-able-to-populate (pending)
+* Comment: we need a system value in FHIR which corresponds to those fields being present, how do we handle this?
+
+SOP Common Module
+* Suggestion: remove Manufacturer and Instution Name (pending)
+* Comment: these define the author of the manifest and so need to be present
