@@ -1,6 +1,6 @@
 #### TID 2010 Key Object Selection
 
-DICOM SR template TID 2010 (Key Object Selection) nodes with DICOM/IHE requirement types and EU-MADO Consumer/Producer obligations. This template is used in the SR Document Module.
+DICOM SR template TID 2010 (Key Object Selection) nodes with DICOM/IHE requirement types and EU-MADO Consumer/Producer obligations. This is used in the SR Document Module.
 
 <ul>
   <li><strong>DICOM source:</strong> <a href="https://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_TID_2010.html#table_TID_2010" target="_blank">PS3.16 TID 2010</a></li>

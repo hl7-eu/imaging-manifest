@@ -23,7 +23,7 @@ DICOM Key Object Document Series attributes (PS3.3 C.17.6.1) with their IHE-MADO
   <tr><td>Protocol Name</td><td style="text-align:center">(0018,1030)</td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center"></td></tr>
   <tr><td>Series Description</td><td style="text-align:center">(0008,103E)</td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center"></td></tr>
   <tr><td>Series Description Code Sequence</td><td style="text-align:center">(0008,103F)</td><td style="text-align:center">2001-02-28</td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center"></td></tr>
-  <tr><td>Reference Request Sequence</td><td style="text-align:center"></td><td style="text-align:center">1C</td><td style="text-align:center">R+</td><td style="text-align:center"></td><td style="text-align:center"></td></tr>
+  <tr><td>Reference Request Sequence</td><td style="text-align:center">(0040,A370)</td><td style="text-align:center">1C</td><td style="text-align:center">R+</td><td style="text-align:center"></td><td style="text-align:center"></td></tr>
   <tr><td>Referenced Performed Procedure Step Sequence</td><td style="text-align:center">(0008,1111)</td><td style="text-align:center">2</td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center"></td></tr>
   <tr><td>Treatment Session UID</td><td style="text-align:center">(300A,0700)</td><td style="text-align:center">3</td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center"></td></tr>
     </tbody>
