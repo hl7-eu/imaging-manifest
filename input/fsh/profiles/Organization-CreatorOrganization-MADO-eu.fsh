@@ -9,7 +9,5 @@ It represents the creator organization in compliance with the MADO specification
 
 * identifier
   * insert setProducerObligation( #SHALL:able-to-populate, "Required by MADO" )
-* type
-  * insert setProducerObligation( #SHALL:able-to-populate, "Required by MADO" )
 * name
   * insert setProducerObligation( #SHALL:able-to-populate, "Required by MADO" )
