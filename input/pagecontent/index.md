@@ -36,6 +36,8 @@ Experimental implementation feedback may result in backward incompatible changes
 
 </div>
 
+{% include worknote.html text="Before ballot, this IG must be updated to point to the published version of MADO (currently it references a development/pre-publication version)." %}
+
 ### Scope
 
 This implementation guide defines the European specific {{iheMado}} specification following the definition in {{ehnImaging}} and refined by {{XtEhrImaging}}, as a DICOM and FHIR model. It defines:

@@ -14,7 +14,7 @@ Profile on [[[MadoImagingStudy]]] that specifies the EU specific elements for th
   * insert setProducerObligation( #SHALL:populate, "Required by MADO" )
 
 * procedureCode
-  * insert setProducerObligation( #SHALL-populate, "Required by MADO" )
+  * insert setProducerObligation( #SHALL:populate, "Required by MADO" )
   
 * subject only Reference( EuMadoPatient ) 
 * subject MS

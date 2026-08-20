@@ -102,3 +102,6 @@ The IG is not for the international realm, and it uses SNOMED CT, so it should f
 
 # 	The repeating element pattern.
 The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
+
+# Pre-ballot: the HL7 Jira spec artifact is registered as part of ballot preparation, not during CI builds.
+%There is no jira specification file defined with the expected name of FHIR-eu-imaging-manifest%

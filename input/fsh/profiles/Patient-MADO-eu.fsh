@@ -21,7 +21,7 @@ Profile on [[[MadoPatient]]] that specifies the EU specific elements.
     * insert setProducerObligation( #SHALL:able-to-populate, "EHDSPatient.name.family" )
   * given
     * insert setProducerObligation( #SHALL:able-to-populate, "EHDSPatient.name.given" )
-* birthDate
+* birthDate 1..
   * insert setProducerObligation( #SHOULD:able-to-populate, "EHDSPatient.birthDate" )
 * gender
   * insert setProducerObligation( #SHOULD:able-to-populate, "EHDSPatient.administrativeGender" )

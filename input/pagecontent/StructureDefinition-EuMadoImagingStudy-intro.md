@@ -1,0 +1,1 @@
+{% include worknote.html text="This profile needs to be updated once the DICOM terminology (e.g. the AcquisitionModality value set and related DICOM code systems) has been published, so that the terminology bindings resolve to the official published DICOM resources." %}

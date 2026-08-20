@@ -29,7 +29,8 @@ dependencies:
   # hl7.fhir.uv.extensions: 5.2.0
   ihe.rad.mado: dev
   hl7.fhir.eu.base: 2.0.0
-  hl7.fhir.eu.extensions:
+  # Use the R4 build of the EU extensions to match this IG's FHIR version (4.0.1)
+  hl7.fhir.eu.extensions.r4:
     uri: http://hl7.eu/fhir/extensions/ImplementationGuide/hl7.fhir.eu.extensions
     version: 1.3.0
   # xtehr.eu.ehds.models: 1.0.0
