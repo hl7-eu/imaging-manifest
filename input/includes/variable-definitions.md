@@ -30,4 +30,7 @@
 {% assign usCore            = "[US core v7.0.0](https://hl7.org/fhir/us/core/STU7/)" %}
 {% assign dicomSr2fhir      = "[DICOM-SR-2-FHIR](https://build.fhir.org/ig/HL7/dicom-sr/)" %}
 
+<!-- Manual link reference for the anatomical-region ValueSet, which is defined in the ihe.rad.mado dependency (not this IG), so it is absent from the generated fsh-link-references.md. -->
+[ValueSetAnatomicalRegion]: https://build.fhir.org/ig/IHE/RAD.MADO/ValueSet-ValueSetAnatomicalRegion.html
+
 {% include fhir-resources.md %}

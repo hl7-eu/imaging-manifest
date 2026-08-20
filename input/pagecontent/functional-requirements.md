@@ -31,7 +31,7 @@ The current implementation realizes these requirements in the following way:
 * The [XtEHR Mapping](xtehr-mapping.html) page documents how Xt-EHR logical model elements are mapped to the FHIR profiles and DICOM data carried by this guide.
 * The [[[EuMadoImagingStudy]]] profile adds EHDS/Xt-EHR traceability and obligations on key elements such as subject, modality, body site, series metadata, and endpoints.
 * The [[[EuMadoPatient]]] profile declares compliance with the EU-core patient profile, providing EU-core compatibility for patient data carried in the manifest.
-* The [[[EuMadoImagingStudy]]] profile requires `extension[anatomical-region] 1..*` and binds its value to [[[`ValueSetAnatomicalRegion]]] with required strength.
+* The [[[EuMadoImagingStudy]]] profile requires `extension[anatomical-region] 1..*` and binds its value to [ValueSetAnatomicalRegion] with required strength.
 
 ### Summary
 

@@ -70,6 +70,7 @@ pages:
 # │ property below.                                                                                │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
+  Contents: toc.html
   Home:
     Introduction: index.html
     Changes: changes.html

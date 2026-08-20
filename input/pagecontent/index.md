@@ -20,7 +20,7 @@
 </div>
 
 <div markdown="1" class="stu-note">
-**IMPORTANT**: MADO is NOT yet recommended for production use.
+**IMPORTANT**: EU MADO is NOT yet recommended for production use.
 
 Profiles released for Trial Implementation by HL7/IHE Europe typically ARE expected to be stable enough for production use; however, this release of this specification is intended for experimental implementation and feedback.
 
@@ -41,10 +41,13 @@ Experimental implementation feedback may result in backward incompatible changes
 ### Scope
 
 This implementation guide defines the European specific {{iheMado}} specification following the definition in {{ehnImaging}} and refined by {{XtEhrImaging}}, as a DICOM and FHIR model. It defines:
-* The structure and contents of FHIR imaging study manifests.
+* The structure and contents of imaging study manifests in two complementary representations: a FHIR Bundle manifest and a DICOM KOS (Key Object Selection) manifest.
+* The MHD (Mobile access to Health Documents) envelopes used to package and exchange these manifests.
 * Mapping between this IG and the Xt-EHR logical models for imaging reports, as functional requirements.
 * Example implementations of the defined models for Imaging Study Manifests.
 * The relation of this specification with the existing ecosystem, including {{iheMado}}, {{iheRad}}, and {{euHealthDataApi}} specifications.
+
+{% include worknote.html text="Examples are currently incomplete: only DICOM KOS example files are provided (under examples/dicom). FHIR example instances still need to be added — at minimum a conformant EuMadoBundle manifest with its EuMadoComposition, EuMadoImagingStudy and EuMadoPatient, plus the MHD envelope (DocumentReference) examples — before this claim is fully met." %}
 
 The specification is to be used in a variety of deployment models, which includes the EHDS use cases: exchange data within healthcare organizations, across nations/regions and cross border information exchange. In all of these use cases it is important that it is compatible with the existing ecosystem.
 
@@ -78,11 +81,27 @@ The development of this implementation guide is promoted by HL7 and IHE Europe u
 
 ### Structure
 
-In term of structure of the profile here the skeleton:
+This specification follows the IHE supplement structure, organised as follows:
 
-1. The volume 1 is the profile overview in term of Actor/Transactions, the overall use case and associated scenarios. Volume 1 alsos state the required and optional transactions, as well as the required/optional grouping.
+1. The volume 1 is the profile overview in term of Actor/Transactions, the overall use case and associated scenarios. Volume 1 alsos state the required and optional transactions, as well as the required/optional grouping. The actors defined by this guide are the [Imaging Manifest Producer](ActorDefinition-EuMadoImagingManifestProducer.html), the [Imaging Manifest Consumer](ActorDefinition-EuMadoImagingManifestConsumer.html), and the [MHD Document Responder](ActorDefinition-EuMadoMhdDocumentResponder.html), whose server behaviour is described in the [MADO Document Responder CapabilityStatement](CapabilityStatement-IHE.RAD.MADO.DocumentResponder.html).
 2. Volume 2 Chapter on the WADO-RS Retrieve Transaction.
 3. A volume 3 Chapter on the Manifest content that includes a section A on the DICOM KOS based Manifest, and one section B on the FHIR based Manifest. The section C (for information) would include the mapping of A to B and B from A
+
+### How to read this guide
+
+The following pages provide the substantive content of this guide:
+
+* [Functional Requirements](functional-requirements.html) — the requirements this specification must satisfy.
+* [EHDS logical model mapping](xtehr-mapping.html) — mapping between this IG and the Xt-EHR logical models.
+* [Volume 1](mado-volume1.html) — actors, transactions, use cases and scenarios.
+* [Volume 2](mado-volume2.html) — the WADO-RS Retrieve transaction.
+* [Volume 3](mado-volume3.html) — the manifest content, with:
+  * [FHIR Imaging Manifest](manifest-fhir.html) — the FHIR Bundle representation.
+  * [DICOM KOS Manifest](manifest-dicom-kos.html) — the DICOM KOS representation.
+  * [Manifest Envelopes for IHE-MHD](manifest-envelop.html) — the MHD packaging of the manifests.
+  * [FHIR / KOS Mappings](eu-mapping.html) — the mapping between the two representations.
+
+The formal definitions — profiles, actors, the capability statement, terminology and examples — are listed on the [Artifacts](artifacts.html) page.
 
 ### FHIR specific Dependencies
 
