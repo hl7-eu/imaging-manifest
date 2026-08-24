@@ -41,7 +41,7 @@ EU MADO profile for the IHE-MHD Document Reference for FHIR Imaging Study Manife
   * insert setProducerObligation( #SHALL:populate, "Required by MADO" )
 
 * securityLabel
-  * insert setProducerObligation( #MAY:populate, "Required by MADO" )
+  * insert setProducerObligation( #MAY:able-to-populate, "Required by MADO" )
 
 // EU-MADO obligations on inherited Must Support fields without an existing producer obligation
 * identifier[entryUUID]

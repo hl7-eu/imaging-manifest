@@ -65,6 +65,7 @@ Profile on [[[MadoImagingStudy]]] that specifies the EU specific elements for th
   * numberOfInstances MS
     * insert setConsumerAndProducerObligation( #SHOULD:process, #SHALL:able-to-populate, "EHDSImagingStudy.series.numberOfInstances" )
 
+  * endpoint[wado] only Reference( EuMadoWadoEndpoint )
   * endpoint[wado] MS
     * insert setConsumerAndProducerObligation( #SHOULD:process, #SHALL:populate, "EHDSImagingStudy.endpoint & EHDSImagingStudy.series.seriesEndpoint" )
 

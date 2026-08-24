@@ -123,6 +123,14 @@ function build_notx() {
   run_publisher -tx n/a "$@"
 }
 
+# Build against a local terminology server (default http://localhost:8085/r4).
+# Override the URL with the TX_URL environment variable.
+function build_localtx() {
+  local tx_url="${TX_URL:-http://localhost:8085/r4}"
+  echo "Using local terminology server: $tx_url"
+  run_publisher -tx "$tx_url" "$@"
+}
+
 function build_continuous() {
   run_publisher -watch "$@"
 }
@@ -134,11 +142,10 @@ function jekyll_build() {
 
 function cleanup() {
   echo "Cleaning up temp directories..."
-  if [ -f "${input_cache_path}${publisher_jar}" ]; then
-    mv "${input_cache_path}${publisher_jar}" ./
-    rm -rf "${input_cache_path}"*
-    mkdir -p "$input_cache_path"
-    mv "$publisher_jar" "$input_cache_path"
+  if [ -d "$input_cache_path" ]; then
+    # Preserve publisher.jar and the terminology cache (txcache) so builds stay fast
+    find "$input_cache_path" -mindepth 1 -maxdepth 1 \
+      ! -name "$publisher_jar" ! -name "txcache" -exec rm -rf {} +
   fi
   rm -rf ./output ./template ./temp
   echo "Cleanup complete."
@@ -155,6 +162,7 @@ if [ $# -gt 0 ]; then
     build)   shift; extraArgs=("$@"); check_internet_connection; build_ig "${extraArgs[@]}"; exit 0 ;;
     nosushi) shift; extraArgs=("$@"); check_internet_connection; build_nosushi "${extraArgs[@]}"; exit 0 ;;
     notx)    shift; extraArgs=("$@"); build_notx "${extraArgs[@]}"; exit 0 ;;
+    localtx) shift; extraArgs=("$@"); build_localtx "${extraArgs[@]}"; exit 0 ;;
     jekyll)  jekyll_build; exit 0 ;;
     clean)   cleanup; exit 0 ;;
     exit)    exit 0 ;;
@@ -201,6 +209,7 @@ echo "3) Build IG without Sushi"
 echo "4) Build IG without TX server"
 echo "5) Jekyll build"
 echo "6) Cleanup temp directories"
+echo "7) Build IG with local TX server (\$TX_URL, default http://localhost:8085)"
 echo "0) Exit"
 echo
 
@@ -217,6 +226,7 @@ case "$choice" in
   4) build_notx ;;
   5) jekyll_build ;;
   6) cleanup ;;
+  7) build_localtx ;;
   0) exit 0 ;;
   *) echo "Invalid option." ;;
 esac

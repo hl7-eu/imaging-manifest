@@ -47,7 +47,7 @@ The following table shows the mapping from EHDSImagingStudy logical model elemen
   </tr>
   <tr>
     <td>header.subject</td>
-    <td><a href="./StructureDefinition-EuImagingStudy.html">EuImagingStudy</a></td>
+    <td><a href="./StructureDefinition-EuMadoImagingStudy.html">EuMadoImagingStudy</a></td>
     <td>subject</td>
     <td>Patient Module</td>
     <td></td>

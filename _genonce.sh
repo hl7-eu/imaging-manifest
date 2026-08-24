@@ -1,15 +1,21 @@
 #!/bin/bash
 publisher_jar=publisher.jar
 input_cache_path=./input-cache/
-echo Checking internet connection...
-curl -sSf tx.fhir.org > /dev/null
 
-if [ $? -eq 0 ]; then
-	echo "Online"
-	txoption=""
+if [ -n "${TX_URL:-}" ]; then
+	echo "Using local terminology server: $TX_URL"
+	txoption="-tx $TX_URL"
 else
-	echo "Offline"
-	txoption="-tx n/a"
+	echo Checking internet connection...
+	curl -sSf tx.fhir.org > /dev/null
+
+	if [ $? -eq 0 ]; then
+		echo "Online"
+		txoption=""
+	else
+		echo "Offline"
+		txoption="-tx n/a"
+	fi
 fi
 
 echo "$txoption"
