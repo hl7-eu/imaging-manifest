@@ -14,6 +14,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Install npm
+        run: sudo nvm install 22 ; sudo nvm use 22
+
       - name: Install Sushi
         run: sudo npm install -g fsh-sushi
 
@@ -24,5 +27,5 @@ jobs:
         run: ./_updatePublisher.sh -f -y
 
       - name: Run publisher
-        run: ./_build.sh
+        run: ./_genonce.sh
       
