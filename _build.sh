@@ -127,8 +127,9 @@ function build_notx() {
 # Override the URL with the TX_URL environment variable.
 function build_localtx() {
   local tx_url="${TX_URL:-http://localhost:8085/r4}"
+  local fhir_settings="../fhir-settings.json"
   echo "Using local terminology server: $tx_url"
-  run_publisher -tx "$tx_url" "$@"
+  run_publisher -fhir-settings "$fhir_settings" -tx "$tx_url" "$@"
 }
 
 function build_continuous() {
