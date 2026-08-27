@@ -1,23 +1,22 @@
-@startuml
-    title EU-1 Intra-country and Cross-border Imaging Manifest Exchange
+@startuml mado-volume1-eu1-cross-border-exchange
+    title EU-1 Locate and Access a Patient Study from an Imaging Manifest
 
-    participant "Imaging Manifest Consumer" as Consumer
-    participant "Document Access Provider" as DocProvider
-    participant "Imaging Manifest Producer" as Producer
-    participant "Imaging Source (WADO-RS)" as Wado
+    participant "Document Consumer (Imaging Manifest)" as Consumer
+    participant "Document Access Provider (Imaging Manifest)" as DocProvider
+    participant "Imaging Document Source" as Wado
 
-    == Discover and select manifest ==
-    Consumer -> DocProvider ++: Search patient imaging documentation
-    DocProvider --> Consumer --: Matching manifest summary metadata
-    Consumer -> DocProvider ++: Retrieve selected full manifest
-    DocProvider -> Producer ++: Resolve manifest content
-    Producer --> DocProvider --: Manifest document and references
-    DocProvider --> Consumer --: Full manifest
+    == Locate and select manifest ==
+    note over Consumer: Use patient identifier and anatomical region
+    Consumer -> DocProvider ++: Search manifests by patient identifier and anatomical region [ITI-67]
+    DocProvider --> Consumer --: Matching manifest metadata and references
+    Consumer -> Consumer: Select a manifest from the search results
+    Consumer -> DocProvider ++: Retrieve selected manifest [ITI-68]
+    DocProvider --> Consumer --: Manifest document
 
-    == Retrieve image payload ==
-    Consumer -> Consumer: Select required series and instances
-    Consumer -> Wado ++: WADO-RS retrieval for referenced objects
+    == Access study content ==
+    Consumer -> Consumer: Read study, series, and instance references
+    Consumer -> Wado ++: WADO-RS retrieval for content represented by the manifest [RAD-160]/[RAD-107]
     Wado --> Consumer --: DICOM instances/series payload
-    Consumer -> Consumer: Display or process images
+    Consumer -> Consumer: Render or process the study
 
 @enduml
