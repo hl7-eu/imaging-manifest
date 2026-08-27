@@ -2,7 +2,7 @@ Profile: EuMadoPatient
 Parent: MadoPatient
 Title: "EU MADO Patient"
 Description: """
-Profile on [[[MadoPatient]]] that specifies the EU specific elements.
+Profile on [MadoPatient](https://profiles.ihe.net/RAD/MADO/StructureDefinition-MadoPatient.html) that specifies the EU specific elements.
 """
 * insert SetFmmAndStatusRule( 1, draft )
 

@@ -1,3 +1,4 @@
+{% include fsh-link-references.md %}
 {% include variable-definitions.md %}
 
 Part of the information related to accessing the content is part of the envelop in which the manifest is distributed. In the case of using {{IHE-MHD}}, the envelop used in a DocumentReference.

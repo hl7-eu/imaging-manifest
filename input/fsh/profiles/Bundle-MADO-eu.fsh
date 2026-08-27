@@ -1,7 +1,7 @@
 Profile: EuMadoBundle
 Parent: MadoFhirBundle
 Title: "MADO EU FHIR Imaging Study Manifest Bundle"
-Description: "This profile refines the [[[MadoFhirBundle]]] with EU specific elements for the MADO EU FHIR Imaging Study Manifest. It includes the necessary resources and rules to represent the imaging study manifest in compliance with the MADO specifications."  
+Description: "This profile refines the [MadoFhirBundle](https://profiles.ihe.net/RAD/MADO/StructureDefinition-MadoFhirBundle.html) with EU specific elements for the MADO EU FHIR Imaging Study Manifest. It includes the necessary resources and rules to represent the imaging study manifest in compliance with the MADO specifications."
 * insert SetFmmAndStatusRule( 1, draft )
 * identifier
   * insert setProducerObligation( #SHALL:populate, "Required by MADO" )

@@ -2,7 +2,7 @@ Profile: EuMadoRequestedProcedure
 Parent: MadoRequestedProcedure
 Title: "EU MADO Requested Procedure"
 Description: """
-Profile on [[[MadoRequestedProcedure]]] that specifies the EU specific elements.
+Profile on [MadoRequestedProcedure](https://profiles.ihe.net/RAD/MADO/StructureDefinition-MadoRequestedProcedure.html) that specifies the EU specific elements.
 """
 * insert SetFmmAndStatusRule( 1, draft )
 

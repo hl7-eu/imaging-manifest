@@ -1,3 +1,4 @@
+{% include fsh-link-references.md %}
 {% include variable-definitions.md %}
 
 This page summarizes the functional requirements addressed by this implementation guide.

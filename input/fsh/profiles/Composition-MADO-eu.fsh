@@ -2,7 +2,7 @@ Profile: EuMadoComposition
 Parent: MadoComposition
 Title: "EU MADO Composition"
 Description: """
-Profile on [[[MadoComposition]]] that specifies the EU specific elements.
+Profile on [MadoComposition](https://profiles.ihe.net/RAD/MADO/StructureDefinition-MadoComposition.html) that specifies the EU specific elements.
 """
 * insert SetFmmAndStatusRule( 1, draft )
 * ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-compliesWithProfile].valueCanonical =
