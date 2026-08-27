@@ -4,13 +4,13 @@ All EU FHIR Manifests SHALL follow the base definition of the FHIR Imaging Manif
 
 This base profile refers to other EU specific derivatives of the base FHIR profiles defined in IHE-MADO.
 
-In these profiles, the requirements on the different system actors [[[EuMadoImagingManifestConsumer]]] and [[[EuMadoImagingManifestProducer]]] are expressed as Obligations.
+In these profiles, the requirements on the different system actors [[[EuMadoDocumentConsumer]]] and [[[EuMadoContentCreator]]] are expressed as Obligations.
 
 ### Differences from IHE-MADO
 
 Most of the IHE-MADO resource profile has a corresponding EU profile (`EuMado…`) that constrains it. The main differences from IHE-MADO are:
 
-1. **Obligations.** Each EU profile adds producer/consumer `Obligations` for the [[[EuMadoImagingManifestProducer]]] and [[[EuMadoImagingManifestConsumer]]] actors, mapped to the EHDS logical model elements where applicable.
+1. **Obligations.** Each EU profile adds producer/consumer `Obligations` for the [[[EuMadoContentCreator]]] and [[[EuMadoDocumentConsumer]]] actors, mapped to the EHDS logical model elements where applicable.
 
 2. **Anatomical region constrains**: The `extension[anatomical-region]` is required (constrained to `1..*`). The binding to `ValueSetAnatomicalRegion` is changed from `preferred` to `required`. The same updates are applied to the `bodysite` concept in [[[EuMadoFhirDocumentReference]]].
 

@@ -9,9 +9,16 @@ This use case illustrates the operational relationship between the {{hl7EuImRep}
 
 **Actors:**
 
-* Document Consumer (typically clinician, but can also be patient-facing systems).
-* IHE-MHD Document Provider.
-* Imaging Source.
+**Manifest:**
+
+* [Content Creator/Document Source (Imaging Manifest)](ActorDefinition-EuMadoContentCreator.html) - creates the document.
+* [Document Access Provider (Imaging Manifest)](ActorDefinition-EuMadoDocumentAccessProvider.html) - provides the document.
+* [Document Consumer (Imaging Manifest)](ActorDefinition-EuMadoDocumentConsumer.html).
+
+**(XC-)WADO-RS:**
+
+* Imaging Document Source.
+* Imaging Document Consumer.
 
 **Preconditions:**
 
@@ -30,12 +37,12 @@ The figure below illustrates this use case in a sequence diagram using IHE-MHD.
 
 The steps are:
 
-1. The Consumer searches for imaging reports for a patient and retrieves a selected report.
-2. The Consumer reviews the report and determines that image access is needed.
-3. The Consumer searches for the associated manifest using identifiers from the report/study context.
-4. The Consumer retrieves the selected manifest document.
-5. The Consumer selects relevant series/instances from the manifest.
-6. The Consumer retrieves the corresponding DICOM data through WADO-RS and renders or processes the images.
+1. The Document Consumer (Imaging Manifest) searches for imaging reports for a patient and retrieves a selected report.
+2. The Document Consumer (Imaging Manifest) reviews the report and determines that image access is needed.
+3. The Document Consumer (Imaging Manifest) searches for the associated manifest using identifiers from the report/study context.
+4. The Document Consumer (Imaging Manifest) retrieves the selected manifest document from the Document Access Provider (Imaging Manifest).
+5. The Document Consumer (Imaging Manifest) selects relevant series/instances from the manifest.
+6. The Document Consumer (Imaging Manifest) retrieves the corresponding DICOM data from the Imaging Document Source through WADO-RS and renders or processes the images.
 
 **example query pattern:**
 

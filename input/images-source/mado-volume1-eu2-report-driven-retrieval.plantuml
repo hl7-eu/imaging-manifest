@@ -1,9 +1,9 @@
 @startuml
     title EU-2 Report-driven Retrieval of Imaging Data
 
-    participant "Report Consumer" as Consumer
-    participant "Document Access Provider" as DocProvider
-    participant "Imaging Source (WADO-RS)" as Wado
+    participant "Document Consumer (Imaging Manifest)" as Consumer
+    participant "Document Access Provider (Imaging Manifest)" as DocProvider
+    participant "Imaging Document Source" as Wado
 
     == Start from report ==
     Consumer -> DocProvider ++: Search and retrieve imaging report [ITI-67][ITI-68]
