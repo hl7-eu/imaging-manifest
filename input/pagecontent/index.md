@@ -61,7 +61,7 @@ The specification is to be used in a variety of deployment models, which include
 
 This guide is part of the broader European EHDS-aligned interoperability landscape and focuses on the imaging report model and related access patterns. It is designed to be complementary to other EHDS family guides and to remain interoperable with established IHE workflows.
 
-In particular, this guide aligns with {{hl7ImagingReport}}. The separation between report and manifest is intentional:
+In particular, this guide aligns with {{hl7EuImRep}}. The separation between report and manifest is intentional:
 * The report communicates the clinician-authored interpretation and supporting clinical content.
 * The manifest communicates imaging-study inventory and retrieval context for DICOM access.
 
