@@ -1,7 +1,7 @@
 id: hl7.fhir.eu.imaging-manifest
 canonical: http://hl7.eu/fhir/imaging-manifest
 name: HL7EuImagingStudyManifest
-title: EU Manifest-based Access to DICOM Objects (MADO)
+title: Manifest-based Access to DICOM Objects (IHE-MADO) - EU Extensions
 description: This guide describes FHIR R4 related elements of the IHE-MADO profile.
 status: draft # draft | active | retired | unknown
 experimental: false
@@ -28,6 +28,7 @@ dependencies:
   # hl7.terminology: current
   # hl7.fhir.uv.extensions: 5.2.0
   ihe.rad.mado: dev
+  ihe.iti.mhd: 4.2.3
   hl7.fhir.eu.base: 2.0.0
   # Use the R4 build of the EU extensions to match this IG's FHIR version (4.0.1)
   hl7.fhir.eu.extensions.r4:
@@ -102,6 +103,7 @@ menu:
 parameters:
 #   excludettl: true
 #   validation: [allow-any-extensions, no-broken-links]
+  logging: tx
   apply-contact: false
   default-contact: true
   default-copyright: true
