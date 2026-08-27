@@ -108,10 +108,10 @@ DICOM SOP Common attributes (PS3.3 C.12.1) with their IHE-MADO usage and EU-MADO
   <tr><td>&gt;&gt;Deidentification Action</td><td style="text-align:center">(0008,0307)</td><td style="text-align:center">1</td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center"></td></tr>
   <tr><td>Instance Origin Status</td><td style="text-align:center">(0400,0600)</td><td style="text-align:center">3</td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center"></td></tr>
   <tr><td>Barcode Value</td><td style="text-align:center">(2200,0005)</td><td style="text-align:center">3</td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center"></td></tr>
-  <tr><td>Universal Entity ID</td><td style="text-align:center">(0010,0032)</td><td style="text-align:center"></td><td style="text-align:center">R+</td><td style="text-align:center"></td><td style="text-align:center"></td></tr>
-  <tr><td>Universal Entity ID Type</td><td style="text-align:center">(0010,0033)</td><td style="text-align:center"></td><td style="text-align:center">RC+</td><td style="text-align:center"></td><td style="text-align:center"></td></tr>
-  <tr><td>Study Instance UID</td><td style="text-align:center">(0020,000D)</td><td style="text-align:center"></td><td style="text-align:center">R</td><td style="text-align:center"></td><td style="text-align:center"><a href="http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-SHALL.58populate" target="_blank">SHALL:populate</a></td></tr>
-  <tr><td>Display URI</td><td style="text-align:center">(0040,E021)</td><td style="text-align:center"></td><td style="text-align:center">O</td><td style="text-align:center"></td><td style="text-align:center"></td></tr>
+  <tr><td>Universal Entity ID</td><td style="text-align:center">(0010,0032)</td><td style="text-align:center">1</td><td style="text-align:center">R+</td><td style="text-align:center"></td><td style="text-align:center"></td></tr>
+  <tr><td>Universal Entity ID Type</td><td style="text-align:center">(0010,0033)</td><td style="text-align:center">1C</td><td style="text-align:center">RC+</td><td style="text-align:center"></td><td style="text-align:center"></td></tr>
+  <tr><td>Study Instance UID</td><td style="text-align:center">(0020,000D)</td><td style="text-align:center">1</td><td style="text-align:center">R</td><td style="text-align:center"></td><td style="text-align:center"><a href="http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-SHALL.58populate" target="_blank">SHALL:populate</a></td></tr>
+  <tr><td>Display URI</td><td style="text-align:center">(0040,E021)</td><td style="text-align:center">3</td><td style="text-align:center">O</td><td style="text-align:center"></td><td style="text-align:center"></td></tr>
     </tbody>
   </table>
 </div>
