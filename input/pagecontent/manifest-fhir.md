@@ -12,7 +12,7 @@ Most of the IHE-MADO resource profile has a corresponding EU profile (`EuMado…
 
 1. **Obligations.** Each EU profile adds producer/consumer `Obligations` for the [[[EuMadoImagingManifestProducer]]] and [[[EuMadoImagingManifestConsumer]]] actors, mapped to the EHDS logical model elements where applicable.
 
-2. **Anatomical region extension.** In [[[EuMadoImagingStudy]]] the `extension[anatomical-region]` is constrained to `1..*` (it must be present) and its binding to `ValueSetAnatomicalRegion` is changed from *preferred* to **required**. The same required binding is applied to the `bodysite` concept in [[[EuMadoFhirDocumentReference]]].
+2. **Anatomical region constrains**: The `extension[anatomical-region]` is required (constrained to `1..*`). The binding to `ValueSetAnatomicalRegion` is changed from `preferred` to `required`. The same updates are applied to the `bodysite` concept in [[[EuMadoFhirDocumentReference]]].
 
 3. **Mapping on EU Core profiles and related changes in cardinalities.**
    - **EU Core compliance:** [[[EuMadoComposition]]] declares compliance with `composition-eu-core`; [[[EuMadoPatient]]] declares compliance with `patient-eu-core` and adds the `eu-pat-1` invariant (name SHALL have `given`, `family`, `text`, or a `data-absent-reason`).
