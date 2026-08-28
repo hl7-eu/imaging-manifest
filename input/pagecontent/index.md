@@ -47,8 +47,6 @@ This implementation guide defines the European specific {{iheMado}} specificatio
 * Example implementations of the defined models for Imaging Study Manifests.
 * The relation of this specification with the existing ecosystem, including {{iheMado}}, {{iheRad}}, and {{euHealthDataApi}} specifications.
 
-{% include worknote.html text="Examples are currently incomplete: only DICOM KOS example files are provided (under examples/dicom). FHIR example instances still need to be added — at minimum a conformant EuMadoBundle manifest with its EuMadoComposition, EuMadoImagingStudy and EuMadoPatient, plus the MHD envelope (DocumentReference) examples — before this claim is fully met." %}
-
 The specification is to be used in a variety of deployment models, which includes the EHDS use cases: exchange data within healthcare organizations, across nations/regions and cross border information exchange. In all of these use cases it is important that it is compatible with the existing ecosystem.
 
 ### Summary of differences

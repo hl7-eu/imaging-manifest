@@ -46,7 +46,7 @@ RuleSet: EuMadoMhdDocumentReferenceCommon
   * insert setProducerObligation( #SHOULD:able-to-populate, "EU-MADO requirement" )
 * content.format
   * insert setProducerObligation( #SHOULD:able-to-populate, "EU-MADO requirement" )
-* context
+* context MS
   * insert setProducerObligation( #SHOULD:able-to-populate, "EU-MADO requirement" )
 * context
   * period
@@ -72,6 +72,7 @@ EU MADO profile for the IHE-MHD Document Reference for FHIR Imaging Study Manife
 * relatesTo[kos-reference]
   * insert setProducerObligation( #SHOULD:able-to-populate, "EU-MADO requirement" )
 * relatesTo[kos-reference].target only Reference( EuMadoDicomKosDocumentReference )
+* relatesTo[kos-reference].target MS
   * insert setProducerObligation( #SHALL:populate, "Required by MADO" )
 
 

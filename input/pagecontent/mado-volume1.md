@@ -81,6 +81,6 @@ The steps are:
 **example query pattern:**
 
 * Search report(s): `GET DocumentReference?category=http://loinc.org|85430-7&subject=Patient/{id}`
-* Search related manifest: `GET DocumentReference?category=http://loinc.org|18748-4&subject=Patient/{id}&identifier={StudyInstanceUID}`
+* Search related manifest: `GET DocumentReference?category=http://loinc.org|18748-4&subject:identifier={identifier}&identifier={StudyInstanceUID}`
 * Retrieve selected payload: `GET {DocumentReference.content.attachment.url}`
 * Retrieve DICOM objects: `GET {wado-rs url from manifest}`
