@@ -16,7 +16,7 @@ EU MADO profile for the IHE-MHD Document Reference for FHIR Imaging Study Manife
 * category
   * insert setProducerObligation( #SHALL:populate, "Required by MADO" )
 
-* extension[bodysite]
+* extension[bodysite] 1..*
   * valueCodeableConcept from ValueSetAnatomicalRegion (required)
   * ^short = "The anatomical region of the patient that is the focus of the imaging manifest, concept field is required."
   * ^definition = "This field may be used to provide additional information about the anatomical region of interest for the imaging manifest."
