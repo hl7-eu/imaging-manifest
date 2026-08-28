@@ -12,7 +12,7 @@ DICOM SR template TID 1601 (Image Library Entry) nodes with DICOM/IHE requiremen
     <caption>TID 1601 Image Library Entry</caption>
     <colgroup><col style="width:6%"><col style="width:5%"><col style="width:13%"><col style="width:6%"><col style="width:22%"><col style="width:5%"><col style="width:8%"><col style="width:8%"><col style="width:13.5%"><col style="width:13.5%"></colgroup>
     <thead>
-      <tr><th style="text-align:center">Row No</th><th style="text-align:center">NL</th><th style="text-align:center">REL with Parent</th><th style="text-align:center">VT</th><th style="text-align:center">Concept Name</th><th style="text-align:center">VM</th><th style="text-align:center">Req Type (DICOM)</th><th style="text-align:center">Req Type (IHE)</th><th style="text-align:center">Consumer Obligation</th><th style="text-align:center">Producer Obligation</th></tr>
+      <tr><th style="text-align:center">Row No</th><th style="text-align:center">NL</th><th style="text-align:center">REL with Parent</th><th style="text-align:center">VT</th><th style="text-align:center">Concept Name</th><th style="text-align:center">VM</th><th style="text-align:center">Req Type (DICOM)</th><th style="text-align:center">Req Type (IHE)</th><th style="text-align:center">Document Consumer Obligation</th><th style="text-align:center">Content Creator/Document Source Obligation</th></tr>
     </thead>
     <tbody>
     </tbody>

@@ -12,7 +12,7 @@ DICOM Key Object Document Series attributes (PS3.3 C.17.6.1) with their IHE-MADO
     <caption>Key Object Document Series Module</caption>
     <colgroup><col style="width:26%"><col style="width:9%"><col style="width:8%"><col style="width:9%"><col style="width:24%"><col style="width:24%"></colgroup>
     <thead>
-      <tr><th style="text-align:center">Attribute Name</th><th style="text-align:center">Tag</th><th style="text-align:center">DICOM Type</th><th style="text-align:center">IHE Usage</th><th style="text-align:center">Consumer Obligation</th><th style="text-align:center">Producer Obligation</th></tr>
+      <tr><th style="text-align:center">Attribute Name</th><th style="text-align:center">Tag</th><th style="text-align:center">DICOM Type</th><th style="text-align:center">IHE Usage</th><th style="text-align:center">Document Consumer Obligation</th><th style="text-align:center">Content Creator/Document Source Obligation</th></tr>
     </thead>
     <tbody>
   <tr><td>Modality</td><td style="text-align:center">(0008,0060)</td><td style="text-align:center">1</td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center"></td></tr>

@@ -12,7 +12,7 @@ DICOM General Equipment attributes (PS3.3 C.7.5.1) with their IHE-MADO usage and
     <caption>General Equipment Module</caption>
     <colgroup><col style="width:26%"><col style="width:9%"><col style="width:8%"><col style="width:9%"><col style="width:24%"><col style="width:24%"></colgroup>
     <thead>
-      <tr><th style="text-align:center">Attribute Name</th><th style="text-align:center">Tag</th><th style="text-align:center">DICOM Type</th><th style="text-align:center">IHE Usage</th><th style="text-align:center">Consumer Obligation</th><th style="text-align:center">Producer Obligation</th></tr>
+      <tr><th style="text-align:center">Attribute Name</th><th style="text-align:center">Tag</th><th style="text-align:center">DICOM Type</th><th style="text-align:center">IHE Usage</th><th style="text-align:center">Document Consumer Obligation</th><th style="text-align:center">Content Creator/Document Source Obligation</th></tr>
     </thead>
     <tbody>
   <tr><td>Manufacturer</td><td style="text-align:center">(0008,0070)</td><td style="text-align:center">2</td><td style="text-align:center">R</td><td style="text-align:center"><a href="http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-SHOULD.58process" target="_blank">SHOULD:process</a></td><td style="text-align:center"><a href="http://hl7.org/fhir/extensions/5.3.0/CodeSystem-obligation.html#obligation-SHALL.58able-to-populate" target="_blank">SHALL:able-to-populate</a></td></tr>
