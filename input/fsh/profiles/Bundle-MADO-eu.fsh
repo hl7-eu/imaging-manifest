@@ -26,7 +26,7 @@ Description: "This profile refines the [MadoFhirBundle](https://profiles.ihe.net
 * entry[requested-procedure]
   * insert setProducerObligation( #SHALL:able-to-populate, "Required by MADO." )
   * resource only EuMadoRequestedProcedure
-* entry[creator]
+* entry[creator-device]
   * insert setProducerObligation( #SHALL:populate, "Required by MADO" )
 * entry[creator-organization]
   * insert setProducerObligation( #SHALL:populate, "Required by MADO" )

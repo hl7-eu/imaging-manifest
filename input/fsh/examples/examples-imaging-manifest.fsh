@@ -42,8 +42,8 @@ Description: "A complete EU MADO FHIR imaging study manifest document Bundle for
 * entry[patient].resource = pat-mado-example
 * entry[requested-procedure].fullUrl = "http://hl7.eu/fhir/imaging-manifest/ServiceRequest/reqproc-mado-example"
 * entry[requested-procedure].resource = reqproc-mado-example
-* entry[creator].fullUrl = "http://hl7.eu/fhir/imaging-manifest/Device/device-mado-creator"
-* entry[creator].resource = device-mado-creator
+* entry[creator-device].fullUrl = "http://hl7.eu/fhir/imaging-manifest/Device/device-mado-creator"
+* entry[creator-device].resource = device-mado-creator
 * entry[creator-organization].fullUrl = "http://hl7.eu/fhir/imaging-manifest/Organization/org-mado-creator"
 * entry[creator-organization].resource = org-mado-creator
 * entry[wado-endpoint].fullUrl = "http://hl7.eu/fhir/imaging-manifest/Endpoint/endpoint-wado"
