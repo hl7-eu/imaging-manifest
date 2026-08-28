@@ -28,6 +28,7 @@ Usage: #example
 Title: "MADO EU MHD DocumentReference - FHIR manifest"
 Description: "IHE-MHD DocumentReference wrapping the FHIR imaging manifest Bundle for Study A."
 * extension[modality].valueCodeableConcept = $dcm#CT
+* extension[bodysite].valueCodeableConcept = $sct#774007 "Structure of head and/or neck"
 * masterIdentifier.use = #usual
 * masterIdentifier.system = "urn:ietf:rfc:3986"
 * masterIdentifier.value = "urn:uuid:11111111-1111-1111-1111-111111110001"
@@ -73,6 +74,7 @@ Usage: #example
 Title: "MADO EU MHD DocumentReference - DICOM KOS manifest"
 Description: "IHE-MHD DocumentReference wrapping the DICOM KOS imaging manifest for Study A."
 * extension[modality].valueCodeableConcept = $dcm#CT
+* extension[bodysite].valueCodeableConcept = $sct#774007 "Structure of head and/or neck"
 * masterIdentifier.use = #usual
 * masterIdentifier.system = "urn:ietf:rfc:3986"
 * masterIdentifier.value = "urn:uuid:11111111-1111-1111-1111-111111110002"

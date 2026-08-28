@@ -3,7 +3,7 @@ Parent: MadoImagingStudy
 Title: "MADO EU Imaging Study"
 Description: 
 """
-Profile on [[[MadoImagingStudy]]] that specifies the EU specific elements for the MADO EU FHIR Imaging Study Manifest. It includes the necessary elements to represent the imaging study in compliance with the MADO specifications.
+Profile on [MadoImagingStudy](https://profiles.ihe.net/RAD/MADO/StructureDefinition-MadoImagingStudy.html) that specifies the EU specific elements for the MADO EU FHIR Imaging Study Manifest. It includes the necessary elements to represent the imaging study in compliance with the MADO specifications.
 """
 * insert SetFmmAndStatusRule( 1, draft )
 

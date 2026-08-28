@@ -59,10 +59,10 @@ RuleSet: setConsumerAndProducerObligation( consumerObligation, producerObligatio
 * insert setProducerObligation( {producerObligation}, {description} )
 
 RuleSet: setConsumerObligation( obligation, description )
-* insert setObligation( EuMadoImagingManifestConsumer, {obligation}, {description} )
+* insert setObligation( EuMadoDocumentConsumer, {obligation}, {description} )
 
 RuleSet: setProducerObligation( obligation, description )
-* insert setObligation( EuMadoImagingManifestProducer, {obligation}, {description} )
+* insert setObligation( EuMadoContentCreator, {obligation}, {description} )
 
 RuleSet: setObligation( actor, obligation, description )
 * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][+].extension[code].valueCode = {obligation}

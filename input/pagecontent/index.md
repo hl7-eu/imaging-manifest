@@ -47,8 +47,6 @@ This implementation guide defines the European specific {{iheMado}} specificatio
 * Example implementations of the defined models for Imaging Study Manifests.
 * The relation of this specification with the existing ecosystem, including {{iheMado}}, {{iheRad}}, and {{euHealthDataApi}} specifications.
 
-{% include worknote.html text="Examples are currently incomplete: only DICOM KOS example files are provided (under examples/dicom). FHIR example instances still need to be added — at minimum a conformant EuMadoBundle manifest with its EuMadoComposition, EuMadoImagingStudy and EuMadoPatient, plus the MHD envelope (DocumentReference) examples — before this claim is fully met." %}
-
 The specification is to be used in a variety of deployment models, which includes the EHDS use cases: exchange data within healthcare organizations, across nations/regions and cross border information exchange. In all of these use cases it is important that it is compatible with the existing ecosystem.
 
 ### Summary of differences
@@ -61,7 +59,7 @@ The specification is to be used in a variety of deployment models, which include
 
 This guide is part of the broader European EHDS-aligned interoperability landscape and focuses on the imaging report model and related access patterns. It is designed to be complementary to other EHDS family guides and to remain interoperable with established IHE workflows.
 
-In particular, this guide aligns with {{hl7ImagingReport}}. The separation between report and manifest is intentional:
+In particular, this guide aligns with {{hl7EuImRep}}. The separation between report and manifest is intentional:
 * The report communicates the clinician-authored interpretation and supporting clinical content.
 * The manifest communicates imaging-study inventory and retrieval context for DICOM access.
 
@@ -83,7 +81,7 @@ The development of this implementation guide is promoted by HL7 and IHE Europe u
 
 This specification follows the IHE supplement structure, organised as follows:
 
-1. The volume 1 is the profile overview in term of Actor/Transactions, the overall use case and associated scenarios. Volume 1 alsos state the required and optional transactions, as well as the required/optional grouping. The actors defined by this guide are the [Imaging Manifest Producer](ActorDefinition-EuMadoImagingManifestProducer.html), the [Imaging Manifest Consumer](ActorDefinition-EuMadoImagingManifestConsumer.html), and the [MHD Document Responder](ActorDefinition-EuMadoMhdDocumentResponder.html), whose server behaviour is described in the [MADO Document Responder CapabilityStatement](CapabilityStatement-IHE.RAD.MADO.DocumentResponder.html).
+1. The volume 1 is the profile overview in term of Actor/Transactions, the overall use case and associated scenarios. Volume 1 alsos state the required and optional transactions, as well as the required/optional grouping. The actors defined by this guide are the [Content Creator/Document Source (Imaging Manifest)](ActorDefinition-EuMadoContentCreator.html), the [Document Consumer (Imaging Manifest)](ActorDefinition-EuMadoDocumentConsumer.html), and the [Document Access Provider (Imaging Manifest)](ActorDefinition-EuMadoDocumentAccessProvider.html), whose server behaviour is described in the [MADO Document Responder CapabilityStatement](CapabilityStatement-IHE.RAD.MADO.DocumentResponder.html).
 2. Volume 2 Chapter on the WADO-RS Retrieve Transaction.
 3. A volume 3 Chapter on the Manifest content that includes a section A on the DICOM KOS based Manifest, and one section B on the FHIR based Manifest. The section C (for information) would include the mapping of A to B and B from A
 

@@ -5,9 +5,9 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
-<artifact id="ActorDefinition/EuMadoImagingManifestConsumer" key="ActorDefinition-EuMadoImagingManifestConsumer" name="ActorDefinition: Imaging Manifest Consumer"/>
-<artifact id="ActorDefinition/EuMadoImagingManifestProducer" key="ActorDefinition-EuMadoImagingManifestProducer" name="ActorDefinition: Imaging Manifest Producer"/>
-<artifact id="ActorDefinition/EuMadoMhdDocumentResponder" key="ActorDefinition-EuMadoMhdDocumentResponder" name="ActorDefinition: MHD Document Responder"/>
+<artifact id="ActorDefinition/EuMadoContentCreator" key="ActorDefinition-EuMadoContentCreator" name="ActorDefinition: Content Creator/Document Source (Imaging Manifest)"/>
+<artifact id="ActorDefinition/EuMadoDocumentAccessProvider" key="ActorDefinition-EuMadoDocumentAccessProvider" name="ActorDefinition: Document Access Provider (Imaging Manifest)"/>
+<artifact id="ActorDefinition/EuMadoDocumentConsumer" key="ActorDefinition-EuMadoDocumentConsumer" name="ActorDefinition: Document Consumer (Imaging Manifest)"/>
 <artifact id="StructureDefinition/EuMadoComposition" key="StructureDefinition-EuMadoComposition" name="EU MADO Composition"/>
 <artifact id="StructureDefinition/EuMadoCreator" key="StructureDefinition-EuMadoCreator" name="EU MADO Creator"/>
 <artifact id="StructureDefinition/EuMadoCreatorOrganization" key="StructureDefinition-EuMadoCreatorOrganization" name="EU MADO Creator Organization"/>
@@ -39,6 +39,7 @@
 <page key="changes" name="Changes"/>
 <page key="current-status" name="Current Status"/>
 <page key="manifest-dicom-kos" name="DICOM KOS Manifest"/>
+<page key="manifest-dicom-kos-full" name="DICOM KOS Manifest - all fields"/>
 <page key="xtehr-mapping" name="EHDS logical model mapping"/>
 <page key="eu-mapping" name="FHIR / KOS Mappings"/>
 <page key="manifest-fhir" name="FHIR Imaging Manifest"/>

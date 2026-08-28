@@ -2,7 +2,7 @@ Profile: EuMadoPatient
 Parent: MadoPatient
 Title: "EU MADO Patient"
 Description: """
-Profile on [[[MadoPatient]]] that specifies the EU specific elements.
+Profile on [MadoPatient](https://profiles.ihe.net/RAD/MADO/StructureDefinition-MadoPatient.html) that specifies the EU specific elements.
 """
 * insert SetFmmAndStatusRule( 1, draft )
 
@@ -13,13 +13,13 @@ Profile on [[[MadoPatient]]] that specifies the EU specific elements.
   * insert setProducerObligation( #SHALL:able-to-populate, "EHDSPatient.identifier" )
 * name 1..* 
   * insert setProducerObligation( #SHALL:able-to-populate, "EHDSPatient.name" )
-  * use
+  * use MS
     * insert setProducerObligation( #SHALL:able-to-populate, "EHDSPatient.name.use" )
-  * text
+  * text MS
     * insert setProducerObligation( #SHOULD:able-to-populate, "EHDSPatient.name.text" )
-  * family
+  * family MS
     * insert setProducerObligation( #SHALL:able-to-populate, "EHDSPatient.name.family" )
-  * given
+  * given MS
     * insert setProducerObligation( #SHALL:able-to-populate, "EHDSPatient.name.given" )
 * birthDate 1..
   * insert setProducerObligation( #SHOULD:able-to-populate, "EHDSPatient.birthDate" )

@@ -1,15 +1,15 @@
-Instance: EuMadoImagingManifestProducer
+Instance: EuMadoContentCreator
 InstanceOf: ActorDefinition
-Title: "ActorDefinition: Imaging Manifest Producer"
-Description: "The actor responsible for producing the Imaging Manifest resources."
+Title: "ActorDefinition: Content Creator/Document Source (Imaging Manifest)"
+Description: "The actor responsible for creating Imaging Manifest documents."
 Usage: #definition
-* name = "EuImagingManifestProducer"
-* title = "Imaging Report provider"
+* name = "EuMadoContentCreator"
+* title = "Content Creator/Document Source (Imaging Manifest)"
 * status = #draft
-* description = "Provides the Imaging Report."
+* description = "Creates the Imaging Manifest document."
 * documentation = """
-This actor typically represents a system that provides access to radiology reports. Typically this would be systems like a Electronic Health Record (EHR), Radiology Information System (RIS) or a Picture Archiving and Communication System (PACS) that manages and provides access to imaging reports.
+This actor represents a system that creates an Imaging Manifest document. It may be implemented by an Electronic Health Record (EHR), Radiology Information System (RIS), Picture Archiving and Communication System (PACS), or another system that assembles the manifest.
 
-This actor is the MADO specific version of the [EHDS Producer](https://build.fhir.org/ig/Xt-EHR/xt-ehr-common/en/ActorDefinition-actor-producer.html).
+This actor is the MADO-specific version of the EHDS Producer.
 """
 * type = #system
