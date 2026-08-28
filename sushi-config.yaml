@@ -57,6 +57,8 @@ pages:
       title: FHIR Imaging Manifest
     manifest-dicom-kos.md:
       title: DICOM KOS Manifest
+    manifest-dicom-kos-full.md:
+      title: DICOM KOS Manifest - all fields
     manifest-envelop.md:
       title: Manifest Envelopes for IHE-MHD
     eu-mapping.md:
