@@ -21,7 +21,7 @@ jobs:
         run: sushi .
       
       - name: Update publisher
-        run: ./_updatePublisher.sh -f -y
+        run: cp _updatePublisher.sh /tmp/_updatePublisher.sh && bash /tmp/_updatePublisher.sh -f -y
 
       - name: Run publisher
         run: ./_genonce.sh
