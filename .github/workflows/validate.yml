@@ -23,6 +23,14 @@ jobs:
       - name: Update publisher
         run: cp _updatePublisher.sh /tmp/_updatePublisher.sh && bash /tmp/_updatePublisher.sh -f -y
 
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+
+      - name: Install Jekyll
+        run: gem install jekyll bundler
+
       - name: Run publisher
         run: ./_genonce.sh
       
