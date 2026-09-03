@@ -27,7 +27,7 @@ copyright: >-
 dependencies:
   # hl7.terminology: current
   # hl7.fhir.uv.extensions: 5.2.0
-  ihe.rad.mado: dev
+  ihe.rad.mado: current
   ihe.iti.mhd: 4.2.3
   hl7.fhir.eu.base: 2.0.0
   # Use the R4 build of the EU extensions to match this IG's FHIR version (4.0.1)
