@@ -6,6 +6,7 @@ set -e
 dlurl="https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar"
 publisher_jar="publisher.jar"
 input_cache_path="$(pwd)/input-cache/"
+publisher_home="${FHIR_PUBLISHER_HOME:-$HOME/.fhir/tools/publisher}"
 skipPrompts=false
 upper_path="../"
 scriptdlroot="https://raw.githubusercontent.com/HL7/ig-publisher-scripts/main"
@@ -19,9 +20,12 @@ function check_jar_location() {
   elif [ -f "${upper_path}${publisher_jar}" ]; then
     jar_location="${upper_path}${publisher_jar}"
     echo "Found publisher.jar in parent folder"
+  elif [ -f "${publisher_home}/${publisher_jar}" ]; then
+    jar_location="${publisher_home}/${publisher_jar}"
+    echo "Found publisher.jar in FHIR publisher home"
   else
     jar_location="not_found"
-    echo "publisher.jar not found in input-cache or parent folder"
+    echo "publisher.jar not found in input-cache, parent folder, or FHIR publisher home"
   fi
 }
 
@@ -58,7 +62,14 @@ function check_internet_connection() {
 
 
 function update_publisher() {
-  echo "Publisher jar location: ${input_cache_path}${publisher_jar}"
+  if [ -f "${input_cache_path}${publisher_jar}" ]; then
+    update_location="${input_cache_path}${publisher_jar}"
+    update_location_name="input-cache"
+  else
+    update_location="${publisher_home}/${publisher_jar}"
+    update_location_name="FHIR publisher home"
+  fi
+  echo "Publisher jar location: ${update_location}"
   if [ "$skipPrompts" = "true" ]; then
     confirm="Y"
   else
@@ -66,8 +77,9 @@ function update_publisher() {
   fi
   if [[ "$confirm" =~ ^[Yy]$ ]]; then
     echo "Downloading latest publisher.jar (~200 MB)..."
-    mkdir -p "$input_cache_path"
-    curl -L "$dlurl" -o "${input_cache_path}${publisher_jar}"
+    mkdir -p "$(dirname "$update_location")"
+    curl -L "$dlurl" -o "$update_location"
+    echo "Publisher updated in ${update_location_name}"
   else
     echo "Skipped downloading publisher.jar"
   fi
@@ -103,7 +115,7 @@ function run_publisher() {
     fi
     java $JAVA_OPTS -jar "$jar_location" -ig . "${extra_flags[@]}"
   else
-    echo "IG Publisher NOT FOUND in input-cache or parent folder. Please run update. Aborting..."
+    echo "IG Publisher NOT FOUND in input-cache, parent folder, or FHIR publisher home. Please run update. Aborting..."
   fi
 }
 
@@ -123,15 +135,6 @@ function build_notx() {
   run_publisher -tx n/a "$@"
 }
 
-# Build against a local terminology server (default http://localhost:8085/r4).
-# Override the URL with the TX_URL environment variable.
-function build_localtx() {
-  local tx_url="${TX_URL:-http://localhost:8085/r4}"
-  local fhir_settings="../fhir-settings.json"
-  echo "Using local terminology server: $tx_url"
-  run_publisher -fhir-settings "$fhir_settings" -tx "$tx_url" "$@"
-}
-
 function build_continuous() {
   run_publisher -watch "$@"
 }
@@ -143,10 +146,11 @@ function jekyll_build() {
 
 function cleanup() {
   echo "Cleaning up temp directories..."
-  if [ -d "$input_cache_path" ]; then
-    # Preserve publisher.jar and the terminology cache (txcache) so builds stay fast
-    find "$input_cache_path" -mindepth 1 -maxdepth 1 \
-      ! -name "$publisher_jar" ! -name "txcache" -exec rm -rf {} +
+  if [ -f "${input_cache_path}${publisher_jar}" ]; then
+    mv "${input_cache_path}${publisher_jar}" ./
+    rm -rf "${input_cache_path}"*
+    mkdir -p "$input_cache_path"
+    mv "$publisher_jar" "$input_cache_path"
   fi
   rm -rf ./output ./template ./temp
   echo "Cleanup complete."
@@ -163,7 +167,6 @@ if [ $# -gt 0 ]; then
     build)   shift; extraArgs=("$@"); check_internet_connection; build_ig "${extraArgs[@]}"; exit 0 ;;
     nosushi) shift; extraArgs=("$@"); check_internet_connection; build_nosushi "${extraArgs[@]}"; exit 0 ;;
     notx)    shift; extraArgs=("$@"); build_notx "${extraArgs[@]}"; exit 0 ;;
-    localtx) shift; extraArgs=("$@"); build_localtx "${extraArgs[@]}"; exit 0 ;;
     jekyll)  jekyll_build; exit 0 ;;
     clean)   cleanup; exit 0 ;;
     exit)    exit 0 ;;
@@ -210,7 +213,6 @@ echo "3) Build IG without Sushi"
 echo "4) Build IG without TX server"
 echo "5) Jekyll build"
 echo "6) Cleanup temp directories"
-echo "7) Build IG with local TX server (\$TX_URL, default http://localhost:8085)"
 echo "0) Exit"
 echo
 
@@ -227,7 +229,6 @@ case "$choice" in
   4) build_notx ;;
   5) jekyll_build ;;
   6) cleanup ;;
-  7) build_localtx ;;
   0) exit 0 ;;
   *) echo "Invalid option." ;;
 esac

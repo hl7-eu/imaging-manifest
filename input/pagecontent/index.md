@@ -30,13 +30,11 @@ The content of this implementation guide is discussed HL7 EU calls ([HL7-eu imag
 
 This version is based on FHIR R4. A FHIR R5 version will be derived from this ballot version and is expected to be published in the near future.  
 
-Experimental implementation feedback may result in backward incompatible changes to the profile.
+Experimental implementation feedback can result in backward incompatible changes to the profile.
 
 {: .grid}
 
 </div>
-
-{% include worknote.html text="Before ballot, this IG must be updated to point to the published version of MADO (currently it references a development/pre-publication version)." %}
 
 ### Scope
 
@@ -129,3 +127,7 @@ The main contributors to this specification are:
 | Project facilitator| Bas van den Heuvel |
 | Project facilitator (retired) | Rick Busbridge     |
 | Contributor        | Josh Priebe        |
+| Contributor        | Andries Hamster    |
+| Contributor        | Nick Hermans       |
+| Contributor        | Neil Robinson      |
+| Contributor        | Antoine Legrand    |

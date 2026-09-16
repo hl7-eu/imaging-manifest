@@ -28,7 +28,7 @@ Compared with {{iheMado}}, this implementation guide introduces the following EU
 
 The current implementation realizes these requirements in the following way:
 
-* The guide declares alignment with the European health-data interoperability context and references the EU Health Data API as the external framework this specification should fit into.
+* The guide declares alignment with the European health-data interoperability context and references the EU Health Data API as the external framework this specification is intended to fit into.
 * The [XtEHR Mapping](xtehr-mapping.html) page documents how Xt-EHR logical model elements are mapped to the FHIR profiles and DICOM data carried by this guide.
 * The [[[EuMadoImagingStudy]]] profile adds EHDS/Xt-EHR traceability and obligations on key elements such as subject, modality, body site, series metadata, and endpoints.
 * The [[[EuMadoPatient]]] profile declares compliance with the EU-core patient profile, providing EU-core compatibility for patient data carried in the manifest.

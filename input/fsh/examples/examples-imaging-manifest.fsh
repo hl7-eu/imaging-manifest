@@ -60,10 +60,11 @@ Usage: #example
 Title: "MADO EU Composition - Head CT"
 Description: "Composition header for the Head CT imaging manifest."
 * text.status = #additional
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h1>Head CT on CT of Head</h1><table><tbody><tr><td><b>Study Instance UID</b></td><td>1.3.6.1.4.1.99999.1.2.1.101</td></tr><tr><td><b>Subject</b></td><td>John DOE</td></tr><tr><td><b>Author</b></td><td>IHEeu imaging converter</td></tr><tr><td><b>Author</b></td><td>Example Hospital</td></tr><tr><td><b>Created</b></td><td>2026-08-21</td></tr><tr><td><b>Type</b></td><td>Diagnostic imaging Study</td></tr><tr><td><b>Category</b></td><td>Medical-Imaging</td></tr><tr><td><b>Study Start</b></td><td>2022-08-22T08:31:17+02:00</td></tr><tr><td><b>Modalities</b></td><td>CT</td></tr><tr><td><b>Anatomical region</b></td><td>Structure of head and/or neck</td></tr><tr><td><b>Accession number</b></td><td>http://example.org/fhir/ris-ids | 2088415396072531</td></tr><tr><td><b>Procedure</b></td><td>Head CT</td></tr><tr><td><b>Number of series</b></td><td>1</td></tr><tr><td><b>Number of instances</b></td><td>2</td></tr></tbody></table></div>"
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\" xml:lang=\"en\"><h1>Head CT imaging manifest</h1><table><tbody><tr><td><b>Study Instance UID</b></td><td>1.3.6.1.4.1.99999.1.2.1.101</td></tr><tr><td><b>Subject</b></td><td>John DOE</td></tr><tr><td><b>Author</b></td><td>IHEeu imaging converter</td></tr><tr><td><b>Author</b></td><td>Example Hospital</td></tr><tr><td><b>Created</b></td><td>2026-08-21T14:15:32+02:00</td></tr><tr><td><b>Type</b></td><td>Diagnostic imaging Study</td></tr><tr><td><b>Category</b></td><td>Medical-Imaging</td></tr><tr><td><b>Study Start</b></td><td>2022-08-22T08:31:17+02:00</td></tr><tr><td><b>Modalities</b></td><td>CT</td></tr><tr><td><b>Anatomical region</b></td><td>Structure of head and/or neck</td></tr><tr><td><b>Accession number</b></td><td>http://example.org/fhir/ris-ids | 2088415396072531</td></tr><tr><td><b>Procedure</b></td><td>Head CT</td></tr><tr><td><b>Number of series</b></td><td>1</td></tr><tr><td><b>Number of instances</b></td><td>2</td></tr></tbody></table></div>"
 * identifier.system = "http://example.org/fhir/document-ids"
 * identifier.value = "mado-doc-0001"
 * status = #final
+* language = #en
 * type = $loinc#18748-4 "Diagnostic imaging Study"
 * category = $doc-priority#Medical-Imaging "Medical-Imaging"
 * subject = Reference(pat-mado-example) "John DOE"
@@ -75,7 +76,7 @@ Description: "Composition header for the Head CT imaging manifest."
 * event[imaging-study].detail = Reference(study-mado-example) "Study A"
 * section.title = "Series 1"
 * section.text.status = #additional
-* section.text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tbody><tr><td><b>Series Id</b></td><td>1.3.6.1.4.1.99999.1.2.2.101.201</td></tr><tr><td><b>Modality</b></td><td>CT</td></tr><tr><td><b>Bodysite</b></td><td>Head</td></tr><tr><td><b>Started</b></td><td>2022-08-22T16:47:58+02:00</td></tr><tr><td><b>Description</b></td><td>Series A1</td></tr><tr><td><b>Number of Instances</b></td><td>2</td></tr><tr><td><b>Endpoint</b></td><td>WADO endpoint: https://example.org/wado-rs</td></tr></tbody></table><p>Instances:</p><ul><li>CT slice 1 &#8212; CT Image Storage &#8212; SOP Instance UID 1.3.6.1.4.1.99999.1.2.3.101.201.31 (instance 1)</li><li>Key Object Selection (Manifest, key image) &#8212; Key Object Selection Document &#8212; SOP Instance UID 1.3.6.1.4.1.99999.1.2.3.101.201.99 (instance 99)</li></ul></div>"
+* section.text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\" xml:lang=\"en\"><table><tbody><tr><td><b>Series Id</b></td><td>1.3.6.1.4.1.99999.1.2.2.101.201</td></tr><tr><td><b>Modality</b></td><td>CT</td></tr><tr><td><b>Bodysite</b></td><td>Head</td></tr><tr><td><b>Started</b></td><td>2022-08-22T16:47:58+02:00</td></tr><tr><td><b>Description</b></td><td>Series A1</td></tr><tr><td><b>Number of Instances</b></td><td>2</td></tr><tr><td><b>Endpoint</b></td><td>WADO endpoint: https://example.org/wado-rs</td></tr></tbody></table><p>Instances:</p><ul><li>CT slice 1 &#8212; CT Image Storage &#8212; SOP Instance UID 1.3.6.1.4.1.99999.1.2.3.101.201.31 (instance 1)</li><li>Key Object Selection &#8212; Key Object Selection Document &#8212; SOP Instance UID 1.3.6.1.4.1.99999.1.2.3.101.201.99 (instance 99)</li></ul></div>"
 
 // ============================================================================
 // ImagingStudy
@@ -111,6 +112,7 @@ Description: "Head CT imaging study with one CT series of two instances."
 * series.numberOfInstances = 2
 * series.endpoint[wado] = Reference(endpoint-wado) "WADO endpoint"
 * series.bodySite = $sct#69536005 "Head"
+* series.laterality = $sct#7771000 "Left"
 * series.started = "2022-08-22T16:47:58+02:00"
 * series.instance[0].uid = "1.3.6.1.4.1.99999.1.2.3.101.201.31"
 * series.instance[0].sopClass = $dicomUIDs#"urn:oid:1.2.840.10008.5.1.4.1.1.2" "CT Image Storage"
