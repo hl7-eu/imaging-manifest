@@ -40,4 +40,27 @@ No definition could be found for URL value 'Binary/kos-binary-example'%
 # MHD remains pinned to 4.2.3 for compatibility; upgrade to 5.0.0 is deferred.
 The ImplementationGuide uses package ihe.iti.mhd#4.2.3 released on 2025-10-31, but the most recent appropriate version is 5.0.0%
 
+# The R5 jurisdiction ValueSet used by ActorDefinition.jurisdiction is inherited from the base FHIR spec.
+%Reference to deprecated ValueSet http://hl7.org/fhir/5.0/ValueSet/jurisdiction%
+
+# OID registration is optional and out of scope for this IG.
+%could usefully have an OID assigned%
+
+# DICOM UID code system is an external ontology not distributed as a FHIR resource, so its codes cannot be validated.
+%A definition for CodeSystem 'http://dicom.nema.org/resources/CodeSystem/DICOM_UIDs' could not be found%
+
+# Obligation extension elements (inherited from the base obligation extension) and example identifiers are not intended to match a named slice.
+%does not match any known slice defined in the profile%
+
+# The MADO content profile canonical used in the example is not expected to be a member of the base FHIR cross-version format code value set.
+%was not found in the value set 'Cross-version ValueSet R5.HL7FormatCodes for use in FHIR R4'%
+
+# The DICOM KOS format code is intentionally outside the IHE format code value set.
+%is not in the value set 'IHE ValueSet of Format Codes for use with Document Sharing'%
+
+# Deprecated R5 extensions/discriminator style are inherited from base FHIR snapshot generation, not authored content.
+%The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet%
+%The extension http://hl7.org/fhir/StructureDefinition/regex|5.3.0 is deprecated%
+%The discriminator type 'pattern' is deprecated in R5+%
+
 

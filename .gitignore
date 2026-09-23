@@ -11,3 +11,4 @@ publisher.jar
 
 # Local copies of upstream IHE MADO example resources (not part of this IG)
 mado-examples/
+.vscode/settings.json
