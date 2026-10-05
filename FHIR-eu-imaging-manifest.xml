@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.eu/fhir/imaging-manifest/1.0.0-ballot" ciUrl="https://build.fhir.org/ig/hl7-eu/imaging-manifest" defaultVersion="1.0.0-ballot" defaultWorkgroup="eu" url="http://hl7.eu/fhir/imaging-manifest">
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.eu/fhir/imaging-manifest/1.0.0-ballot" ciUrl="https://build.fhir.org/ig/hl7-eu/imaging-manifest" defaultVersion="1.0.0-ballot" defaultWorkgroup="eu" gitUrl="https://github.com/HL7-eu/imaging-manifest" url="http://hl7.eu/fhir/imaging-manifest">
 <version code="current" url="https://build.fhir.org/ig/hl7-eu/imaging-manifest"/>
 <version code="1.0.0-ballot" url="http://hl7.eu/fhir/imaging-manifest/1.0.0-ballot"/>
 <artifactPageExtension value="-definitions"/>
