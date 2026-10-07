@@ -3,7 +3,7 @@ canonical: http://hl7.eu/fhir/imaging-manifest
 name: HL7EuImagingStudyManifest
 # title: Manifest-based Access to DICOM Objects (IHE-MADO) - EU Extensions
 # title changed based on HL7-eu TNT resolution
-title: EU Imaging Manifest (based on IHE-MADO)
+title: EU Imaging Manifest and Access (IHE-MADO additions)
 description: This guide describes FHIR R4 related elements of the IHE-MADO profile.
 status: draft # draft | active | retired | unknown
 experimental: false
