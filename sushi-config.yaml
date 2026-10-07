@@ -31,7 +31,7 @@ dependencies:
   # hl7.fhir.uv.extensions: 5.2.0
   ihe.rad.mado: 1.0.0
   ihe.iti.mhd: 4.2.3
-  hl7.fhir.eu.base: 2.0.0
+  hl7.fhir.eu.base: 2.0.1
   # Use the R4 build of the EU extensions to match this IG's FHIR version (4.0.1)
   hl7.fhir.eu.extensions.r4:
     uri: http://hl7.eu/fhir/extensions/ImplementationGuide/hl7.fhir.eu.extensions

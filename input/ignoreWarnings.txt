@@ -63,4 +63,5 @@ The ImplementationGuide uses package ihe.iti.mhd#4.2.3 released on 2025-10-31, b
 %The extension http://hl7.org/fhir/StructureDefinition/regex|5.3.0 is deprecated%
 %The discriminator type 'pattern' is deprecated in R5+%
 
-
+# Binding not effective on the slices for canonical
+The Binding on the type slicer DocumentReference.content.extension.extension.value[x] applies to all its slices, but it only makes sense for some of its types, so it has no effect on the slices for canonical

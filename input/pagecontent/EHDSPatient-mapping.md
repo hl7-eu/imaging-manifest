@@ -1,4 +1,4 @@
-#### EHDSPatient
+### EHDSPatient
 
 The following table shows the mapping from EHDSPatient logical model elements to FHIR profiles.
 
