@@ -1,14 +1,17 @@
 {
   "package-id" : "hl7.fhir.eu.imaging-manifest",
-  "version" : "0.1.0",
-  "path" : "http://hl7.eu/fhir/imaging-manifest/0.1.0",
+  "version" : "1.0.0-ballot",
+  "path" : "http://hl7.eu/fhir/imaging-manifest/1.0.0-ballot",
   "ci-build": "https://build.fhir.org/ig/hl7-eu/imaging-manifest",
   "first": true,
   "desc" : "This is the first ballot of the Imaging Manifest FHIR IG STU 1",
+  "registry-description" : "This implementation guide describes the European extensions to the IHE Manifest-based Access to DICOM Objects (MADO) profile.",
+  "registry-country" : "eu",
+  "registry-authority" : "HL7 Europe",
   "category" : "Imaging",
   "introduction" : "This guide is the EU specific version of the IHE-MADO profile.",
   "title" : "EU Manifest-based Access to DICOM Objects (EU-MADO)",
   "mode": "milestone",
-  "status" : "preview",
+  "status" : "ballot",
   "sequence" : "STU 1"
 }
